@@ -6,81 +6,67 @@ $time-transition: all 0.3s;
 
 .social-container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
     a {
-        height: 30px;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+        padding: 3px;
+        border-radius: 3px;
+        transition: background 400ms;
 
-        .item {
-            width: 30px;
-            margin: 0 3px;
-
-            img {
-                width: 100%;
-
-                &.no-hover,
-                &.hover {
-                    transition: all 0.3s;
-                }
-            }
+        img {
+            width: 100%;
+            max-width: 20px;
         }
 
         &:hover {
-            .item {
-                img {
-                    &.no-hover {
-                        transform: translateY(calc(-100% - 5px));
-                    }
-
-                    &.hover {
-                        transform: translateY(calc(-100% - 8px));
-                    }
-                }
-            }
+            background-color: #4eadd7;
         }
     }
 }
 
-.wg-contact-container {
-    .item {
-        display: flex;
+// .wg-contact-container {
+//     .item {
+//         display: flex;
 
-        .col {
-            display: flex;
-            align-items: center;
-            padding: 5px;
+//         .col {
+//             display: flex;
+//             align-items: center;
+//             padding: 5px;
 
-            img {
-                width: 40px;
-            }
+//             img {
+//                 width: 40px;
+//             }
 
-            span {
-                display: block;
-                margin: 0;
-                padding: 0;
-                font-size: 14px;
-                font-weight: bold;
-                color: $color-text;
-                height: 12px;
-            }
+//             span {
+//                 display: block;
+//                 margin: 0;
+//                 padding: 0;
+//                 font-size: 14px;
+//                 font-weight: bold;
+//                 color: $color-text;
+//                 height: 12px;
+//             }
 
-            a {
-                height: 12px;
-                margin: 0;
-                padding: 0;
-                line-height: 12px;
-                font-size: 12px;
-                text-decoration: none;
-                color: $color-text;
-                font-weight: 500;
-                transition: $time-transition;
+//             a {
+//                 height: 12px;
+//                 margin: 0;
+//                 padding: 0;
+//                 line-height: 12px;
+//                 font-size: 12px;
+//                 text-decoration: none;
+//                 color: $color-text;
+//                 font-weight: 500;
+//                 transition: $time-transition;
 
-                &:hover {
-                    color: $color-text-alternate;
-                }
-            }
-        }
-    }
-}
+//                 &:hover {
+//                     color: $color-text-alternate;
+//                 }
+//             }
+//         }
+//     }
+// }
