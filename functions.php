@@ -59,21 +59,24 @@ function menro_styles() {
 
 	wp_enqueue_style( 'generals', get_template_directory_uri() . '/css/generals.css', array(), wp_get_theme()->get( 'Version' ));
 
-
-	// Responsive embeds script.
-	// wp_enqueue_script(
-	// 	'twenty-twenty-one-responsive-embeds-script',
-	// 	get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-	// 	array( 'twenty-twenty-one-ie11-polyfills' ),
-	// 	wp_get_theme()->get( 'Version' ),
-	// 	true
-	// );
+	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', false);
 }
 add_action( 'wp_enqueue_scripts', 'menro_styles' );
 
 
 function menro_widgets() {
-
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Side Menú', 'menro' ),
+			'id'            => 'sidebar-main-content',
+			'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'menro' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+    );
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer columna 1', 'menro' ),
@@ -135,3 +138,25 @@ function menro_widgets() {
 	);
 }
 add_action( 'widgets_init', 'menro_widgets' );
+
+if ( function_exists( 'register_block_pattern_category' ) ) {
+
+	register_block_pattern_category(
+		'menro',
+		array( 'label' => esc_html__( 'MENRO', 'menro' ) )
+	);
+}
+
+if ( function_exists( 'register_block_pattern' ) ) {
+
+	// Large Text.
+	register_block_pattern(
+		'menro/large-text',
+		array(
+			'title'         => esc_html__( 'Texto Largo', 'menro' ),
+			'categories'    => array( 'menro' ),
+			'viewportWidth' => 1440,
+			'content'       => '<!-- wp:heading {"align":"wide","fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><h2 class="alignwide has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) . '</h2><!-- /wp:heading -->',
+		)
+	);
+}

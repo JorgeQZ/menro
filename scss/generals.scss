@@ -29,7 +29,96 @@ header {
     }
 }
 
+.wrapper {
+    position: relative;
+    margin: 0;
+
+    .sidebar-content {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 99;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 15px;
+
+        &.stickToBottom {
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            height: 100vh;
+        }
+
+        .sidebar {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                height: 220px;
+                width: 2px;
+                bottom: calc(100% + 50px);
+                right: 0;
+                background-color: #fff;
+            }
+
+            &:after {
+                position: absolute;
+                content: '';
+                height: 220px;
+                width: 2px;
+                top: calc(100% + 50px);
+                right: 0;
+                background-color: #fff;
+            }
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+            li {
+                text-align: right;
+                margin: 16px 0;
+
+                a {
+                    padding: 1px 5px;
+                    font-size: 13px;
+                    font-weight: 100;
+                    color: white;
+                    text-decoration: none;
+                    transition: background 400ms;
+
+                    &:hover {
+                        background-color: #4eadd7;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-content {
+        width: calc(100% - 110px);
+        padding: 20px;
+    }
+
+    .side-menu {
+        background-color: #191919;
+        width: 110px;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
 footer {
+    z-index: 1000;
+    position: relative;
     padding: 35px 15px 60px;
     min-height: 40px;
     background-color: #3f4143;

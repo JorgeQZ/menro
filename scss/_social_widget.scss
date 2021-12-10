@@ -1,72 +1,54 @@
-$font: "Sukhumvit Set";
-$color-text: #00a0a8;
-$color-text-alternate: #67ae3d;
-$color-accented: #14e1ea;
-$time-transition: all 0.3s;
-
-.social-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-
-    a {
+.wrapper {
+    .social-container {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
-        margin: 0 3px;
-        padding: 3px;
-        border-radius: 3px;
-        transition: background 400ms;
+        flex-direction: column;
 
-        img {
-            width: 100%;
-            max-width: 20px;
-        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 3px;
+            padding: 3px;
+            border-radius: 3px;
+            transition: background 400ms;
 
-        &:hover {
-            background-color: #4eadd7;
+            img {
+                width: 100%;
+                max-width: 20px;
+            }
+
+            &:hover {
+                background-color: #4eadd7;
+            }
         }
     }
 }
 
-// .wg-contact-container {
-//     .item {
-//         display: flex;
+footer {
+    .social-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
 
-//         .col {
-//             display: flex;
-//             align-items: center;
-//             padding: 5px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 3px;
+            padding: 3px;
+            border-radius: 3px;
+            transition: background 400ms;
 
-//             img {
-//                 width: 40px;
-//             }
+            img {
+                width: 100%;
+                max-width: 20px;
+            }
 
-//             span {
-//                 display: block;
-//                 margin: 0;
-//                 padding: 0;
-//                 font-size: 14px;
-//                 font-weight: bold;
-//                 color: $color-text;
-//                 height: 12px;
-//             }
-
-//             a {
-//                 height: 12px;
-//                 margin: 0;
-//                 padding: 0;
-//                 line-height: 12px;
-//                 font-size: 12px;
-//                 text-decoration: none;
-//                 color: $color-text;
-//                 font-weight: 500;
-//                 transition: $time-transition;
-
-//                 &:hover {
-//                     color: $color-text-alternate;
-//                 }
-//             }
-//         }
-//     }
-// }
+            &:hover {
+                background-color: #4eadd7;
+            }
+        }
+    }
+}
