@@ -1,3 +1,77 @@
+<div class="grid-posts">
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+    <a class="item" rel="nofollow noopener" href="#" target="_blank">
+        <div class="overlay">
+            <div>
+                <div class="title">titulo</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+            </div>
+        </div>
+        <div class="title-box">
+            <div class="title">titulo</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
+        </div>
+    </a>
+</div>
 </div><!-- main content -->
 <div class="side-menu"></div>
 

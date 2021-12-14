@@ -118,6 +118,137 @@ header .site-logo img {
   padding: 20px;
 }
 
+.wrapper .main-content .grid-posts {
+  margin: 0 auto;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.wrapper .main-content .grid-posts:before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  z-index: 0;
+  width: 100%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.wrapper .main-content .grid-posts .item {
+  text-decoration: none;
+  margin: 10px;
+  width: 280px;
+  height: 280px;
+  background-image: url(../img/slider-bg.jpg);
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.wrapper .main-content .grid-posts .item .title-box {
+  height: 85px;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  position: relative;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.wrapper .main-content .grid-posts .item .title-box .title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #515151;
+}
+
+.wrapper .main-content .grid-posts .item .title-box .desc {
+  color: #adadad;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.wrapper .main-content .grid-posts .item .overlay {
+  position: absolute;
+  height: 100%;
+  max-height: 85px;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  padding: 20px;
+  left: 0%;
+  z-index: 10;
+  background-color: #f9f9f9;
+  color: black;
+  -webkit-transition: max-height 200ms linear, left 400ms ease 500ms, width 0ms linear;
+  transition: max-height 200ms linear, left 400ms ease 500ms, width 0ms linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .main-content .grid-posts .item .overlay .title {
+  opacity: 0;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #515151;
+  -webkit-transition: opacity 400ms ease-in-out 350ms;
+  transition: opacity 400ms ease-in-out 350ms;
+}
+
+.wrapper .main-content .grid-posts .item .overlay .desc {
+  font-weight: 100;
+  opacity: 0;
+  font-size: 20px;
+  color: #adadad;
+  -webkit-transition: opacity 400ms ease-in-out 450ms;
+  transition: opacity 400ms ease-in-out 450ms;
+  line-height: 1.1;
+}
+
+.wrapper .main-content .grid-posts .item:hover .title-box {
+  opacity: 0;
+}
+
+.wrapper .main-content .grid-posts .item:hover .overlay {
+  max-height: 300px;
+  opacity: 1;
+  width: calc(100% + 20px);
+  left: calc(-100% - 20px);
+}
+
+.wrapper .main-content .grid-posts .item:hover .overlay .title {
+  opacity: 1;
+}
+
+.wrapper .main-content .grid-posts .item:hover .overlay .desc {
+  opacity: 1;
+}
+
+.wrapper .main-content .grid-posts .item:hover:not(:nth-child(3n)) .overlay {
+  left: 100%;
+}
+
 .wrapper .side-menu {
   background-color: #191919;
   width: 110px;
