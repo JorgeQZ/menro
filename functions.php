@@ -1,6 +1,8 @@
 <?php
 
 include_once ('widgets/social-icons.php');
+
+
 function menro_setup(){
     $logo_width  = 300;
     $logo_height = 100;
@@ -21,33 +23,14 @@ function menro_setup(){
             'unlink-homepage-logo' => false,
         )
     );
-
-    // Add support for responsive embedded content.
-    add_theme_support( 'responsive-embeds' );
-
-    // Add support for custom line height controls.
-    add_theme_support( 'custom-line-height' );
-
-    // Add support for experimental link color control.
-    add_theme_support( 'experimental-link-color' );
-
-    // Add support for experimental cover block spacing.
-    add_theme_support( 'custom-spacing' );
-
-    // Add support for custom units.
-    // This was removed in WordPress 5.6 but is still required to properly support WP 5.5.
-    add_theme_support( 'custom-units' );
-
-    // Add theme support for selective refresh for widgets.
-    add_theme_support( 'customize-selective-refresh-widgets' );
-
-    // Add support for Block Styles.
-    add_theme_support( 'wp-block-styles' );
-
-    // Add support for full and wide align images.
-    add_theme_support( 'align-wide' );
-
-    // Add support for editor styles.
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'custom-line-height' );
+	add_theme_support( 'experimental-link-color' );
+  	add_theme_support( 'custom-spacing' );
+  	add_theme_support( 'custom-units' );
+ 	add_theme_support( 'customize-selective-refresh-widgets' );
+ 	add_theme_support( 'wp-block-styles' );
+ 	add_theme_support( 'align-wide' );
     add_theme_support( 'editor-styles' );
     $background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 }
@@ -138,25 +121,3 @@ function menro_widgets() {
 	);
 }
 add_action( 'widgets_init', 'menro_widgets' );
-
-if ( function_exists( 'register_block_pattern_category' ) ) {
-
-	register_block_pattern_category(
-		'menro',
-		array( 'label' => esc_html__( 'MENRO', 'menro' ) )
-	);
-}
-
-if ( function_exists( 'register_block_pattern' ) ) {
-
-	// Large Text.
-	register_block_pattern(
-		'menro/large-text',
-		array(
-			'title'         => esc_html__( 'Texto Largo', 'menro' ),
-			'categories'    => array( 'menro' ),
-			'viewportWidth' => 1440,
-			'content'       => '<!-- wp:heading {"align":"wide","fontSize":"gigantic","style":{"typography":{"lineHeight":"1.1"}}} --><h2 class="alignwide has-text-align-wide has-gigantic-font-size" style="line-height:1.1">' . esc_html__( 'A new portfolio default theme for WordPress', 'twentytwentyone' ) . '</h2><!-- /wp:heading -->',
-		)
-	);
-}
