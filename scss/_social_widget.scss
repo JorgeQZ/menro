@@ -13,6 +13,7 @@
             padding: 3px;
             border-radius: 3px;
             transition: background 400ms;
+            filter: saturate(3);
 
             img {
                 width: 100%;
@@ -20,7 +21,7 @@
             }
 
             &:hover {
-                background-color: #4eadd7;
+                background-color: #3fb0e4;
             }
         }
     }
@@ -40,6 +41,7 @@ footer {
             padding: 3px;
             border-radius: 3px;
             transition: background 400ms;
+            filter: saturate(3);
 
             img {
                 width: 100%;

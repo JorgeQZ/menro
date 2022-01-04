@@ -4,6 +4,38 @@
  */
 get_header();?>
 
+<div class="render-cont">
+    <div class="image-cont">
+        <img src="<?php echo get_template_directory_uri().'/img/render.png'?>" alt="">
+
+        <div class="button-content button-content-bottom-left">
+            <div class="button">
+                <p>+</p>
+            </div>
+            <div class="shape">
+                <div class="text">
+                    <div class="title">Title</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eius veniam aspernatur suscipit, dolores sint </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button-content button-content-top-right">
+            <div class="button">
+                <p>+</p>
+            </div>
+            <div class="shape">
+                <div class="text">
+                    <div class="title">Title</div>
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eius veniam aspernatur suscipit, dolores sint </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="middle-logos-cont">
     <div class="container">
         <div class="title">

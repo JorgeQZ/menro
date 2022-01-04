@@ -43,10 +43,26 @@ function menro_styles() {
 	wp_enqueue_style( 'generals', get_template_directory_uri() . '/css/generals.css', array(), wp_get_theme()->get( 'Version' ));
 
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', false);
+
+	wp_enqueue_script( 'anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
+
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'menro_styles' );
 
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'anime' !== $handle ) {
+        return $tag;
+    }
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+    return $tag;
+}
+// add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
 function menro_widgets() {
 	register_sidebar(
