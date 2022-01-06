@@ -107,15 +107,16 @@ header {
 
         //Render
         .render-cont {
+            opacity: 0;
             padding: 60px;
             padding-top: 160px;
-            margin-bottom: 120px;
+            padding-bottom: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-image: url(../img/home-top-bg.jpg);
-            background-size: contain;
-            background-position: top left;
+            background-size: cover;
+            background-position: center;
 
             .image-cont {
                 width: 800px;
@@ -125,6 +126,11 @@ header {
 
                 img {
                     width: 100%;
+                }
+
+                .button-content {
+                    opacity: 0;
+                    margin-top: 20px;
                 }
 
                 .button-content-bottom-left, .button-content-top-right {
@@ -147,6 +153,8 @@ header {
                         border-radius: 50%;
                         padding: 0;
                         filter: saturate(3);
+                        z-index: 99999;
+                        position: relative;
                         box-shadow: 0px 4px 20px -4px rgba(black, 0.5);
 
                         p {
@@ -207,7 +215,7 @@ header {
                 }
 
                 .button-content-bottom-left {
-                    transform: translate3d(10%, -105%, 0) perspective(10px);
+                    transform: translate3d(10%, -185%, 0) perspective(10px);
 
                     .shape {
                         margin-left: auto;
@@ -229,7 +237,7 @@ header {
                 }
 
                 .button-content-top-right {
-                    transform: translate3d(190%, -600%, 0) perspective(10px);
+                    transform: translate3d(190%, -500%, 0) perspective(10px);
 
                     .shape {
                         margin-right: auto;
@@ -321,6 +329,7 @@ header {
                 }
 
                 .item {
+                    opacity: 0;
                     text-decoration: none;
                     margin: 10px;
                     width: calc(33% - 20px);

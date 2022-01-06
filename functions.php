@@ -1,5 +1,4 @@
 <?php
-
 include_once ('widgets/social-icons.php');
 
 
@@ -39,17 +38,11 @@ add_action( 'after_setup_theme', 'menro_setup' );
 
 
 function menro_styles() {
-
 	wp_enqueue_style( 'generals', get_template_directory_uri() . '/css/generals.css', array(), wp_get_theme()->get( 'Version' ));
-
 	wp_enqueue_script('jquery');
-
+	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/noframework.waypoints.min.js', array(), false, true);
 	wp_enqueue_script( 'anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
-
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
-
-
-
 }
 add_action( 'wp_enqueue_scripts', 'menro_styles' );
 

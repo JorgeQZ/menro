@@ -11,7 +11,6 @@ window.onload = () => {
     }
 };
 
-
 //ya jala el jquery
 jQuery(document).ready(function ($) {
 
@@ -26,7 +25,6 @@ jQuery(document).ready(function ($) {
             easing: 'easeInCubic',
             duration: 700
         });
-
 
         if (currentButton != clickedButton) {
             //Reinicio los inline styles
@@ -105,4 +103,61 @@ jQuery(document).ready(function ($) {
             $(this).attr('style', '');
         }
     });
+
+    // =====================================================
+    //                    WAYPOINTS
+    // =====================================================
+
+    let render_cont = $('.render-cont')[0],
+        buttons = $(render_cont).find('.button-content'),
+        items_posts = $('.grid-posts .item')
+
+    let render = new Waypoint({
+        element: render_cont,
+        handler: function () {
+            let render_animation = anime.timeline({
+                duration: 500,
+                easing: 'easeInQuad',
+            })
+
+            render_animation.add({
+                targets: render_cont,
+                opacity: 1,
+            })
+
+            for (let i = 0; i <= buttons.length; i++) {
+                render_animation.add({
+                    targets: buttons[i],
+                    opacity: 1,
+                    marginTop: 0,
+                    delay: function () {
+                        return i * 150
+                    }
+                })
+            }
+        },
+        offset: '30%'
+    })
+
+    let gridPost = new Waypoint({
+        element: $('.grid-posts')[0],
+        handler: function () {
+            let grid_posts_animation = anime.timeline({
+                duration: 500,
+                easing: 'easeInQuad',
+            })
+
+            for (let i = 0; i <= items_posts.length; i++) {
+                console.log(items_posts[i]);
+                grid_posts_animation.add({
+                    targets: items_posts[i],
+                    opacity: 1,
+                    delay: function () {
+                        return i * 100
+                    }
+                })
+            }
+        },
+        offset: '30%'
+    })
 });

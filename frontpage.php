@@ -8,7 +8,7 @@ get_header();?>
     <div class="image-cont">
         <img src="<?php echo get_template_directory_uri().'/img/render.png'?>" alt="">
 
-        <div class="button-content button-content-bottom-left">
+        <div class="button-content button-content-top-right">
             <div class="button">
                 <p>+</p>
             </div>
@@ -21,7 +21,7 @@ get_header();?>
 
         </div>
 
-        <div class="button-content button-content-top-right">
+        <div class="button-content button-content-bottom-left">
             <div class="button">
                 <p>+</p>
             </div>
