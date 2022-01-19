@@ -2,12 +2,18 @@
 window.onload = () => {
     let mainWrapper = document.querySelector("#mainWrapper")
     let sidebar_content = document.getElementById("sidebarContent")
+    let sidebar_content_inner = document.getElementById("sidebarContent_inner")
     window.onscroll = () => {
         if (Math.ceil(mainWrapper.getBoundingClientRect().bottom) <= window.innerHeight) {
             sidebar_content.classList.add('stickToBottom');
         } else {
             sidebar_content.classList.remove('stickToBottom');
         }
+
+        sidebar_content_inner.clientTop = sidebar_content.clientTop
+
+        console.log(Math.ceil(sidebar_content.clientTop));
+
     }
 };
 
@@ -108,56 +114,78 @@ jQuery(document).ready(function ($) {
     //                    WAYPOINTS
     // =====================================================
 
-    let render_cont = $('.render-cont')[0],
-        buttons = $(render_cont).find('.button-content'),
-        items_posts = $('.grid-posts .item')
+    //Side Menu
+    // new Waypoint({
+    //     element: $('#sidebarContent')[0],
+    //     handler: function () {
+    //         $('#sidebarContent').addClass('animate__fadeInRight');
+    //     },
+    // })
+    //RENDER
+    // let render_cont = $('.render-cont')[0],
+    //     buttons = $(render_cont).find('.button-content'),
+    //     items_posts = $('.grid-posts .item')
 
-    let render = new Waypoint({
-        element: render_cont,
-        handler: function () {
-            let render_animation = anime.timeline({
-                duration: 500,
-                easing: 'easeInQuad',
-            })
+    // new Waypoint({
+    //     element: render_cont,
+    //     handler: function () {
+    //         let render_animation = anime.timeline({
+    //             duration: 500,
+    //             easing: 'easeInQuad',
+    //         })
 
-            render_animation.add({
-                targets: render_cont,
-                opacity: 1,
-            })
+    //         render_animation.add({
+    //             targets: render_cont,
+    //             opacity: 1,
+    //         })
 
-            for (let i = 0; i <= buttons.length; i++) {
-                render_animation.add({
-                    targets: buttons[i],
-                    opacity: 1,
-                    marginTop: 0,
-                    delay: function () {
-                        return i * 150
-                    }
-                })
-            }
-        },
-        offset: '30%'
-    })
+    //         for (let i = 0; i <= buttons.length; i++) {
+    //             render_animation.add({
+    //                 targets: buttons[i],
+    //                 opacity: 1,
+    //                 delay: function () {
+    //                     return i * 150
+    //                 }
+    //             })
+    //         }
+    //     },
+    //     offset: '30%'
+    // })
 
-    let gridPost = new Waypoint({
-        element: $('.grid-posts')[0],
-        handler: function () {
-            let grid_posts_animation = anime.timeline({
-                duration: 500,
-                easing: 'easeInQuad',
-            })
+    //POSTS
+    // new Waypoint({
+    //     element: $('.grid-posts')[0],
+    //     handler: function () {
+    //         let grid_posts_animation = anime.timeline({
+    //             duration: 500,
+    //             easing: 'easeInQuad',
+    //         })
 
-            for (let i = 0; i <= items_posts.length; i++) {
-                console.log(items_posts[i]);
-                grid_posts_animation.add({
-                    targets: items_posts[i],
-                    opacity: 1,
-                    delay: function () {
-                        return i * 100
-                    }
-                })
-            }
-        },
-        offset: '30%'
-    })
+    //         for (let i = 0; i <= items_posts.length; i++) {
+    //             grid_posts_animation.add({
+    //                 targets: items_posts[i],
+    //                 opacity: 1,
+    //                 delay: function () {
+    //                     return i * 10
+    //                 }
+    //             })
+    //         }
+    //     },
+    //     // offset: '30%'
+    // })
+
+    // GENERALES
+    // let animated_elements = document.getElementsByClassName('animate__animated');
+    // console.log(animated_elements);
+    // for (let i = 0; i <= animated_elements.length; i++) {
+    //     new Waypoint({
+    //         element: animated_elements[i][0],
+    //         handler: function () {
+    //             $(animated_elements[i]).addClass('animate__fadeIn');
+    //         },
+    //         continuous: false,
+    //         offset: '20%'
+
+    //     })
+    // }
 });

@@ -1,11 +1,10 @@
 </div><!-- main content -->
-<div class="side-menu"></div>
 
 
 </div><!-- Wrapper -->
 
 
-<footer id="footer">
+<footer id="footer animate__animated">
     <div class="column">
         <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
         <aside class="widget-area">

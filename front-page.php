@@ -2,7 +2,10 @@
 /**
  * Template Name: Front Page
  */
-get_header();?>
+get_header();
+
+
+?>
 
 <div class="render-cont">
     <div class="image-cont">
@@ -36,7 +39,7 @@ get_header();?>
     </div>
 </div>
 
-<div class="middle-logos-cont">
+<div class="middle-logos-cont animate__animated">
     <div class="container">
         <div class="title">
             Construimos con
@@ -124,7 +127,7 @@ get_header();?>
         </a>
     </div>
 
-    <div class="contact-block">
+    <div class="contact-block animate__animated">
         <div class="column">
             <div class="title">
                 Convierte tu proyecto en realidad
