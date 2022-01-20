@@ -3,6 +3,7 @@
 get_header();
 
 /* Start the Loop */
+?>
 
 
-get_footer();
+<?php get_footer(); ?>

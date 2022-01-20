@@ -93,6 +93,10 @@ body {
   .wrapper .sidebar-content.inner .sidebar .menu li a {
     color: white;
   }
+  .wrapper .sidebar-content.inner .sidebar .social-container a img {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
   .wrapper .sidebar-content.stickToBottom {
     position: absolute;
     top: unset;
@@ -339,6 +343,8 @@ body {
 .wrapper .social-container a img {
   width: 100%;
   max-width: 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .wrapper .social-container a:hover {

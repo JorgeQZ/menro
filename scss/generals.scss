@@ -95,6 +95,14 @@ body {
                             }
                         }
                     }
+
+                    .social-container {
+                        a {
+                            img {
+                                filter: invert(0);
+                            }
+                        }
+                    }
                 }
             }
 
