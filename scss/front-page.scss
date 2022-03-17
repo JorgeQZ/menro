@@ -294,7 +294,6 @@ $max-width: 1280px;
             align-items: center;
             justify-content: center;
             padding-right: 15px;
-            display: none;
 
             &.stickToBottom {
                 position: absolute;
@@ -595,6 +594,95 @@ $max-width: 1280px;
 
 @media screen and (min-width: 1024px) {
     .wrapper {
+        .clip {
+            background-color: #0000;
+        }
+
+        .sidebar-content {
+            position: fixed;
+            width: 110px;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 15px;
+
+            &.inner {
+                .sidebar {
+                    &:before, &:after {
+                        background-color: #fff;
+                    }
+
+                    .menu {
+                        li {
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .social-container {
+                        a {
+                            img {
+                                filter: invert(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:not(.inner) {
+                background: #191919;
+            }
+
+            .sidebar {
+                position: relative;
+
+                .social-container {
+                    a {
+                        img {
+                            filter: invert(0);
+                        }
+                    }
+                }
+            }
+
+            &.stickToBottom {
+                position: absolute;
+                top: unset;
+                bottom: 0;
+                height: 100vh;
+            }
+
+            .menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: relative;
+
+                li {
+                    text-align: right;
+                    margin: 16px 0;
+
+                    a {
+                        padding: 1px 5px;
+                        font-size: 13px;
+                        font-weight: 100;
+                        color: #fff;
+                        text-decoration: none;
+                        transition: background 400ms;
+
+                        &:hover {
+                            background-color: #4eadd7;
+                        }
+                    }
+                }
+            }
+        }
+
         .main-content {
             width: calc(100% - 110px);
 

@@ -64,6 +64,19 @@
         <!-- Slider -->
         <?php elseif($mostrarBanner == 'slider'): ?>
         <div id="sliderBanner" class="slider_banner">
+            <!-- Sidebar -->
+            <div class="clip">
+                <div class="inner sidebar-content" id="sidebarContent_inner">
+                    <div class="sidebar" id="sidebar">
+                        <?php
+                                if ( is_active_sidebar( 'sidebar-main-content' ) ) :
+                                dynamic_sidebar( 'sidebar-main-content' );
+                                endif;
+                            ?>
+                        <!-- .widget-area -->
+                    </div>
+                </div>
+            </div><!-- Sidebar -->
             <?php echo do_shortcode($slider); ?>
         </div>
         <?php endif; ?>

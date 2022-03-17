@@ -2,9 +2,13 @@ $border-width: 2px;
 $footerFZ: 13px;
 $max-width: 1280px;
 
-* {
+*, html :where(.editor-styles-wrapper) {
     font-family: Helvetica, Arial,sans-serif;
     box-sizing: border-box;
+}
+
+html :where(.editor-styles-wrapper) {
+    font-family: Helvetica, Arial,sans-serif !important;
 }
 
 body {
@@ -68,6 +72,7 @@ body {
             right: 0;
             clip: rect(0, auto, auto, 0);
             background-color: rgba(black, 0.5);
+            z-index: 9999;
         }
 
         .sidebar-content {

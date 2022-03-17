@@ -1,7 +1,13 @@
 <?php
+
+/**
+ * Required
+ */
 include_once ('widgets/social-icons.php');
 
-
+/**
+ * Initial Setup
+ */
 function menro_setup(){
     $logo_width  = 300;
     $logo_height = 100;
@@ -33,13 +39,15 @@ function menro_setup(){
 	add_theme_support( 'editor-styles' );
     add_theme_support( 'custom-logo');
     add_theme_support( 'post-thumbnails');
+    add_theme_support( 'wp-block-styles' );
 
     $background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 }
 add_action( 'after_setup_theme', 'menro_setup' );
 
-
-
+/**
+ * Styles & Scripts Registration
+ */
 function menro_styles() {
 	wp_enqueue_style( 'generals', get_template_directory_uri() . '/css/generals.css', array(), '0.1.0');
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), wp_get_theme()->get( 'Version' ));
@@ -56,6 +64,10 @@ function menro_styles() {
 
 	if(is_page_template('page-contacto.php')){
 		wp_enqueue_style( 'contacto', get_template_directory_uri() . '/css/contacto.css', array(), '0.1.0');
+    }
+
+    if(is_page_template('page-proyectos.php')){
+		wp_enqueue_style( 'proyectos', get_template_directory_uri() . '/css/proyectos.css', array(), '0.1.0');
 	}
 
 	if(is_home() && get_option('page_for_posts') && !is_front_page()):
@@ -64,17 +76,20 @@ function menro_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'menro_styles' );
 
+/**
+ * Module Tag
+ */
 function add_type_attribute($tag, $handle, $src) {
-    // if not your script, do nothing and return original $tag
-    if ( 'anime' !== $handle ) {
-        return $tag;
-    }
-    // change the script tag by adding type="module" and return it.
+    if ( 'anime' !== $handle ) {return $tag;}
     $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
     return $tag;
 }
 // add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
+
+/**
+ * WIDGETS
+ */
 function menro_widgets() {
 	register_sidebar(
 		array(
@@ -150,6 +165,9 @@ function menro_widgets() {
 add_action( 'widgets_init', 'menro_widgets' );
 
 
+/**
+ * Custom Logos
+ */
 function menro_customize_register($wp_customize)
 {
     $wp_customize->add_section('logos_header', array(
@@ -197,6 +215,9 @@ function menro_customize_register($wp_customize)
 
 add_action('customize_register', 'menro_customize_register');
 
+/**
+ * Rewrite Conditions
+ */
 function re_rewrite_rules() {
     global $wp_rewrite;
     // $wp_rewrite->author_base = $author_slug;
@@ -208,3 +229,140 @@ function re_rewrite_rules() {
     $wp_rewrite->flush_rules();
 }
 add_action('init', 're_rewrite_rules');
+
+
+/**
+ * Post Type Proyectos
+ */
+
+
+// Proyectos
+function menro_register_proyectos()
+{
+
+    /**
+     * Post Type: Proyectos.
+     */
+
+    $labels = [
+        "name" => __("Proyectos", "menro"),
+        "singular_name" => __("Proyecto", "menro"),
+        "menu_name" => __("Mis Proyectos", "menro"),
+        "all_items" => __("Todos los Proyectos", "menro"),
+        "add_new" => __("Añadir nuevo", "menro"),
+        "add_new_item" => __("Añadir nuevo Proyecto", "menro"),
+        "edit_item" => __("Editar Proyecto", "menro"),
+        "new_item" => __("Nuevo Proyecto", "menro"),
+        "view_item" => __("Ver Proyecto", "menro"),
+        "view_items" => __("Ver Proyectos", "menro"),
+        "search_items" => __("Buscar Proyectos", "menro"),
+        "not_found" => __("No se ha encontrado Proyectos", "menro"),
+        "not_found_in_trash" => __("No se han encontrado Proyectos en la papelera", "menro"),
+        "parent" => __("Proyecto superior:", "menro"),
+        "featured_image" => __("Imagen destacada para Proyecto", "menro"),
+        "set_featured_image" => __("Establece una imagen destacada para Proyecto", "menro"),
+        "remove_featured_image" => __("Eliminar la imagen destacada de Proyecto", "menro"),
+        "use_featured_image" => __("Usar como imagen destacada de Proyecto", "menro"),
+        "archives" => __("Archivos de Proyecto", "menro"),
+        "insert_into_item" => __("Insertar en Proyecto", "menro"),
+        "uploaded_to_this_item" => __("Subir a Proyecto", "menro"),
+        "filter_items_list" => __("Filtrar la lista de Proyectos", "menro"),
+        "items_list_navigation" => __("Navegación de la lista de Proyectos", "menro"),
+        "items_list" => __("Lista de Proyectos", "menro"),
+        "attributes" => __("Atributos de Proyectos", "menro"),
+        "name_admin_bar" => __("Proyecto", "menro"),
+        "item_published" => __("Proyecto publicado", "menro"),
+        "item_published_privately" => __("Proyecto publicado como privado.", "menro"),
+        "item_reverted_to_draft" => __("Proyecto devuelto a borrador.", "menro"),
+        "item_scheduled" => __("Proyecto programado", "menro"),
+        "item_updated" => __("Proyecto actualizado.", "menro"),
+        "parent_item_colon" => __("Proyecto superior:", "menro"),
+    ];
+
+    $args = [
+        "label" => __("Proyectos", "menro"),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "capability_type" => "page",
+        "map_meta_cap" => true,
+        "hierarchical" => true,
+        "rewrite" => [ "slug" => "proyecto-sustentable", "with_front" => true ],
+        "query_var" => true,
+        "menu_position" => 20,
+        "menu_icon" => "dashicons-admin-site",
+        "supports" => [ "title", "editor", "thumbnail", "author", "page-attributes", "post-formats" ],
+        "taxonomies" => [ "categoria_proyectors" ],
+        "show_in_graphql" => false,
+    ];
+
+    register_post_type("proyectos", $args);
+}
+
+add_action('init', 'menro_register_proyectos');
+
+
+
+function menro_register_tax_proyectos()
+{
+
+    /**
+     * Taxonomy: Categorías de Proyectos.
+     */
+
+    $labels = [
+        "name" => __("Categorías de Proyectos", "menro"),
+        "singular_name" => __("Categoría de Proyectos", "menro"),
+        "menu_name" => __("Categorías de Proyectos", "menro"),
+        "all_items" => __("Todos los Categorías de Proyectos", "menro"),
+        "edit_item" => __("Editar Categoría de Proyectos", "menro"),
+        "view_item" => __("Ver Categoría de Proyectos", "menro"),
+        "update_item" => __("Actualizar el nombre de Categoría de Proyectos", "menro"),
+        "add_new_item" => __("Añadir nuevo Categoría de Proyectos", "menro"),
+        "new_item_name" => __("Nombre del nuevo Categoría de Proyectos", "menro"),
+        "parent_item" => __("Categoría de Proyectos superior", "menro"),
+        "parent_item_colon" => __("Categoría de Proyectos superior:", "menro"),
+        "search_items" => __("Buscar Categorías de Proyectos", "menro"),
+        "popular_items" => __("Categorías de Proyectos populares", "menro"),
+        "separate_items_with_commas" => __("Separar Categorías de Proyectos con comas", "menro"),
+        "add_or_remove_items" => __("Añadir o eliminar Categorías de Proyectos", "menro"),
+        "choose_from_most_used" => __("Escoger entre los Categorías de Proyectos más usandos", "menro"),
+        "not_found" => __("No se ha encontrado Categorías de Proyectos", "menro"),
+        "no_terms" => __("Ninguna Categoría de Proyectos", "menro"),
+        "items_list_navigation" => __("Navegación de la lista de Categorías de Proyectos", "menro"),
+        "items_list" => __("Lista de Categorías de Proyectos", "menro"),
+        "back_to_items" => __("Volver a Categorías de Proyectos", "menro"),
+    ];
+
+
+    $args = [
+        "label" => __("Categorías de Proyectos", "menro"),
+        "labels" => $labels,
+        "public" => true,
+        "publicly_queryable" => true,
+        "hierarchical" => true,
+        "show_ui" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "query_var" => true,
+        "rewrite" => [ 'slug' => 'categoria_proyectos', 'with_front' => true,  'hierarchical' => true, ],
+        "show_admin_column" => true,
+        "show_in_rest" => true,
+        "rest_base" => "categoria_proyectos",
+        "rest_controller_class" => "WP_REST_Terms_Controller",
+        "show_in_quick_edit" => true,
+        "show_in_graphql" => false,
+    ];
+    register_taxonomy("categoria_proyectos", [ "proyectos" ], $args);
+}
+add_action('init', 'menro_register_tax_proyectos');

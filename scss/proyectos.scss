@@ -1,0 +1,81 @@
+.wrapper {
+    header {
+        position: relative;
+    }
+
+    .main-content {
+        background-image: url(../img/bg-contact.jpg);
+        background-position: center bottom;
+        min-height: calc(100vh - 200px);
+        padding: 60px 90px;
+        overflow: hidden;
+
+        .title {
+            color: #3f4143;
+            font-size: 50px;
+            line-height: 1;
+            font-weight: bolder;
+            position: relative;
+            width: 100%;
+
+            &:before {
+                content: attr(data-text);
+                position: absolute;
+                font-weight: bold;
+                font-size: 93px;
+                width: 1000%;
+                top: -35px;
+                left: -70px;
+                color: #0000;
+                letter-spacing: -5px;
+                line-height: 1;
+                -webkit-text-fill-color: transparent;
+                stroke-width: 1px;
+                -moz-text-fill-color: transparent;
+                -webkit-text-fill-color: #0000;
+                -webkit-text-stroke-color: #3f4143;
+                -moz-text-stroke-width: 1px;
+                -webkit-text-stroke-width: 1px;
+                opacity: 0.3;
+            }
+        }
+
+        .tabs-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+
+            .item {
+                padding: 5px 10px;
+                margin: 0px 5px;
+                color: #3f4143;
+                font-weight: 100;
+                cursor: pointer;
+                transition: all 300ms linear;
+                filter: saturate(3);
+
+                &:before {
+                    content: '';
+                    width: 2px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: -6px;
+                    background-color: #3f4143;
+                }
+
+                &:last-child {
+                    &::before {
+                        background-color: #0000;
+                    }
+                }
+
+                &:hover {
+                    color: white;
+                    background-color: #3fb0e4;
+                }
+            }
+        }
+    }
+}
