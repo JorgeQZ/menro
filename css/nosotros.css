@@ -1,0 +1,689 @@
+@charset "UTF-8";
+.wrapper header {
+  position: relative;
+}
+
+.wrapper .contenedor-principal {
+  background-image: url(../img/bg-contact.jpg);
+  background-position: center bottom;
+  min-height: calc(100vh - 200px);
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.wrapper .contenedor-principal .container {
+  width: 90%;
+  padding-top: 120px;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 120px;
+}
+
+.wrapper .contenedor-principal .container .col-izq {
+  width: 45%;
+}
+
+.wrapper .contenedor-principal .container .col-izq img {
+  width: 100%;
+}
+
+.wrapper .contenedor-principal .container .col-der {
+  width: 49%;
+}
+
+.wrapper .contenedor-principal .container .col-der .info h2 {
+  color: #3f4143;
+  font-size: 50px;
+  font-weight: bolder;
+  letter-spacing: -2px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.wrapper .contenedor-principal .container .col-der .info p {
+  color: #3f4143;
+  font-weight: 100;
+  width: 75%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.wrapper .contenedor-principal .container .col-der .info p:last-child {
+  margin-bottom: 0;
+}
+
+.wrapper .wrapper-sec {
+  width: 100%;
+  background: #232323;
+}
+
+.wrapper .wrapper-sec > div {
+  width: 94%;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq {
+  width: 49%;
+  background: #369bc5;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq .info {
+  padding: 90px 65px;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq .info h2 {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq .info p {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq .info p span {
+  font-weight: bold;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-izq .info p:last-child {
+  margin-bottom: 0;
+}
+
+.wrapper .wrapper-sec .contenedor-secundario .col-der {
+  width: 51%;
+  background-image: url(../img/nosotros2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto {
+  background-image: url(../img/nosotros2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100% / 3);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-tit {
+  position: absolute;
+  padding: 60px 30px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: ease-out all .3s;
+  transition: ease-out all .3s;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-tit h2 {
+  color: white;
+  font-size: 25px;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-tit h2:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background: white;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-tit img {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 32px;
+  height: auto;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-info {
+  padding: 60px 30px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: ease all .4s;
+  transition: ease all .4s;
+  position: relative;
+  top: 100%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-info h2 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-info h2:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: white;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-info p {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto:nth-child(2) {
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto:hover .cont-tit {
+  opacity: 0;
+}
+
+.wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto:hover .cont-info {
+  opacity: 1;
+  top: 0;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia {
+  background: white;
+  overflow: hidden;
+  padding: 60px 5%;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .title {
+  color: #3f4143;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: bolder;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .title:before {
+  content: "Nuestra Metodología";
+  position: absolute;
+  font-weight: bold;
+  font-size: 93px;
+  width: 1000%;
+  top: -35px;
+  left: -70px;
+  color: #0000;
+  letter-spacing: -5px;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1px;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: #0000;
+  -webkit-text-stroke-color: #3f4143;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  opacity: 0.3;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia {
+  margin: 100px 0;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol {
+  width: 3px;
+  height: 750px;
+  background: #808080;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama {
+  position: absolute;
+  left: -175px;
+  width: 175px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama > img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama .cont-info {
+  width: 200px;
+  position: relative;
+  left: -95px;
+  padding-top: 10px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama .cont-info img {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama .cont-info p {
+  color: #808080;
+  font-weight: 100;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8.5px;
+  width: 14px;
+  height: 14px;
+  background: #808080;
+  border-radius: 100%;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) {
+  left: inherit;
+  right: -175px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) > img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) .cont-info {
+  left: inherit;
+  right: -70px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n)::before {
+  right: inherit;
+  left: -8.5px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama2 {
+  top: 150px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama3 {
+  top: 300px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama4 {
+  top: 450px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama5 {
+  top: 600px;
+}
+
+.wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5.4px;
+  width: 14px;
+  height: 14px;
+  background: #808080;
+  border-radius: 100%;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador {
+  background: white;
+  overflow: hidden;
+  padding: 60px 5%;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .title {
+  color: #3f4143;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: bolder;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .title:before {
+  content: "Nuestro Diferenciador";
+  position: absolute;
+  font-weight: bold;
+  font-size: 93px;
+  width: 1000%;
+  top: -35px;
+  left: -70px;
+  color: #0000;
+  letter-spacing: -5px;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1px;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: #0000;
+  -webkit-text-stroke-color: #3f4143;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  opacity: 0.3;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .subtitle {
+  color: #3f4143;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador {
+  margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item img {
+  height: 60px;
+  width: auto;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item .cont-info {
+  width: 70%;
+  margin-left: 15px;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item .cont-info h2 {
+  color: #3f4143;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item .cont-info p {
+  color: #3f4143;
+  font-weight: 100;
+  margin: 0;
+  font-size: 12px;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #b8b8b8;
+}
+
+.wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item:last-child {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wrapper .wrapper-sec .contenedor-presencia {
+  background: white;
+  overflow: hidden;
+}
+
+.wrapper .wrapper-sec .contenedor-presencia .cont-tit {
+  padding: 60px 5%;
+}
+
+.wrapper .wrapper-sec .contenedor-presencia .cont-tit .title {
+  color: #3f4143;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: bolder;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper .wrapper-sec .contenedor-presencia .cont-tit .title:before {
+  content: "Nuestra Presencia";
+  position: absolute;
+  font-weight: bold;
+  font-size: 93px;
+  width: 1000%;
+  top: -35px;
+  left: -70px;
+  color: #0000;
+  letter-spacing: -5px;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1px;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: #0000;
+  -webkit-text-stroke-color: #3f4143;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  opacity: 0.3;
+}
+
+.wrapper .wrapper-sec .contenedor-presencia .cont-presencia img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper .sidebar-content {
+  top: unset;
+  bottom: 0 !important;
+  -webkit-filter: saturate(3);
+          filter: saturate(3);
+}
+
+.wrapper .sidebar-content .sidebar:before, .wrapper .sidebar-content .sidebar:after {
+  background-color: #3f4143;
+}
+
+.wrapper .sidebar-content .sidebar .menu li a {
+  color: #3f4143;
+}
+
+.wrapper .sidebar-content .sidebar .social-container a img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.wrapper .side-menu {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item {
+    width: 50%;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item:nth-child(2)::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper .wrapper-sec .contenedor-secundario {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .wrapper-sec .contenedor-secundario .col-izq {
+    width: 100%;
+  }
+  .wrapper .wrapper-sec .contenedor-secundario .col-der {
+    width: 100%;
+  }
+  .wrapper .wrapper-sec .contenedor-proyectos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto {
+    width: 100%;
+  }
+  .wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto:nth-child(2) {
+    border-left: 0;
+    border-right: 0;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia {
+    margin: 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol {
+    margin: 0;
+    height: 1000px;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) {
+    left: -175px;
+    right: inherit;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) > img {
+    -webkit-transform: inherit;
+            transform: inherit;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) .cont-info {
+    left: -95px;
+    right: inherit;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n)::before {
+    right: -8.5px;
+    left: inherit;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama2 {
+    top: 200px;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama3 {
+    top: 400px;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama4 {
+    top: 600px;
+  }
+  .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama5 {
+    top: 800px;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item img {
+    width: 70px;
+    height: auto;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .wrapper .wrapper-sec .contenedor-diferenciador .cont-diferenciador .cont-item:nth-child(2)::before {
+    display: none;
+  }
+  .wrapper .wrapper-sec .contenedor-presencia {
+    background: white;
+    overflow: hidden;
+  }
+  .wrapper .wrapper-sec .contenedor-presencia .cont-tit {
+    padding: 60px 5%;
+  }
+  .wrapper .wrapper-sec .contenedor-presencia .cont-tit .title {
+    color: #3f4143;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: bolder;
+    position: relative;
+    width: 100%;
+  }
+  .wrapper .wrapper-sec .contenedor-presencia .cont-tit .title:before {
+    content: "Nuestra Presencia";
+    position: absolute;
+    font-weight: bold;
+    font-size: 93px;
+    width: 1000%;
+    top: -35px;
+    left: -70px;
+    color: #0000;
+    letter-spacing: -5px;
+    line-height: 1;
+    -webkit-text-fill-color: transparent;
+    stroke-width: 1px;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke-color: #3f4143;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px;
+    opacity: 0.3;
+  }
+  .wrapper .wrapper-sec .contenedor-presencia .cont-presencia img {
+    width: 100%;
+    display: block;
+  }
+}

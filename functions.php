@@ -62,6 +62,10 @@ function menro_styles() {
 
 	}
 
+    if(is_page_template('page-nosotros.php')){
+        wp_enqueue_style( 'nosotros', get_template_directory_uri() . '/css/nosotros.css', array(), filemtime( get_stylesheet_directory() . '/css/nosotros.css' ), 'all');
+    }
+
 	if(is_page_template('page-contacto.php')){
 		wp_enqueue_style( 'contacto', get_template_directory_uri() . '/css/contacto.css', array(), '0.1.0');
     }
