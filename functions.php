@@ -66,6 +66,13 @@ function menro_styles() {
         wp_enqueue_style( 'nosotros', get_template_directory_uri() . '/css/nosotros.css', array(), filemtime( get_stylesheet_directory() . '/css/nosotros.css' ), 'all');
     }
 
+    if(is_page_template('page-inversion.php')){
+        wp_enqueue_style( 'inversion', get_template_directory_uri() . '/css/inversion.css', array(), filemtime( get_stylesheet_directory() . '/css/inversion.css' ), 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/owl.carousel.min.js' ), false);
+    }
+
 	if(is_page_template('page-contacto.php')){
 		wp_enqueue_style( 'contacto', get_template_directory_uri() . '/css/contacto.css', array(), '0.1.0');
     }
