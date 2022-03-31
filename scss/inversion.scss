@@ -1,50 +1,67 @@
 .wrapper {
-    header {
-        position: relative;
-    }
 
     .contenedor-principal {
-        background-image: url(../img/bg-contact.jpg);
-        background-position: center bottom;
-        min-height: calc(100vh - 200px);
-        padding: 60px 0 0;
+        height: 100vh;
+        width: 100%;
+        background-image: url(../img/bg-inversion.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 90px;
         overflow: hidden;
 
-        .title {
-            color: #3f4143;
-            font-size: 50px;
-            line-height: 1;
-            font-weight: bolder;
-            position: relative;
-            width: 100%;
-
-            &:before {
-                content: "¿Tienes algun proyecto?";
-                position: absolute;
-                font-weight: bold;
-                font-size: 93px;
-                width: 1000%;
-                top: -35px;
-                left: -70px;
-                color: #0000;
-                letter-spacing: -5px;
+        .cont-info{
+            .title {
+                color: white;
+                font-size: 50px;
                 line-height: 1;
-                -webkit-text-fill-color: transparent;
-                stroke-width: 1px;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: #0000;
-                -webkit-text-stroke-color: #3f4143;
-                -moz-text-stroke-width: 1px;
-                -webkit-text-stroke-width: 1px;
-                opacity: 0.3;
+                font-weight: bolder;
+                position: relative;
+                width: 100%;
+    
+                &:before {
+                    content: "Inversión en Bienes Raíces";
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: 93px;
+                    width: 1000%;
+                    top: -35px;
+                    left: -70px;
+                    color: white;
+                    letter-spacing: -5px;
+                    line-height: 1;
+                    -webkit-text-fill-color: transparent;
+                    stroke-width: 1px;
+                    -moz-text-fill-color: transparent;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-color: white;
+                    -moz-text-stroke-width: 1px;
+                    -webkit-text-stroke-width: 1px;
+                    opacity: 0.3;
+                }
+            }
+    
+            .subtitle {
+                color: white;
+                font-weight: 100;
+                line-height: 1;
+            }
+            a{
+                display: inline-block;
+                padding: 7px 22px;
+                background: white;
+                color: #3f4143;
+                text-decoration: none;
+                transition: all .3s;
+                &:hover{
+                    opacity: .6;
+                }
             }
         }
 
-        .subtitle {
-            color: #3f4143;
-            font-weight: 100;
-            line-height: 1;
-        }
         .container {
             padding-top: 120px;
             max-width: 1280px;
@@ -157,6 +174,7 @@
     .contenedor-activos{
         overflow: hidden;
         padding: 60px 5% 100px;
+        background: white;
         .title {
             color: #3f4143;
             font-size: 50px;
@@ -361,6 +379,7 @@
     .contenedor-funciona{
         overflow: hidden;
         padding: 60px 5%;
+        background: white;
         .title {
             color: #3f4143;
             font-size: 50px;
@@ -435,6 +454,7 @@
     .contenedor-fondeo{
         overflow: hidden;
         padding: 60px 5%;
+        background: white;
         .title {
             color: #3f4143;
             font-size: 50px;
@@ -550,40 +570,6 @@
         }
     }
     
-
-    .sidebar-content {
-        top: unset;
-        bottom: 0 !important;
-        filter: saturate(3);
-
-        &.stickToBottom {}
-
-        .sidebar {
-            &:before, &:after {
-                background-color: #3f4143;
-            }
-
-            .menu {
-                li {
-                    a {
-                        color: #3f4143;
-                    }
-                }
-            }
-
-            .social-container {
-                a {
-                    img {
-                        filter: invert(1);
-                    }
-                }
-            }
-        }
-    }
-
-    .side-menu {
-        background-color: transparent;
-    }
 }
 
 

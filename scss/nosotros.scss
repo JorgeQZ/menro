@@ -1,23 +1,18 @@
 .wrapper {
-    header {
-        position: relative;
-    }
 
     .contenedor-principal {
         background-image: url(../img/bg-contact.jpg);
         background-position: center bottom;
-        min-height: calc(100vh - 200px);
-        padding: 60px 0;
+        min-height: 100vh;
         overflow: hidden;
+        display: flex;
+        align-items: center;
 
         .container {
             width: 90%;
-            padding-top: 120px;
-            max-width: 1280px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 120px;
 
             .col-izq {
                 width: 45%;
@@ -53,12 +48,6 @@
     }
 
     .wrapper-sec{
-        width: 100%;
-        background: #232323;
-
-        > div{
-            width: 94%;
-        }
 
         .contenedor-secundario{
             display: flex;
@@ -451,40 +440,6 @@
             }
         }
 
-    }
-
-    .sidebar-content {
-        top: unset;
-        bottom: 0 !important;
-        filter: saturate(3);
-
-        &.stickToBottom {}
-
-        .sidebar {
-            &:before, &:after {
-                background-color: #3f4143;
-            }
-
-            .menu {
-                li {
-                    a {
-                        color: #3f4143;
-                    }
-                }
-            }
-
-            .social-container {
-                a {
-                    img {
-                        filter: invert(1);
-                    }
-                }
-            }
-        }
-    }
-
-    .side-menu {
-        background-color: transparent;
     }
 }
 

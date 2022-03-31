@@ -16,7 +16,7 @@
     $mainLogo = get_field('logo') ? get_theme_mod(get_field('logo')) : get_theme_mod('Blanco');
     $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
     ?>
-    <div class="wrapper" id="mainWrapper">
+    <div class="wrapper" id="mainWrapper <?php echo get_field('logo'); ?>">
         <!-- Header -->
 
         <header>
@@ -44,20 +44,6 @@
             <div class="title_banner" data-text="<?php echo $title_text; ?>">
                 <?php echo $title_text; ?>
             </div>
-
-            <!-- Sidebar -->
-            <div class="clip">
-                <div class="inner sidebar-content" id="sidebarContent_inner">
-                    <div class="sidebar" id="sidebar">
-                        <?php
-                                if ( is_active_sidebar( 'sidebar-main-content' ) ) :
-                                dynamic_sidebar( 'sidebar-main-content' );
-                                endif;
-                            ?>
-                        <!-- .widget-area -->
-                    </div>
-                </div>
-            </div><!-- Sidebar -->
         </div>
         <!-- Thumbnail -->
 
@@ -83,6 +69,27 @@
         <!-- Slider -->
         <?php endif ?>
         <!-- Sidebar -->
+        <?php
+        if(get_field('menu') == "Color"){
+        ?>
+        <div id="siderbarPrincipal" class="slider_banner">
+            <!-- Sidebar -->
+            <div class="clip">
+                <div class="inner sidebar-content" id="sidebarContent_inner">
+                    <div class="sidebar" id="sidebar">
+                        <?php
+                                if ( is_active_sidebar( 'sidebar-main-content' ) ) :
+                                dynamic_sidebar( 'sidebar-main-content' );
+                                endif;
+                            ?>
+                        <!-- .widget-area -->
+                    </div>
+                </div>
+            </div><!-- Sidebar -->
+        </div>
+        <?php
+        }
+        ?>
         <div class="sidebar-content" id="sidebarContent">
             <div class="sidebar" id="sidebar">
                 <?php

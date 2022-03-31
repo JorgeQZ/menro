@@ -1,18 +1,26 @@
 @charset "UTF-8";
-.wrapper header {
-  position: relative;
-}
-
 .wrapper .contenedor-principal {
-  background-image: url(../img/bg-contact.jpg);
-  background-position: center bottom;
-  min-height: calc(100vh - 200px);
-  padding: 60px 0 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/bg-inversion.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 90px;
   overflow: hidden;
 }
 
-.wrapper .contenedor-principal .title {
-  color: #3f4143;
+.wrapper .contenedor-principal .cont-info .title {
+  color: white;
   font-size: 50px;
   line-height: 1;
   font-weight: bolder;
@@ -20,31 +28,45 @@
   width: 100%;
 }
 
-.wrapper .contenedor-principal .title:before {
-  content: "¿Tienes algun proyecto?";
+.wrapper .contenedor-principal .cont-info .title:before {
+  content: "Inversión en Bienes Raíces";
   position: absolute;
   font-weight: bold;
   font-size: 93px;
   width: 1000%;
   top: -35px;
   left: -70px;
-  color: #0000;
+  color: white;
   letter-spacing: -5px;
   line-height: 1;
   -webkit-text-fill-color: transparent;
   stroke-width: 1px;
   -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
   -moz-text-stroke-width: 1px;
   -webkit-text-stroke-width: 1px;
   opacity: 0.3;
 }
 
-.wrapper .contenedor-principal .subtitle {
-  color: #3f4143;
+.wrapper .contenedor-principal .cont-info .subtitle {
+  color: white;
   font-weight: 100;
   line-height: 1;
+}
+
+.wrapper .contenedor-principal .cont-info a {
+  display: inline-block;
+  padding: 7px 22px;
+  background: white;
+  color: #3f4143;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.wrapper .contenedor-principal .cont-info a:hover {
+  opacity: .6;
 }
 
 .wrapper .contenedor-principal .container {
@@ -180,6 +202,7 @@
 .wrapper .contenedor-activos {
   overflow: hidden;
   padding: 60px 5% 100px;
+  background: white;
 }
 
 .wrapper .contenedor-activos .title {
@@ -458,6 +481,7 @@
 .wrapper .contenedor-funciona {
   overflow: hidden;
   padding: 60px 5%;
+  background: white;
 }
 
 .wrapper .contenedor-funciona .title {
@@ -548,6 +572,7 @@
 .wrapper .contenedor-fondeo {
   overflow: hidden;
   padding: 60px 5%;
+  background: white;
 }
 
 .wrapper .contenedor-fondeo .title {
@@ -684,30 +709,6 @@
 
 .wrapper .contenedor-inversionistas .contenedor-items .cont-item:hover p span {
   color: #fc7200;
-}
-
-.wrapper .sidebar-content {
-  top: unset;
-  bottom: 0 !important;
-  -webkit-filter: saturate(3);
-          filter: saturate(3);
-}
-
-.wrapper .sidebar-content .sidebar:before, .wrapper .sidebar-content .sidebar:after {
-  background-color: #3f4143;
-}
-
-.wrapper .sidebar-content .sidebar .menu li a {
-  color: #3f4143;
-}
-
-.wrapper .sidebar-content .sidebar .social-container a img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.wrapper .side-menu {
-  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
