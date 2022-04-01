@@ -155,37 +155,4 @@
         }
     }
 
-    .sidebar-content {
-        top: unset;
-        bottom: 0 !important;
-        filter: saturate(3);
-
-        &.stickToBottom {}
-
-        .sidebar {
-            &:before, &:after {
-                background-color: #3f4143;
-            }
-
-            .menu {
-                li {
-                    a {
-                        color: #3f4143;
-                    }
-                }
-            }
-
-            .social-container {
-                a {
-                    img {
-                        filter: invert(1);
-                    }
-                }
-            }
-        }
-    }
-
-    .side-menu {
-        background-color: transparent;
-    }
 }
