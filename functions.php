@@ -41,6 +41,8 @@ function menro_setup(){
     add_theme_support( 'post-thumbnails');
     add_theme_support( 'wp-block-styles' );
 
+    add_image_size('cat_image_projects', 400 );
+
     $background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 }
 add_action( 'after_setup_theme', 'menro_setup' );
@@ -297,7 +299,7 @@ function menro_register_proyectos()
         "capability_type" => "page",
         "map_meta_cap" => true,
         "hierarchical" => true,
-        "rewrite" => [ "slug" => "proyecto-sustentable", "with_front" => true ],
+        "rewrite" => [ "slug" => "proyecto", "with_front" => true ],
         "query_var" => true,
         "menu_position" => 20,
         "menu_icon" => "dashicons-admin-site",

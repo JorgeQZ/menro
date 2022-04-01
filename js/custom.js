@@ -20,6 +20,22 @@ window.onload = () => {
 //ya jala el jquery
 jQuery(document).ready(function ($) {
 
+    //Proyectos tabs
+    jQuery('.item').on('click', function (e) {
+        e.preventDefault();
+        jQuery('.item').removeClass('active');
+        jQuery(this).addClass('active');
+
+        jQuery('.tab').removeClass('active').css({
+            'opacity': 0
+        });
+
+        let tab_id = $(this).attr('data-button');
+        jQuery('#' + tab_id).addClass('active').animate({
+            'opacity': '1'
+        }, 600);
+
+    })
     // Botones del render
     let currentButton;
     $('.button-content').on('click', function (e) {

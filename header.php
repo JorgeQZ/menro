@@ -82,6 +82,8 @@
         <?php endif; ?>
         <!-- Slider -->
         <?php endif ?>
+
+
         <!-- Sidebar -->
         <div class="sidebar-content" id="sidebarContent">
             <div class="sidebar" id="sidebar">
