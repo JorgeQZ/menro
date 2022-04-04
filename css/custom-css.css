@@ -1,0 +1,49 @@
+.field_left {
+  float: left;
+}
+
+.field_right {
+  float: left;
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+#dynamic_form {
+  width: 100%;
+}
+
+#dynamic_form input[type=text] {
+  width: 300px;
+}
+
+#dynamic_form .field_row {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#dynamic_form label {
+  padding: 0 6px;
+}
+
+.btn-add {
+  width: 95px !important;
+}
+
+.btn-remove {
+  width: 95px !important;
+  margin-top: 4px !important;
+}
+
+.btn-addRow {
+  color: #fff !important;
+  font-size: 13px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  background: #2EA2CC !important;
+  border: #0074A2 solid 1px !important;
+}

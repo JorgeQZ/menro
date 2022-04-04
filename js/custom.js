@@ -4,16 +4,18 @@ window.onload = () => {
     let sidebar_content = document.getElementById("sidebarContent")
     let sidebar_content_inner = document.getElementById("sidebarContent_inner")
     window.onscroll = () => {
-        if (Math.ceil(mainWrapper.getBoundingClientRect().bottom) <= window.innerHeight) {
-            sidebar_content.classList.add('stickToBottom');
-        } else {
-            sidebar_content.classList.remove('stickToBottom');
+        if (mainWrapper) {
+            if (Math.ceil(mainWrapper.getBoundingClientRect().bottom) <= window.innerHeight) {
+                sidebar_content.classList.add('stickToBottom');
+            } else {
+                sidebar_content.classList.remove('stickToBottom');
+            }
+
+            sidebar_content_inner.clientTop = sidebar_content.clientTop
+
+            console.log(Math.ceil(sidebar_content.clientTop));
+
         }
-
-        sidebar_content_inner.clientTop = sidebar_content.clientTop
-
-        console.log(Math.ceil(sidebar_content.clientTop));
-
     }
 };
 
@@ -205,3 +207,29 @@ jQuery(document).ready(function ($) {
     //     })
     // }
 });
+
+//--------Start Image Slider Box JS-----------
+function add_image(obj) {
+    var parent = jQuery(obj).parent().parent('div.field_row');
+    var inputField = jQuery(parent).find("input.meta_image_url");
+    tb_show('Select Your Image', 'media-upload.php?type=image&amp;TB_iframe=true', false);
+    window.send_to_editor = function (html) {
+        var url = jQuery(html).find('img').attr('src');
+        inputField.val(url);
+        jQuery(parent).find("div.image_wrap").html('<img src="' + url + '" width="128" height="130">');
+        tb_remove();
+    };
+    return false;
+}
+
+function remove_field(obj) {
+    var parent = jQuery(obj).parent().parent();
+    parent.remove();
+}
+
+function add_field_row() {
+    var row = jQuery('#child-row').html();
+    jQuery(row).appendTo('#parent-row');
+}
+
+//----------End Image Slider Box JS------------

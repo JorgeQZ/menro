@@ -3,179 +3,219 @@
 /**
  * Required
  */
-include_once ('widgets/social-icons.php');
+include_once 'widgets/social-icons.php';
 
 /**
  * Initial Setup
  */
-function menro_setup(){
-    $logo_width  = 300;
+function menro_setup()
+{
+    $logo_width = 300;
     $logo_height = 100;
 
     register_nav_menus(
         array(
-            'primary' => esc_html__( 'Header Menú', 'MENRO' ),
-            'footer'  => __( 'Footer Menú', 'MENRO' ),
+            'primary' => esc_html__('Header Menú', 'MENRO'),
+            'footer' => __('Footer Menú', 'MENRO'),
         )
     );
     add_theme_support(
         'custom-logo',
         array(
-            'height'               => $logo_height,
-            'width'                => $logo_width,
-            'flex-width'           => true,
-            'flex-height'          => true,
+            'height' => $logo_height,
+            'width' => $logo_width,
+            'flex-width' => true,
+            'flex-height' => true,
             'unlink-homepage-logo' => false,
         )
     );
-	add_theme_support( 'responsive-embeds' );
-	add_theme_support( 'custom-line-height' );
-	add_theme_support( 'experimental-link-color' );
-  	add_theme_support( 'custom-spacing' );
-  	add_theme_support( 'custom-units' );
- 	add_theme_support( 'customize-selective-refresh-widgets' );
- 	add_theme_support( 'wp-block-styles' );
- 	add_theme_support( 'align-wide' );
-	add_theme_support( 'editor-styles' );
-    add_theme_support( 'custom-logo');
-    add_theme_support( 'post-thumbnails');
-    add_theme_support( 'wp-block-styles' );
+    add_theme_support('responsive-embeds');
+    add_theme_support('custom-line-height');
+    add_theme_support('experimental-link-color');
+    add_theme_support('custom-spacing');
+    add_theme_support('custom-units');
+    add_theme_support('customize-selective-refresh-widgets');
+    add_theme_support('wp-block-styles');
+    add_theme_support('align-wide');
+    add_theme_support('editor-styles');
+    add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
+    add_theme_support('wp-block-styles');
 
-    add_image_size('cat_image_projects', 400 );
+    add_image_size('cat_image_projects', 400);
 
-    $background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+    $background_color = get_theme_mod('background_color', 'D1E4DD');
 }
-add_action( 'after_setup_theme', 'menro_setup' );
+add_action('after_setup_theme', 'menro_setup');
+
+/**
+ *
+ * Field Repeater
+ */
+
+add_action('admin_init', 'add_image_slider_meta_box');
+
+function add_image_slider_meta_box(){
+    add_meta_box(
+        'image_sliderId',
+        'Carrusel de Galería',
+        'add_image_slider',
+        'proyectos',
+        'normal',
+        'high'
+    );
+}
+
+function add_image_slider($post){
+    $value = get_post_meta( $post->ID, '_wporg_meta_key', true );
+    ?>
+    <input type="text" name="wporg_field" id="wporg_field" value="<?php echo $value; ?>">
+    <?php
+}
+
+add_action('save_post', 'save_update_image_slider', 10, 2);
+
+// Save post action, for Image slider
+function save_update_image_slider($post_id, $post_object) {
+    if(array_key_exists('wporg_field', $_POST)){
+        update_post_meta(
+            $post_id,
+            '_wporg_meta_key',
+            $_POST['wporg_field']
+        );
+    }
+}
 
 /**
  * Styles & Scripts Registration
  */
-function menro_styles() {
-    wp_enqueue_style( 'generals', get_template_directory_uri() . '/css/generals.css', array(), filemtime( get_stylesheet_directory() . '/css/generals.css' ), 'all');
-	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), wp_get_theme()->get( 'Version' ));
+function menro_styles()
+{
+    wp_enqueue_style('generals', get_template_directory_uri() . '/css/generals.css', array(), filemtime(get_stylesheet_directory() . '/css/generals.css'), 'all');
+    wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.css', array(), wp_get_theme()->get('Version'));
 
-	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/noframework.waypoints.min.js', array(), false, true);
-	wp_enqueue_script( 'anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
-	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/noframework.waypoints.min.js', array(), false, true);
+    wp_enqueue_script('anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
+    wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
 
-	if(is_front_page()){
-        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime( get_stylesheet_directory() . '/css/front-page.css' ), 'all');
-	}
-
-    if(is_page_template('page-nosotros.php')){
-        wp_enqueue_style( 'nosotros', get_template_directory_uri() . '/css/nosotros.css', array(), filemtime( get_stylesheet_directory() . '/css/nosotros.css' ), 'all');
+    if (is_front_page()) {
+        wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime(get_stylesheet_directory() . '/css/front-page.css'), 'all');
     }
 
-    if(is_page_template('page-inversion.php')){
-        wp_enqueue_style( 'inversion', get_template_directory_uri() . '/css/inversion.css', array(), filemtime( get_stylesheet_directory() . '/css/inversion.css' ), 'all');
-        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
-        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
-        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/owl.carousel.min.js' ), false);
+    if (is_page_template('page-nosotros.php')) {
+        wp_enqueue_style('nosotros', get_template_directory_uri() . '/css/nosotros.css', array(), filemtime(get_stylesheet_directory() . '/css/nosotros.css'), 'all');
     }
 
-	if(is_page_template('page-contacto.php')){
-        wp_enqueue_style( 'contacto', get_template_directory_uri() . '/css/contacto.css', array(), filemtime( get_stylesheet_directory() . '/css/contacto.css' ), 'all');
+    if (is_page_template('page-inversion.php')) {
+        wp_enqueue_style('inversion', get_template_directory_uri() . '/css/inversion.css', array(), filemtime(get_stylesheet_directory() . '/css/inversion.css'), 'all');
+        wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style('owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/owl.carousel.min.js'), false);
     }
 
-    if(is_page_template('page-proyectos.php')){
-        wp_enqueue_style( 'proyectos', get_template_directory_uri() . '/css/proyectos.css', array(), filemtime( get_stylesheet_directory() . '/css/proyectos.css' ), 'all');
-	}
+    if (is_page_template('page-contacto.php')) {
+        wp_enqueue_style('contacto', get_template_directory_uri() . '/css/contacto.css', array(), filemtime(get_stylesheet_directory() . '/css/contacto.css'), 'all');
+    }
 
-	if(is_home() && get_option('page_for_posts') && !is_front_page()):
-        wp_enqueue_style( 'home', get_template_directory_uri() . '/css/home.css', array(), filemtime( get_stylesheet_directory() . '/css/home.css' ), 'all');
-	endif;
+    if (is_page_template('page-proyectos.php')) {
+        wp_enqueue_style('proyectos', get_template_directory_uri() . '/css/proyectos.css', array(), filemtime(get_stylesheet_directory() . '/css/proyectos.css'), 'all');
+    }
+
+    if (is_home() && get_option('page_for_posts') && !is_front_page()):
+        wp_enqueue_style('home', get_template_directory_uri() . '/css/home.css', array(), filemtime(get_stylesheet_directory() . '/css/home.css'), 'all');
+    endif;
 }
-add_action( 'wp_enqueue_scripts', 'menro_styles' );
+add_action('wp_enqueue_scripts', 'menro_styles');
 
 /**
  * Module Tag
  */
-function add_type_attribute($tag, $handle, $src) {
-    if ( 'anime' !== $handle ) {return $tag;}
-    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+function add_type_attribute($tag, $handle, $src)
+{
+    if ('anime' !== $handle) {return $tag;}
+    $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
     return $tag;
 }
 // add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
 
-
 /**
  * WIDGETS
  */
-function menro_widgets() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Side Menú', 'menro' ),
-			'id'            => 'sidebar-main-content',
-			'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+function menro_widgets()
+{
+    register_sidebar(
+        array(
+            'name' => esc_html__('Side Menú', 'menro'),
+            'id' => 'sidebar-main-content',
+            'description' => esc_html__('Add widgets here to appear in your sidebar.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
     );
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer columna 1', 'menro' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+    register_sidebar(
+        array(
+            'name' => esc_html__('Footer columna 1', 'menro'),
+            'id' => 'sidebar-1',
+            'description' => esc_html__('Add widgets here to appear in your footer.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
     );
 
     register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer columna 2', 'menro' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+        array(
+            'name' => esc_html__('Footer columna 2', 'menro'),
+            'id' => 'sidebar-2',
+            'description' => esc_html__('Add widgets here to appear in your footer.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
     );
 
     register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer columna 3', 'menro' ),
-			'id'            => 'sidebar-3',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+        array(
+            'name' => esc_html__('Footer columna 3', 'menro'),
+            'id' => 'sidebar-3',
+            'description' => esc_html__('Add widgets here to appear in your footer.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
     );
 
     register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer columna 4', 'menro' ),
-			'id'            => 'sidebar-4',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
+        array(
+            'name' => esc_html__('Footer columna 4', 'menro'),
+            'id' => 'sidebar-4',
+            'description' => esc_html__('Add widgets here to appear in your footer.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
     );
 
     register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer columna 5', 'menro' ),
-			'id'            => 'sidebar-5',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'menro' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+        array(
+            'name' => esc_html__('Footer columna 5', 'menro'),
+            'id' => 'sidebar-5',
+            'description' => esc_html__('Add widgets here to appear in your footer.', 'menro'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
+    );
 }
-add_action( 'widgets_init', 'menro_widgets' );
-
+add_action('widgets_init', 'menro_widgets');
 
 /**
  * Custom Logos
@@ -185,12 +225,12 @@ function menro_customize_register($wp_customize)
     $wp_customize->add_section('logos_header', array(
         'title' => __('Logos de Cabecera', 'textdomain'),
         'priority' => 1,
-        'capability' => 'edit_theme_options'
+        'capability' => 'edit_theme_options',
     ));
 
     $wp_customize->add_setting('Blanco', array(
-        'capability'        => 'edit_theme_options',
-        'type'           => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
     ));
 
     $wp_customize->add_control(
@@ -198,17 +238,17 @@ function menro_customize_register($wp_customize)
             $wp_customize,
             'primary_logo',
             array(
-                'label'    => __('Logo Primario', 'menro'),
-                'section'  => 'logos_header',
+                'label' => __('Logo Primario', 'menro'),
+                'section' => 'logos_header',
                 'settings' => 'Blanco',
-                'description' => 'Este es el logotipo principal en color blanco. Aparece por defecto.'
+                'description' => 'Este es el logotipo principal en color blanco. Aparece por defecto.',
             )
         )
     );
 
     $wp_customize->add_setting('Color', array(
-        'capability'        => 'edit_theme_options',
-        'type'           => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
     ));
 
     $wp_customize->add_control(
@@ -216,10 +256,10 @@ function menro_customize_register($wp_customize)
             $wp_customize,
             'secundary_logo',
             array(
-                'label'    => __('Logo Secundario', 'menro'),
-                'section'  => 'logos_header',
+                'label' => __('Logo Secundario', 'menro'),
+                'section' => 'logos_header',
                 'settings' => 'Color',
-                'description' => 'Este es el logotipo secundario a color. Aparece si esta seleccionado en la página de edición.'
+                'description' => 'Este es el logotipo secundario a color. Aparece si esta seleccionado en la página de edición.',
             )
         )
     );
@@ -230,23 +270,22 @@ add_action('customize_register', 'menro_customize_register');
 /**
  * Rewrite Conditions
  */
-function re_rewrite_rules() {
+function re_rewrite_rules()
+{
     global $wp_rewrite;
     // $wp_rewrite->author_base = $author_slug;
-//  print_r($wp_rewrite);
+    //  print_r($wp_rewrite);
     // $wp_rewrite->author_base        = 'autor';
     // $wp_rewrite->search_base        = 'buscar';
     // $wp_rewrite->comments_base      = 'comentarios';
-    $wp_rewrite->pagination_base    = 'pagina';
+    $wp_rewrite->pagination_base = 'pagina';
     $wp_rewrite->flush_rules();
 }
 add_action('init', 're_rewrite_rules');
 
-
 /**
  * Post Type Proyectos
  */
-
 
 // Proyectos
 function menro_register_proyectos()
@@ -309,12 +348,12 @@ function menro_register_proyectos()
         "capability_type" => "page",
         "map_meta_cap" => true,
         "hierarchical" => true,
-        "rewrite" => [ "slug" => "proyecto", "with_front" => true ],
+        "rewrite" => ["slug" => "proyecto", "with_front" => true],
         "query_var" => true,
         "menu_position" => 20,
         "menu_icon" => "dashicons-admin-site",
-        "supports" => [ "title", "editor", "thumbnail", "author", "page-attributes", "post-formats" ],
-        "taxonomies" => [ "categoria_proyectors" ],
+        "supports" => ["title", "editor", "thumbnail", "author", "page-attributes", "post-formats"],
+        "taxonomies" => ["categoria_proyectors"],
         "show_in_graphql" => false,
     ];
 
@@ -322,8 +361,6 @@ function menro_register_proyectos()
 }
 
 add_action('init', 'menro_register_proyectos');
-
-
 
 function menro_register_tax_proyectos()
 {
@@ -356,7 +393,6 @@ function menro_register_tax_proyectos()
         "back_to_items" => __("Volver a Categorías de Proyectos", "menro"),
     ];
 
-
     $args = [
         "label" => __("Categorías de Proyectos", "menro"),
         "labels" => $labels,
@@ -367,7 +403,7 @@ function menro_register_tax_proyectos()
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "query_var" => true,
-        "rewrite" => [ 'slug' => 'categoria_proyectos', 'with_front' => true,  'hierarchical' => true, ],
+        "rewrite" => ['slug' => 'categoria_proyectos', 'with_front' => true, 'hierarchical' => true],
         "show_admin_column" => true,
         "show_in_rest" => true,
         "rest_base" => "categoria_proyectos",
@@ -375,6 +411,6 @@ function menro_register_tax_proyectos()
         "show_in_quick_edit" => true,
         "show_in_graphql" => false,
     ];
-    register_taxonomy("categoria_proyectos", [ "proyectos" ], $args);
+    register_taxonomy("categoria_proyectos", ["proyectos"], $args);
 }
 add_action('init', 'menro_register_tax_proyectos');
