@@ -14,6 +14,9 @@
 wp_body_open();
 
 $mainLogo = get_field('logo') ? get_theme_mod(get_field('logo')) : get_theme_mod('Blanco');
+if(is_singular('proyectos')){
+    $mainLogo = get_theme_mod('Color');
+}
 $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
 ?>
     <div class="wrapper" id="mainWrapper <?php echo get_field('logo'); ?>">

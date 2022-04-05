@@ -1,11 +1,28 @@
 .contenedor-general-sucursales{
     overflow: hidden;
-    padding: 60px 5% 100px;
-    background: white;
+    background-image: url(../img/bg-contact.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 130px;
     .contenedor-sucursales{
-        width: 75%;
+        width: 90%;
         margin: 0 auto;
+        .cont-slider{
+            width: 82%;
+            margin: 0 auto;
+            .owl-dots {
+                button {
+                    span {
+                        width: 7px;
+                        height: 7px;
+                        margin: 2px;
+                    }
+                }
+            }
+        }
         .cont-sliderr{
+            margin-top: 20px;
             .cont-item{
                 .cont-info{
                     h2{
@@ -59,8 +76,8 @@
         }
     }
     .contenedor-presencia{
-        background: white;
         overflow: hidden;
+        margin-top: 60px;
         .cont-tit{
             padding: 60px 5%;
             .title {
@@ -100,4 +117,17 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 767px){
+
+    .contenedor-general-sucursales{
+        .contenedor-sucursales{
+            .cont-slider{
+                width: 100%;
+            }
+        }
+    }
+
 }
