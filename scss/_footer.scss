@@ -67,10 +67,13 @@
 
         p, a {
             font-size: $footerFZ;
+            text-align: left;
         }
 
         .menu {
             li {
+                text-align: left;
+
                 a {
                     font-size: $footerFZ;
 

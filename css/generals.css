@@ -403,6 +403,10 @@ body {
   }
   footer p, footer a {
     font-size: 13px;
+    text-align: left;
+  }
+  footer .menu li {
+    text-align: left;
   }
   footer .menu li a {
     font-size: 13px;

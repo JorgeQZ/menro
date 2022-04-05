@@ -1,25 +1,45 @@
+
+
 //menu fixed columna derecha *se hizo en js porque el jquery no se habia registrado bien, aún*
 window.onload = () => {
     let mainWrapper = document.querySelector("#mainWrapper")
     let sidebar_content = document.getElementById("sidebarContent")
     let sidebar_content_inner = document.getElementById("sidebarContent_inner")
     window.onscroll = () => {
-        if (Math.ceil(mainWrapper.getBoundingClientRect().bottom) <= window.innerHeight) {
-            sidebar_content.classList.add('stickToBottom');
-        } else {
-            sidebar_content.classList.remove('stickToBottom');
+        if (mainWrapper) {
+            if (Math.ceil(mainWrapper.getBoundingClientRect().bottom) <= window.innerHeight) {
+                sidebar_content.classList.add('stickToBottom');
+            } else {
+                sidebar_content.classList.remove('stickToBottom');
+            }
+
+            sidebar_content_inner.clientTop = sidebar_content.clientTop
+
+            console.log(Math.ceil(sidebar_content.clientTop));
+
         }
-
-        sidebar_content_inner.clientTop = sidebar_content.clientTop
-
-        console.log(Math.ceil(sidebar_content.clientTop));
-
     }
 };
 
 //ya jala el jquery
 jQuery(document).ready(function ($) {
 
+    //Proyectos tabs
+    jQuery('.item').on('click', function (e) {
+        e.preventDefault();
+        jQuery('.item').removeClass('active');
+        jQuery(this).addClass('active');
+
+        jQuery('.tab').removeClass('active').css({
+            'opacity': 0
+        });
+
+        let tab_id = $(this).attr('data-button');
+        jQuery('#' + tab_id).addClass('active').animate({
+            'opacity': '1'
+        }, 600);
+
+    })
     // Botones del render
     let currentButton;
     $('.button-content').on('click', function (e) {
@@ -117,6 +137,14 @@ jQuery(document).ready(function ($) {
         mouseleave: function () {
             $(this).attr('style', '');
         }
+    });
+
+    jQuery('.galeria-proyectos').owlCarousel({
+        loop: false,
+        margin: 0,
+        dots: true,
+        nav: false,
+        items: 1
     });
 
     // =====================================================
