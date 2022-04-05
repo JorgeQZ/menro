@@ -43,48 +43,11 @@ function menro_setup()
     add_theme_support('wp-block-styles');
 
     add_image_size('cat_image_projects', 400);
+    add_image_size('gal_project', 880, 580, array('center', 'center'));
 
     $background_color = get_theme_mod('background_color', 'D1E4DD');
 }
 add_action('after_setup_theme', 'menro_setup');
-
-/**
- *
- * Field Repeater
- */
-
-add_action('admin_init', 'add_image_slider_meta_box');
-
-function add_image_slider_meta_box(){
-    add_meta_box(
-        'image_sliderId',
-        'Carrusel de Galería',
-        'add_image_slider',
-        'proyectos',
-        'normal',
-        'high'
-    );
-}
-
-function add_image_slider($post){
-    $value = get_post_meta( $post->ID, '_wporg_meta_key', true );
-    ?>
-    <input type="text" name="wporg_field" id="wporg_field" value="<?php echo $value; ?>">
-    <?php
-}
-
-add_action('save_post', 'save_update_image_slider', 10, 2);
-
-// Save post action, for Image slider
-function save_update_image_slider($post_id, $post_object) {
-    if(array_key_exists('wporg_field', $_POST)){
-        update_post_meta(
-            $post_id,
-            '_wporg_meta_key',
-            $_POST['wporg_field']
-        );
-    }
-}
 
 /**
  * Styles & Scripts Registration
@@ -97,7 +60,7 @@ function menro_styles()
     wp_enqueue_script('jquery');
     wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/noframework.waypoints.min.js', array(), false, true);
     wp_enqueue_script('anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
-    wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
+
 
     if (is_front_page()) {
         wp_enqueue_style('front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime(get_stylesheet_directory() . '/css/front-page.css'), 'all');
@@ -125,6 +88,18 @@ function menro_styles()
     if (is_home() && get_option('page_for_posts') && !is_front_page()):
         wp_enqueue_style('home', get_template_directory_uri() . '/css/home.css', array(), filemtime(get_stylesheet_directory() . '/css/home.css'), 'all');
     endif;
+
+    if(is_singular('proyectos')){
+        wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style('owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/owl.carousel.min.js'), false);
+        wp_enqueue_style('proyecto', get_template_directory_uri() . '/css/proyecto.css', array(), '1.1', 'all');
+
+
+    }
+
+
+    wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'menro_styles');
 

@@ -1,0 +1,23 @@
+.wrapper {
+    .main-content {
+        background-image: url(../img/bg-contact.jpg);
+        background-position: center bottom;
+        background-size: cover !important;
+        min-height: calc(100vh - 200px);
+        padding: 60px 90px;
+        overflow: hidden;
+
+        .galeria-proyectos {
+            .owl-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 880px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

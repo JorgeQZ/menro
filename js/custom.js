@@ -1,3 +1,5 @@
+
+
 //menu fixed columna derecha *se hizo en js porque el jquery no se habia registrado bien, aún*
 window.onload = () => {
     let mainWrapper = document.querySelector("#mainWrapper")
@@ -128,6 +130,14 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    jQuery('.galeria-proyectos').owlCarousel({
+        loop: false,
+        margin: 0,
+        dots: true,
+        nav: false,
+        items: 1
+    });
+
     // =====================================================
     //                    WAYPOINTS
     // =====================================================
@@ -207,29 +217,3 @@ jQuery(document).ready(function ($) {
     //     })
     // }
 });
-
-//--------Start Image Slider Box JS-----------
-function add_image(obj) {
-    var parent = jQuery(obj).parent().parent('div.field_row');
-    var inputField = jQuery(parent).find("input.meta_image_url");
-    tb_show('Select Your Image', 'media-upload.php?type=image&amp;TB_iframe=true', false);
-    window.send_to_editor = function (html) {
-        var url = jQuery(html).find('img').attr('src');
-        inputField.val(url);
-        jQuery(parent).find("div.image_wrap").html('<img src="' + url + '" width="128" height="130">');
-        tb_remove();
-    };
-    return false;
-}
-
-function remove_field(obj) {
-    var parent = jQuery(obj).parent().parent();
-    parent.remove();
-}
-
-function add_field_row() {
-    var row = jQuery('#child-row').html();
-    jQuery(row).appendTo('#parent-row');
-}
-
-//----------End Image Slider Box JS------------
