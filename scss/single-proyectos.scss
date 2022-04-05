@@ -1,0 +1,103 @@
+.contenedor-general-sucursales{
+    overflow: hidden;
+    padding: 60px 5% 100px;
+    background: white;
+    .contenedor-sucursales{
+        width: 75%;
+        margin: 0 auto;
+        .cont-sliderr{
+            .cont-item{
+                .cont-info{
+                    h2{
+                        color: #3f4143;
+                        font-size: 50px;
+                        font-weight: bolder;
+                        letter-spacing: -2px;
+                        margin: 0;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        color: #3f4143;
+                        font-weight: 100;
+                        margin: 0;
+                    }
+                }
+            }
+            .owl-nav {
+                display: flex;
+                button {
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 100%;
+                    margin: 0;
+                    margin-right: 10px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        filter: invert(1);
+                        transition: all 0.3s;
+                    }
+                    &:hover {
+                        background: transparent;
+                        img {
+                            transform: scale(0.7);
+                        }
+                    }
+                    &.disabled{
+                        filter: brightness(0.5);
+                        opacity: 1;
+                        img{
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contenedor-presencia{
+        background: white;
+        overflow: hidden;
+        .cont-tit{
+            padding: 60px 5%;
+            .title {
+                color: #3f4143;
+                font-size: 50px;
+                line-height: 1;
+                font-weight: bolder;
+                position: relative;
+                width: 100%;
+    
+                &:before {
+                    content: "Ubicación";
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: 93px;
+                    width: 1000%;
+                    top: -35px;
+                    left: -70px;
+                    color: #0000;
+                    letter-spacing: -5px;
+                    line-height: 1;
+                    -webkit-text-fill-color: transparent;
+                    stroke-width: 1px;
+                    -moz-text-fill-color: transparent;
+                    -webkit-text-fill-color: #0000;
+                    -webkit-text-stroke-color: #3f4143;
+                    -moz-text-stroke-width: 1px;
+                    -webkit-text-stroke-width: 1px;
+                    opacity: 0.3;
+                }
+            }
+        }
+        .cont-presencia{
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}

@@ -95,6 +95,15 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    /* Menú */
+    $('.burguer').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(this).toggleClass('active');
+        $('.wrapper .sidebar-content').toggleClass('active');
+    });
+
     //submit del contact form
     $('#wpcf7-f92-o1 .wpcf7-submit').on({
         mouseenter: function () {

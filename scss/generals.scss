@@ -175,6 +175,118 @@ body {
     }
 }
 
+@media screen and (max-width: 1023px) {
+    .wrapper {
+        position: relative;
+        margin: 0;
+
+        .clip {
+            display: none;
+        }
+
+        .sidebar-content {
+            width: 100vw;
+            height: 100vh;
+            background: #3f4143;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            right: -100%;
+            transition: all .3s;
+
+            .sidebar {
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    height: 220px;
+                    width: 2px;
+                    bottom: calc(100% + 50px);
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    background-color: #fff;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 220px;
+                    width: 2px;
+                    top: calc(100% + 50px);
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    background-color: #fff;
+                }
+
+            }
+
+            .menu {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+                li {
+                    margin: 16px 0;
+
+                    a {
+                        padding: 1px 5px;
+                        font-size: 13px;
+                        font-weight: 100;
+                        color: white;
+                        text-decoration: none;
+                        transition: background 400ms;
+
+                        &:hover {
+                            background-color: #4eadd7;
+                        }
+                    }
+                }
+            }
+            &.active{
+                right: 0%;
+            }
+        }
+        .cont-burguer {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            z-index: 1000;
+            .burguer {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                z-index: 1000;
+                cursor: pointer;
+                span {
+                    width: 90%;
+                    height: 2px;
+                    margin: 4px 2px;
+                    background-color: red;
+                    transition: transform 400ms ease;
+                }
+
+                &.active {
+                    span {
+                        &:nth-child(1) {
+                            transform: rotateZ(45deg) translate3d(3px, 3px, 0);
+                        }
+                        &:nth-child(2) {
+                            transform: rotateZ(-45deg) translate3d(4px, -4px, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @import "header";
 @import "footer";
 @import "social_widget";

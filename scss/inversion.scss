@@ -608,7 +608,10 @@
 @media screen and (max-width: 767px){
 
     .wrapper {
-            .contenedor-activos{
+        .contenedor-principal {
+            padding: 90px 5%;
+        }
+        .contenedor-activos{
             .contenedor-grafica{
                 width: 100%;
                 .cont-item{

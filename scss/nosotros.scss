@@ -474,6 +474,23 @@
 @media screen and (max-width: 767px){
 
     .wrapper {
+
+        .contenedor-principal {
+            justify-content: center;
+            .container {
+                flex-direction: column;
+                padding: 150px 0 100px;
+    
+                .col-izq {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+    
+                .col-der {
+                    width: 100%;
+                }
+            }
+        }
     
         .wrapper-sec{
     

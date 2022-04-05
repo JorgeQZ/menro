@@ -524,6 +524,25 @@
 }
 
 @media screen and (max-width: 767px) {
+  .wrapper .contenedor-principal {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .contenedor-principal .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 150px 0 100px;
+  }
+  .wrapper .contenedor-principal .container .col-izq {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .wrapper .contenedor-principal .container .col-der {
+    width: 100%;
+  }
   .wrapper .wrapper-sec .contenedor-secundario {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

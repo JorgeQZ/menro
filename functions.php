@@ -55,7 +55,7 @@ function menro_styles() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/noframework.waypoints.min.js', array(), false, true);
 	wp_enqueue_script( 'anime', get_template_directory_uri() . '/js/anime.min.js', array(), false, true);
-	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
+    wp_enqueue_script( 'custom', get_template_directory_uri().'/js/custom.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/custom.js' ), false);
 
 	if(is_front_page()){
         wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime( get_stylesheet_directory() . '/css/front-page.css' ), 'all');
@@ -79,6 +79,13 @@ function menro_styles() {
     if(is_page_template('page-proyectos.php')){
         wp_enqueue_style( 'proyectos', get_template_directory_uri() . '/css/proyectos.css', array(), filemtime( get_stylesheet_directory() . '/css/proyectos.css' ), 'all');
 	}
+
+    //if(is_page_template('page.php')){
+        wp_enqueue_style( 'single-proyectos', get_template_directory_uri() . '/css/single-proyectos.css', array(), filemtime( get_stylesheet_directory() . '/css/single-proyectos.css' ), 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/owl.carousel.min.js' ), false);
+	//}
 
 	if(is_home() && get_option('page_for_posts') && !is_front_page()):
         wp_enqueue_style( 'home', get_template_directory_uri() . '/css/home.css', array(), filemtime( get_stylesheet_directory() . '/css/home.css' ), 'all');

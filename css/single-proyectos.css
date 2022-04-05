@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.contenedor-general-sucursales {
+  overflow: hidden;
+  padding: 60px 5% 100px;
+  background: white;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .cont-item .cont-info h2 {
+  color: #3f4143;
+  font-size: 50px;
+  font-weight: bolder;
+  letter-spacing: -2px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .cont-item .cont-info p {
+  color: #3f4143;
+  font-weight: 100;
+  margin: 0;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button {
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  margin: 0;
+  margin-right: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button:hover {
+  background: transparent;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button:hover img {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button.disabled {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+  opacity: 1;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav button.disabled img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contenedor-general-sucursales .contenedor-presencia {
+  background: white;
+  overflow: hidden;
+}
+
+.contenedor-general-sucursales .contenedor-presencia .cont-tit {
+  padding: 60px 5%;
+}
+
+.contenedor-general-sucursales .contenedor-presencia .cont-tit .title {
+  color: #3f4143;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: bolder;
+  position: relative;
+  width: 100%;
+}
+
+.contenedor-general-sucursales .contenedor-presencia .cont-tit .title:before {
+  content: "Ubicación";
+  position: absolute;
+  font-weight: bold;
+  font-size: 93px;
+  width: 1000%;
+  top: -35px;
+  left: -70px;
+  color: #0000;
+  letter-spacing: -5px;
+  line-height: 1;
+  -webkit-text-fill-color: transparent;
+  stroke-width: 1px;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: #0000;
+  -webkit-text-stroke-color: #3f4143;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  opacity: 0.3;
+}
+
+.contenedor-general-sucursales .contenedor-presencia .cont-presencia img {
+  width: 100%;
+  display: block;
+}
