@@ -139,7 +139,7 @@ jQuery(document).ready(function ($) {
             $(this).attr('style', '');
         }
     });
-
+/*
     jQuery('.galeria-proyectos').owlCarousel({
         loop: false,
         margin: 0,
@@ -147,7 +147,7 @@ jQuery(document).ready(function ($) {
         nav: false,
         items: 1
     });
-
+*/
     // =====================================================
     //                    WAYPOINTS
     // =====================================================

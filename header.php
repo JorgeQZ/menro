@@ -14,6 +14,8 @@
 wp_body_open();
 
 $mainLogo = get_field('logo') ? get_theme_mod(get_field('logo')) : get_theme_mod('Blanco');
+$excerpt = get_the_excerpt();
+
 if(is_singular('proyectos')){
     $mainLogo = get_theme_mod('Color');
 }
@@ -49,6 +51,11 @@ $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
                     <div class="title_banner" data-text="<?php echo $title_text; ?>">
                         <?php echo $title_text; ?>
                     </div>
+                    <?php if($excerpt){ ?>
+                    <p class="subtitle_banner">
+                        <?php echo $excerpt; ?>
+                    </p>
+                    <?php } ?>
                 </div>
                 <!-- Thumbnail -->
 

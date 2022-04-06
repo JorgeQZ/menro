@@ -1,0 +1,173 @@
+.contenedor-general-entrada{
+    overflow: hidden;
+    background-image: url(../img/bg-contact.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 65px 5% 100px;
+
+    h2{
+        color: #3f4143;
+        font-size: 50px;
+        font-weight: bolder;
+        letter-spacing: -2px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    p{
+        color: #3f4143;
+        font-weight: 100;
+        margin: 20px 0;
+    }
+
+}
+
+
+// grid de posts
+.grid-container {
+    background-image: url(../img/home-bottom-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 150px 5% 250px;
+    overflow: hidden;
+
+    .titlee {
+        color: #3f4143;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: bolder;
+        position: relative;
+        width: 100%;
+
+        &:before {
+            content: "Blog";
+            position: absolute;
+            font-weight: bold;
+            font-size: 93px;
+            width: 1000%;
+            top: -35px;
+            left: -70px;
+            color: #0000;
+            letter-spacing: -5px;
+            line-height: 1;
+            -webkit-text-fill-color: transparent;
+            stroke-width: 1px;
+            -moz-text-fill-color: transparent;
+            -webkit-text-fill-color: #0000;
+            -webkit-text-stroke-color: #3f4143;
+            -moz-text-stroke-width: 1px;
+            -webkit-text-stroke-width: 1px;
+            opacity: 0.3;
+        }
+    }
+
+    .grid-posts {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: 90px;
+        //box-shadow: 0px 150px 50px -100px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 175px 65px -95px rgba(0, 0, 0, 0.5);
+
+
+        .item {
+            text-decoration: none;
+            margin: 20px 10px;
+            margin-bottom: 0;
+            width: calc(33% - 20px);
+            height: 280px;
+            background-image: url(../img/slider-bg.jpg);
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+
+            .title-box {
+                height: 85px;
+                padding: 10px 15px;
+                background-color: #f9f9f9;
+                position: relative;
+                transition: opacity 200ms ease;
+
+                .title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 1.2;
+                    color: #515151;
+                }
+
+                .desc {
+                    color: #adadad;
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                height: 100%;
+                max-height: 85px;
+                width: 100%;
+                bottom: 0;
+                opacity: 0;
+                padding: 20px;
+                left: 0%;
+                z-index: 10;
+                background-color: #f9f9f9;
+                color: black;
+                transition: max-height 200ms linear, left 400ms ease 500ms, width 0ms linear;
+                display: flex;
+                align-items: center;
+
+                .title {
+                    opacity: 0;
+                    font-size: 32px;
+                    font-weight: bold;
+                    line-height: 1.2;
+                    color: #515151;
+                    transition: opacity 400ms ease-in-out 350ms;
+                }
+
+                .desc {
+                    font-weight: 100;
+                    opacity: 0;
+                    font-size: 20px;
+                    color: #adadad;
+                    transition: opacity 400ms ease-in-out 450ms;
+                    line-height: 1.1;
+                }
+            }
+
+            &:hover {
+                .title-box {
+                    opacity: 0;
+                }
+
+                .overlay {
+                    max-height: 300px;
+                    opacity: 1;
+                    width: calc(100% + 20px);
+                    left: calc(-100% - 20px);
+
+                    .title {
+                        opacity: 1;
+                    }
+
+                    .desc {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:hover:not(:nth-child(3n)) {
+                .overlay {
+                    left: 100%;
+                }
+            }
+        }
+    }
+}

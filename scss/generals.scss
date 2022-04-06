@@ -42,8 +42,10 @@ img{
             background-position: center;
             background-size: cover;
             display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            //align-items: flex-end;
+            //justify-content: flex-start;
             padding: 90px;
             overflow: hidden;
 
@@ -73,6 +75,11 @@ img{
                     -webkit-text-stroke-width: 1px;
                     opacity: 0.5;
                 }
+            }
+            .subtitle_banner {
+                color: white;
+                font-weight: 100;
+                line-height: 1;
             }
         }
 

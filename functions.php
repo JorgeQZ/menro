@@ -97,11 +97,14 @@ function menro_styles()
         wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style('owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/owl.carousel.min.js'), false);
-        //wp_enqueue_style('proyecto', get_template_directory_uri() . '/css/proyecto.css', array(), '1.1', 'all');
     }
 
+    if(is_singular('post')){
+        wp_enqueue_style( 'entrada', get_template_directory_uri() . '/css/entrada.css', array(), filemtime( get_stylesheet_directory() . '/css/entrada.css' ), 'all');
+    }
 
-    wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array(), false, true);
+    wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/custom.js' ), false);
+
 }
 add_action('wp_enqueue_scripts', 'menro_styles');
 
