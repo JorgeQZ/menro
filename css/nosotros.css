@@ -534,7 +534,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 150px 0 100px;
+    padding: 160px 0 100px;
   }
   .wrapper .contenedor-principal .container .col-izq {
     width: 100%;

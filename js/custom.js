@@ -122,6 +122,7 @@ jQuery(document).ready(function ($) {
 
         $(this).toggleClass('active');
         $('.wrapper .sidebar-content').toggleClass('active');
+        $("body").toggleClass('dis');
     });
 
     //submit del contact form

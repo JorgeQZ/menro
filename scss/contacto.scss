@@ -1,7 +1,4 @@
 .wrapper {
-    header {
-        position: relative;
-    }
 
     .main-content {
         background-image: url(../img/bg-contact.jpg);
@@ -9,6 +6,7 @@
         min-height: calc(100vh - 200px);
         padding: 60px 90px;
         overflow: hidden;
+        padding-top: 160px;
 
         .title {
             color: #3f4143;
@@ -127,6 +125,7 @@
                                     border-bottom: 2px solid #5d5d5d;
                                     background-color: transparent;
                                     color: #5d5d5d;
+                                    outline: none;
                                 }
                             }
                         }
@@ -154,4 +153,32 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 767px){
+
+    .wrapper {
+        .main-content {
+            padding: 60px 35px;
+            padding-top: 160px;
+            .container {
+                flex-direction: column;
+                padding-top: 60px;
+                .col {
+                    width: 100%;
+                    margin-bottom: 80px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    form {
+                        .half-width {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

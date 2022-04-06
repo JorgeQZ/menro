@@ -529,12 +529,23 @@
 
 .wrapper .contenedor-funciona .contenedor-items .cont-item {
   width: calc(25% - 40px);
+  min-height: 230px;
   background: #f3f3f3;
   padding: 25px;
   margin: 40px 20px;
   border-bottom: 4px solid transparent;
   position: relative;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: all .3s;
   transition: all .3s;
 }

@@ -83,6 +83,9 @@ function menro_styles()
 
     if (is_page_template('page-proyectos.php')) {
         wp_enqueue_style('proyectos', get_template_directory_uri() . '/css/proyectos.css', array(), filemtime(get_stylesheet_directory() . '/css/proyectos.css'), 'all');
+        wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style('owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min.js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/owl.carousel.min.js'), false);
     }
 
     if (is_home() && get_option('page_for_posts') && !is_front_page()):

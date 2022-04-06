@@ -1,14 +1,11 @@
 @charset "UTF-8";
-.wrapper header {
-  position: relative;
-}
-
 .wrapper .main-content {
   background-image: url(../img/bg-contact.jpg);
   background-position: center bottom;
   min-height: calc(100vh - 200px);
   padding: 60px 90px;
   overflow: hidden;
+  padding-top: 160px;
 }
 
 .wrapper .main-content .title {
@@ -151,6 +148,7 @@
   border-bottom: 2px solid #5d5d5d;
   background-color: transparent;
   color: #5d5d5d;
+  outline: none;
 }
 
 .wrapper .main-content .container .col form .button-submit {
@@ -175,4 +173,28 @@
           filter: saturate(3);
   cursor: pointer;
   width: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper .main-content {
+    padding: 60px 35px;
+    padding-top: 160px;
+  }
+  .wrapper .main-content .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 60px;
+  }
+  .wrapper .main-content .container .col {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .wrapper .main-content .container .col:last-child {
+    margin-bottom: 0;
+  }
+  .wrapper .main-content .container .col form .half-width {
+    width: 100%;
+  }
 }
