@@ -3,7 +3,7 @@
     .contenedor-principal {
         background-image: url(../img/bg-contact.jpg);
         background-position: center bottom;
-        min-height: calc(100vh - 200px);
+        min-height: 100vh;
         padding: 60px 90px;
         overflow: hidden;
         padding-top: 160px;
@@ -183,7 +183,7 @@
                             position: absolute;
                             bottom: 20px;
                             right: -50px;
-                            background: red;
+                            background: #00ccff;
                             padding: 30px 15px;
                             max-width: 320px;
                             opacity: 0;
@@ -294,6 +294,20 @@
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
     .wrapper{
+        .contenedor-principal {
+            .tabs-content {
+                .tab {
+                    .column {
+                        width: 50%;
+                        .image-banner{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .contenedor-edificaciones{
             .cont-edificaciones{
                 .owl-stage{
@@ -354,6 +368,12 @@
                     }
     
                     .column {
+                        width: 100%;
+                        .image-banner{
+                            img{
+                                width: 100%;
+                            }
+                        }
                         &:first-child {
                             padding-right: 0;
                         }

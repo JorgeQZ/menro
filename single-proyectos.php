@@ -31,6 +31,7 @@
                         </p>
                     </div>
                 </div>
+            <!--
                 <div class="cont-item">
                     <div class="cont-info">
                         <h2>Sucursal y PYME Leó2n</h2>
@@ -55,6 +56,7 @@
                         </p>
                     </div>
                 </div>
+            -->
             </div>
         </div>
 
@@ -65,7 +67,10 @@
                 </div>
             </div>
             <div class="cont-presencia">
-                <img src="<?php echo get_template_directory_uri().'/img/mapa.jpg'?>" alt="">
+                <!--
+                    <img src="<?php echo get_template_directory_uri().'/img/mapa.jpg'?>" alt="">
+                -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.657017290472!2d-100.35843798468332!3d25.6495064836878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bde75bb8b127%3A0xc67c297e5ecd632f!2sMENRO%20Construcci%C3%B3n!5e0!3m2!1ses-419!2smx!4v1649282895289!5m2!1ses-419!2smx" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         
@@ -75,6 +80,11 @@
 
 <?php get_footer(); ?>
 
+<style>
+    .contenedor-general-sucursales .contenedor-sucursales .cont-sliderr .owl-nav{
+        display: none;
+    }
+</style>
 
 <script>
     $ = jQuery;
@@ -89,7 +99,7 @@
         loop: false,
         margin: 0,
         dots: false,
-        nav: true,
+        nav: false,
         items: 1,
         navText: ["<img src='<?php echo get_template_directory_uri().'/img/flecha-izq.png';?>'>", "<img src='<?php echo get_template_directory_uri().'/img/flecha-der.png';?>'>"],
     });

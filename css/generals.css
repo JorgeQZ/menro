@@ -164,7 +164,7 @@ img {
     transition: background 400ms;
   }
   .wrapper .sidebar-content .menu li a:hover {
-    background-color: #4eadd7;
+    background-color: #00ccff;
   }
 }
 
@@ -238,7 +238,7 @@ img {
     transition: background 400ms;
   }
   .wrapper .sidebar-content .menu li a:hover {
-    background-color: #4eadd7;
+    background-color: #00ccff;
   }
   .wrapper .sidebar-content.active {
     right: 0%;
@@ -272,7 +272,7 @@ img {
     width: 90%;
     height: 2px;
     margin: 4px 2px;
-    background-color: red;
+    background-color: #00ccff;
     -webkit-transition: -webkit-transform 400ms ease;
     transition: -webkit-transform 400ms ease;
     transition: transform 400ms ease;

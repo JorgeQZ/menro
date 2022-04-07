@@ -51,7 +51,7 @@ $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
                     <div class="title_banner" data-text="<?php echo $title_text; ?>">
                         <?php echo $title_text; ?>
                     </div>
-                    <?php if($excerpt){ ?>
+                    <?php if($excerpt != "" && is_singular('post')){ ?>
                     <p class="subtitle_banner">
                         <?php echo $excerpt; ?>
                     </p>

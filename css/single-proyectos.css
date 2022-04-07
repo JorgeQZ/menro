@@ -141,6 +141,10 @@
   display: block;
 }
 
+.contenedor-general-sucursales .contenedor-presencia .cont-presencia iframe {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .contenedor-general-sucursales .contenedor-sucursales .cont-slider {
     width: 100%;
