@@ -25,7 +25,7 @@
   position: relative;
 }
 
-.blog-container .grid-container .grid-posts .item {
+.blog-container .grid-container .grid-posts .post-item {
   text-decoration: none;
   margin: 10px;
   width: calc(48% - 20px);
@@ -44,14 +44,15 @@
   transition: -webkit-box-shadow 300ms linear;
   transition: box-shadow 300ms linear;
   transition: box-shadow 300ms linear, -webkit-box-shadow 300ms linear;
+  opacity: 0;
 }
 
-.blog-container .grid-container .grid-posts .item:hover {
+.blog-container .grid-container .grid-posts .post-item:hover {
   -webkit-box-shadow: 0px 0px 20px 8px lightgrey;
           box-shadow: 0px 0px 20px 8px lightgrey;
 }
 
-.blog-container .grid-container .grid-posts .item:before {
+.blog-container .grid-container .grid-posts .post-item:before {
   content: '';
   position: absolute;
   top: 30%;
@@ -64,14 +65,14 @@
           filter: blur(20px);
 }
 
-.blog-container .grid-container .grid-posts .item img {
+.blog-container .grid-container .grid-posts .post-item img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 280px;
   width: 48%;
 }
 
-.blog-container .grid-container .grid-posts .item .title-box {
+.blog-container .grid-container .grid-posts .post-item .title-box {
   width: 52%;
   height: 280px;
   padding: 10px 15px;
@@ -88,14 +89,14 @@
   justify-self: start;
 }
 
-.blog-container .grid-container .grid-posts .item .title-box .title {
+.blog-container .grid-container .grid-posts .post-item .title-box .title {
   font-size: 32px;
   font-weight: bold;
   line-height: 1.2;
   color: #515151;
 }
 
-.blog-container .grid-container .grid-posts .item .title-box .desc {
+.blog-container .grid-container .grid-posts .post-item .title-box .desc {
   color: #adadad;
   font-size: 18px;
   line-height: 1;

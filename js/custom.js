@@ -25,9 +25,9 @@ window.onload = () => {
 jQuery(document).ready(function ($) {
 
     //Proyectos tabs
-    jQuery('.item').on('click', function (e) {
+    jQuery('.option-item').on('click', function (e) {
         e.preventDefault();
-        jQuery('.item').removeClass('active');
+        jQuery('.option-item').removeClass('active');
         jQuery(this).addClass('active');
 
         jQuery('.tab').removeClass('active').css({
@@ -139,15 +139,15 @@ jQuery(document).ready(function ($) {
             $(this).attr('style', '');
         }
     });
-/*
-    jQuery('.galeria-proyectos').owlCarousel({
-        loop: false,
-        margin: 0,
-        dots: true,
-        nav: false,
-        items: 1
-    });
-*/
+    /*
+        jQuery('.galeria-proyectos').owlCarousel({
+            loop: false,
+            margin: 0,
+            dots: true,
+            nav: false,
+            items: 1
+        });
+    */
     // =====================================================
     //                    WAYPOINTS
     // =====================================================
@@ -159,7 +159,7 @@ jQuery(document).ready(function ($) {
     //         $('#sidebarContent').addClass('animate__fadeInRight');
     //     },
     // })
-    //RENDER
+    // //RENDER
     // let render_cont = $('.render-cont')[0],
     //     buttons = $(render_cont).find('.button-content'),
     //     items_posts = $('.grid-posts .item')
@@ -213,17 +213,16 @@ jQuery(document).ready(function ($) {
     // })
 
     // GENERALES
-    // let animated_elements = document.getElementsByClassName('animate__animated');
-    // console.log(animated_elements);
-    // for (let i = 0; i <= animated_elements.length; i++) {
-    //     new Waypoint({
-    //         element: animated_elements[i][0],
-    //         handler: function () {
-    //             $(animated_elements[i]).addClass('animate__fadeIn');
-    //         },
-    //         continuous: false,
-    //         offset: '20%'
-
-    //     })
-    // }
+    let animated_elements = $('.post-item');
+    for (let i = 0; i < animated_elements.length; i++) {
+        new Waypoint({
+            element: $('.post-item')[i],
+            handler: function () {
+                $('.post-item').eq(i).addClass('animate__fadeInRight');
+            },
+            offset: '75%',
+            duration: 3000,
+            easing: 'easeInQuad',
+        })
+    }
 });
