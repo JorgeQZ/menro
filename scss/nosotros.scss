@@ -55,8 +55,9 @@
             .col-izq {
                 width: 49%;
                 background: #369bc5;
+                max-width: 585px;
                 .info{
-                    padding: 90px 65px;
+                    padding: 110px 65px;
                     h2{
                         color: white;
                         font-size: 28px;
@@ -68,6 +69,7 @@
                         font-weight: 100;
                         margin: 0;
                         margin-bottom: 20px;
+                        font-size: 18px;
                         span{
                             font-weight: bold;
                         }
@@ -98,6 +100,7 @@
                 position: relative;
                 display: flex;
                 overflow: hidden;
+                min-height: 250px;
                 .cont-tit{
                     position: absolute;
                     padding: 60px 30px;

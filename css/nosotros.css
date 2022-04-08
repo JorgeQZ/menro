@@ -67,10 +67,11 @@
 .wrapper .wrapper-sec .contenedor-secundario .col-izq {
   width: 49%;
   background: #369bc5;
+  max-width: 585px;
 }
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq .info {
-  padding: 90px 65px;
+  padding: 110px 65px;
 }
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq .info h2 {
@@ -85,6 +86,7 @@
   font-weight: 100;
   margin: 0;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq .info p span {
@@ -120,6 +122,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  min-height: 250px;
 }
 
 .wrapper .wrapper-sec .contenedor-proyectos .contenedor-proyecto .cont-tit {

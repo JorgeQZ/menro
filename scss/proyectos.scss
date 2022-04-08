@@ -302,6 +302,7 @@
                         .image-banner{
                             img{
                                 width: 100%;
+                                height: auto;
                             }
                         }
                     }
@@ -359,9 +360,7 @@
     
             .tabs-content {
                 .tab {
-                    display: none;
-                    align-items: stretch;
-                    opacity: 0;
+                    flex-direction: column;
     
                     &.active {
                         display: flex;
@@ -372,6 +371,7 @@
                         .image-banner{
                             img{
                                 width: 100%;
+                                height: auto;
                             }
                         }
                         &:first-child {

@@ -201,3 +201,22 @@ get_header();
 
 
 <?php get_footer(); ?>
+
+<style>
+    .wrapper .wrapper-sec .contenedor-secundario .col-izq .info{
+        opacity: 0;
+    }
+</style>
+
+<script>
+    $ = jQuery;
+
+    new Waypoint({
+         element: $('.info')[0],
+         handler: function () {
+             $('.info').addClass('animate__fadeInRight');
+         },
+     });
+
+
+</script>
