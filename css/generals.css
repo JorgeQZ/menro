@@ -21,6 +21,10 @@ img {
   display: block;
 }
 
+.animate__animated {
+  opacity: 0;
+}
+
 @media screen and (min-width: 1024px) {
   .wrapper {
     position: relative;
@@ -173,6 +177,55 @@ img {
     position: relative;
     margin: 0;
   }
+  .wrapper .thumbnail_banner {
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 40px;
+    overflow: hidden;
+  }
+  .wrapper .thumbnail_banner .title_banner {
+    color: white;
+    font-weight: 800;
+    font-size: 80px;
+    position: relative;
+  }
+  .wrapper .thumbnail_banner .title_banner:before {
+    content: attr(data-text);
+    position: absolute;
+    font-weight: bold;
+    font-size: 100px;
+    width: 1000%;
+    top: -5px;
+    left: -60px;
+    color: #0000;
+    letter-spacing: -5px;
+    line-height: 1;
+    -webkit-text-fill-color: transparent;
+    stroke-width: 1px;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke-color: white;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1px;
+    opacity: 0.5;
+  }
+  .wrapper .thumbnail_banner .subtitle_banner {
+    color: white;
+    font-weight: 100;
+    line-height: 1;
+  }
   .wrapper .clip {
     display: none;
   }
@@ -192,6 +245,7 @@ img {
             align-items: center;
     z-index: 999;
     right: -100%;
+    top: 0;
     -webkit-transition: all .3s;
     transition: all .3s;
   }

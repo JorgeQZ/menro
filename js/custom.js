@@ -213,16 +213,14 @@ jQuery(document).ready(function ($) {
     // })
 
     // GENERALES
-    let animated_elements = $('.post-item');
+    let animated_elements = $('.animate__animated');
     for (let i = 0; i < animated_elements.length; i++) {
         new Waypoint({
-            element: $('.post-item')[i],
+            element: $('.animate__animated')[i],
             handler: function () {
-                $('.post-item').eq(i).addClass('animate__fadeInRight');
+                $('.animate__animated').eq(i).addClass('animate__fadeInUp');
             },
             offset: '75%',
-            duration: 3000,
-            easing: 'easeInQuad',
         })
     }
 });

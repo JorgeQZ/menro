@@ -7,6 +7,18 @@ get_header();
 
 ?>
 
+<style>
+    @media screen and (min-width: 1024px) {
+        .clip #sidebar{
+            display: none;
+        }
+        .wrapper .sidebar-content:not(.inner) {
+            background: #191919;
+            z-index: 9999;
+        }
+    }
+</style>
+
 <div class="render-cont">
     <div class="image-cont">
         <img src="<?php echo get_template_directory_uri().'/img/render.png'?>" alt="">

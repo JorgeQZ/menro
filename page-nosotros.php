@@ -11,7 +11,7 @@ get_header();
             <img src="<?php echo get_template_directory_uri().'/img/nosotros1.jpg'?>" alt="">
         </div>
         <div class="col-der">
-            <div class="info">
+            <div class="info animate__animated">
                 <h2>
                     Obras que transforman
                 </h2>
@@ -29,7 +29,7 @@ get_header();
 <div class="wrapper-sec">
     <div class="contenedor-secundario">
         <div class="col-izq">
-            <div class="info">
+            <div class="info animate__animated">
                 <h2>
                     Construimos proyectos de excelencia.
                 </h2>
@@ -103,7 +103,7 @@ get_header();
     </div>
 
     <div class="contenedor-metodologia">
-        <div class="title">
+        <div class="title animate__animated">
             Nuestra Metodología
         </div>
         <div class="cont-metodologia">
@@ -111,7 +111,7 @@ get_header();
 
                 <div class="cont-rama">
                     <img src="<?php echo get_template_directory_uri().'/img/rama-meto.png'?>" alt="">
-                    <div class="cont-info">
+                    <div class="cont-info animate__animated">
                         <img class="icon" src="<?php echo get_template_directory_uri().'/img/meto-icon1.png'?>" alt="">
                         <p>Planeación</p>
                     </div>
@@ -119,7 +119,7 @@ get_header();
 
                 <div class="cont-rama rama2">
                     <img src="<?php echo get_template_directory_uri().'/img/rama-meto.png'?>" alt="">
-                    <div class="cont-info">
+                    <div class="cont-info animate__animated">
                         <img class="icon" src="<?php echo get_template_directory_uri().'/img/meto-icon2.png'?>" alt="">
                         <p>Diseño</p>
                     </div>
@@ -127,7 +127,7 @@ get_header();
 
                 <div class="cont-rama rama3">
                     <img src="<?php echo get_template_directory_uri().'/img/rama-meto.png'?>" alt="">
-                    <div class="cont-info">
+                    <div class="cont-info animate__animated">
                         <img class="icon" src="<?php echo get_template_directory_uri().'/img/meto-icon3.png'?>" alt="">
                         <p>Desarrollo</p>
                     </div>
@@ -135,7 +135,7 @@ get_header();
 
                 <div class="cont-rama rama4">
                     <img src="<?php echo get_template_directory_uri().'/img/rama-meto.png'?>" alt="">
-                    <div class="cont-info">
+                    <div class="cont-info animate__animated">
                         <img class="icon" src="<?php echo get_template_directory_uri().'/img/meto-icon4.png'?>" alt="">
                         <p>Construcción</p>
                     </div>
@@ -143,7 +143,7 @@ get_header();
 
                 <div class="cont-rama rama5">
                     <img src="<?php echo get_template_directory_uri().'/img/rama-meto.png'?>" alt="">
-                    <div class="cont-info">
+                    <div class="cont-info animate__animated">
                         <img class="icon" src="<?php echo get_template_directory_uri().'/img/meto-icon5.png'?>" alt="">
                         <p>Estructuración y entregas</p>
                     </div>
@@ -154,15 +154,15 @@ get_header();
     </div>
 
     <div class="contenedor-diferenciador">
-        <div class="title">
+        <div class="title animate__animated">
             Nuestro Diferenciador
         </div>
-        <p class="subtitle">
+        <p class="subtitle animate__animated">
             Brindamos un trato y servicio de excelencia, dinámico, honesto y eficiente. Trabajamos para desarrollar proyectos a la altura de las expectativas y necesidades 
             de nuestros clientes, respetando la comunidad y su entorno.
         </p>
         <div class="cont-diferenciador">
-            <div class="cont-item">
+            <div class="cont-item animate__animated">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-mision.png'?>" alt="">
                 <div class="cont-info">
                     <h2>Misión</h2>
@@ -171,7 +171,7 @@ get_header();
                     </p>
                 </div>
             </div>
-            <div class="cont-item">
+            <div class="cont-item animate__animated">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-vision.png'?>" alt="">
                 <div class="cont-info">
                     <h2>Visión</h2>
@@ -185,7 +185,7 @@ get_header();
 
     <div class="contenedor-presencia">
         <div class="cont-tit">
-            <div class="title">
+            <div class="title animate__animated">
                 Nuestra Presencia
             </div>
         </div>
@@ -201,22 +201,3 @@ get_header();
 
 
 <?php get_footer(); ?>
-
-<style>
-    .wrapper .wrapper-sec .contenedor-secundario .col-izq .info{
-        opacity: 0;
-    }
-</style>
-
-<script>
-    $ = jQuery;
-
-    new Waypoint({
-         element: $('.info')[0],
-         handler: function () {
-             $('.info').addClass('animate__fadeInRight');
-         },
-     });
-
-
-</script>

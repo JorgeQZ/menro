@@ -8,7 +8,7 @@ get_header();
 
 <div class="contenedor-principal">
 
-    <div class="title" data-text=" <?php the_title();?>"><?php the_title();?></div>
+    <div class="title animate__animated" data-text=" <?php the_title();?>"><?php the_title();?></div>
 
     <!-- Opciones de tabs -->
     <?php
@@ -22,7 +22,7 @@ $args_cat = array(
 $cats = get_categories($args_cat);
 if ($cats):
     $first = true;
-    echo '<div class="tabs-options">';
+    echo '<div class="tabs-options animate__animated">';
     foreach ($cats as $item):
 
     ?>
@@ -40,7 +40,7 @@ endif;
     <!-- Opciones de tabs -->
 
     <!-- Contenido de Tabs -->
-    <div class="tabs-content">
+    <div class="tabs-content animate__animated">
         <?php
 if ($cats):
     $first = true;
@@ -103,7 +103,7 @@ endif;
 
 <div class="wrapper-sec">
     <div class="contenedor-edificaciones">
-        <div class="title">
+        <div class="title animate__animated">
             Edificaciones
         </div>
         <div class="cont-edificaciones owl-carousel owl-theme">

@@ -1,8 +1,8 @@
 .contenedor-general-entrada{
     overflow: hidden;
-    background-image: url(../img/bg-contact.jpg);
-    background-position: center bottom;
+    background-image: url(../img/home-top-bg.jpg);
     background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
     padding: 65px 5% 100px;
 
@@ -166,6 +166,44 @@
             &:hover:not(:nth-child(3n)) {
                 .overlay {
                     left: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .grid-container {
+        .grid-posts {
+            .item {
+                width: calc(50% - 20px);
+                &:hover{
+                    .overlay{
+                        display: none;
+                    }
+                    .title-box{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .grid-container {
+        .grid-posts {
+            width: 100%;
+            .item {
+                width: calc(100% - 20px);
+                &:hover{
+                    .overlay{
+                        display: none;
+                    }
+                    .title-box{
+                        opacity: 1;
+                    }
                 }
             }
         }

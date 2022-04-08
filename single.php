@@ -16,11 +16,11 @@ get_header();
     </div>
 
     <div class="grid-container">
-        <div class="titlee">
+        <div class="titlee animate__animated">
             Blog
         </div>
         <div class="grid-posts">
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
@@ -32,7 +32,7 @@ get_header();
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
@@ -44,7 +44,7 @@ get_header();
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
@@ -56,7 +56,7 @@ get_header();
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
@@ -68,7 +68,7 @@ get_header();
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
@@ -80,7 +80,7 @@ get_header();
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
-            <a class="item" rel="nofollow noopener" href="#" target="_blank">
+            <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
                         <div class="title">titulo</div>
