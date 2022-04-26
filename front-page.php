@@ -53,9 +53,7 @@ get_header();
 
 <div class="middle-logos-cont animate__animated">
     <div class="container">
-        <div class="title">
-            Construimos con
-        </div>
+        <a href="nosotros/" target="_blank" rel="noopener noreferrer">Construimos con</a>
         <div class="logos">
             <img src="<?php echo get_template_directory_uri().'/img/procore.png'?>" alt="">
             <img src="<?php echo get_template_directory_uri().'/img/PMI-01.jpg'?>" alt="">

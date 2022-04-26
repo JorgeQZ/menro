@@ -7,28 +7,19 @@
     <div class="contenedor-general-sucursales">
 
         <div class="contenedor-sucursales">
+            <?php if(have_rows('galeria')): ?>
             <div class="cont-slider owl-carousel owl-theme">
-                <div class="cont-item">
-                    <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                </div>
-                <div class="cont-item">
-                    <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                </div>
-                <div class="cont-item">
-                    <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                </div>
+                <?php while(have_rows('galeria')): the_row(); ?>
+                    <div class="cont-item" style="background-image: url('<?php the_sub_field('imagen'); ?>');">
+                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
+                    </div>
+                <?php endwhile; ?>
             </div>
+            <?php endif; ?>
             <div class="cont-sliderr">
                 <div class="cont-item">
                     <div class="cont-info animate__animated">
-                        <h2>Sucursal y PYME León</h2>
-                        <p>
-                            Para seguir fortaleciendo la presencia de BanBajío en la región, se integra una obra con el objetivo de atender y estar más cerca de los clientes. <br>
-                            <strong>Ubicación:</strong> León, Guanajuato <br>
-                            <strong>Tipo de obra:</strong> Banca <br>
-                            <strong>Año:</strong> 2018 <br>
-                            <strong>Extensión:</strong> 290M²
-                        </p>
+                        <?php the_field('informacion'); ?>
                     </div>
                 </div>
             </div>
@@ -41,10 +32,7 @@
                 </div>
             </div>
             <div class="cont-presencia">
-                <!--
-                    <img src="<?php echo get_template_directory_uri().'/img/mapa.jpg'?>" alt="">
-                -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.657017290472!2d-100.35843798468332!3d25.6495064836878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bde75bb8b127%3A0xc67c297e5ecd632f!2sMENRO%20Construcci%C3%B3n!5e0!3m2!1ses-419!2smx!4v1649282895289!5m2!1ses-419!2smx" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1I6Dp_c6u1bfGy2HIphPyrRGEfu5SUiwJ&ehbc=2E312F" width="640" height="480"></iframe>
             </div>
         </div>
         

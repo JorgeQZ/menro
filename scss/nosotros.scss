@@ -54,10 +54,12 @@
     
             .col-izq {
                 width: 49%;
-                background: #369bc5;
-                max-width: 585px;
+                //background: #369bc5;
+                background: #35b1e5;
                 .info{
                     padding: 110px 65px;
+                    max-width: 585px;
+
                     h2{
                         color: white;
                         font-size: 28px;
@@ -189,34 +191,10 @@
         .contenedor-metodologia{
             background: white;
             overflow: hidden;
-            padding: 60px 5%;
+            padding: 80px 5% 100px;
             .title {
-                color: #3f4143;
-                font-size: 50px;
-                line-height: 1;
-                font-weight: bolder;
-                position: relative;
-                width: 100%;
-    
                 &:before {
                     content: "Nuestra Metodología";
-                    position: absolute;
-                    font-weight: bold;
-                    font-size: 93px;
-                    width: 1000%;
-                    top: -35px;
-                    left: -70px;
-                    color: #0000;
-                    letter-spacing: -5px;
-                    line-height: 1;
-                    -webkit-text-fill-color: transparent;
-                    stroke-width: 1px;
-                    -moz-text-fill-color: transparent;
-                    -webkit-text-fill-color: #0000;
-                    -webkit-text-stroke-color: #3f4143;
-                    -moz-text-stroke-width: 1px;
-                    -webkit-text-stroke-width: 1px;
-                    opacity: 0.3;
                 }
             }
             .cont-metodologia{
@@ -317,34 +295,10 @@
         .contenedor-diferenciador{
             background: white;
             overflow: hidden;
-            padding: 60px 5%;
+            padding: 80px 5% 100px;
             .title {
-                color: #3f4143;
-                font-size: 50px;
-                line-height: 1;
-                font-weight: bolder;
-                position: relative;
-                width: 100%;
-    
                 &:before {
                     content: "Nuestro Diferenciador";
-                    position: absolute;
-                    font-weight: bold;
-                    font-size: 93px;
-                    width: 1000%;
-                    top: -35px;
-                    left: -70px;
-                    color: #0000;
-                    letter-spacing: -5px;
-                    line-height: 1;
-                    -webkit-text-fill-color: transparent;
-                    stroke-width: 1px;
-                    -moz-text-fill-color: transparent;
-                    -webkit-text-fill-color: #0000;
-                    -webkit-text-stroke-color: #3f4143;
-                    -moz-text-stroke-width: 1px;
-                    -webkit-text-stroke-width: 1px;
-                    opacity: 0.3;
                 }
             }
             .subtitle {
@@ -404,34 +358,10 @@
             background: white;
             overflow: hidden;
             .cont-tit{
-                padding: 60px 5%;
+                padding: 80px 5% 60px;
                 .title {
-                    color: #3f4143;
-                    font-size: 50px;
-                    line-height: 1;
-                    font-weight: bolder;
-                    position: relative;
-                    width: 100%;
-        
                     &:before {
                         content: "Nuestra Presencia";
-                        position: absolute;
-                        font-weight: bold;
-                        font-size: 93px;
-                        width: 1000%;
-                        top: -35px;
-                        left: -70px;
-                        color: #0000;
-                        letter-spacing: -5px;
-                        line-height: 1;
-                        -webkit-text-fill-color: transparent;
-                        stroke-width: 1px;
-                        -moz-text-fill-color: transparent;
-                        -webkit-text-fill-color: #0000;
-                        -webkit-text-stroke-color: #3f4143;
-                        -moz-text-stroke-width: 1px;
-                        -webkit-text-stroke-width: 1px;
-                        opacity: 0.3;
                     }
                 }
             }

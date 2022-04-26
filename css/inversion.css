@@ -2,7 +2,7 @@
 .wrapper .contenedor-principal {
   height: 100vh;
   width: 100%;
-  background-image: url(../img/bg-inversion.jpg);
+  background-image: url(../img/bg-inversion3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,34 +19,8 @@
   overflow: hidden;
 }
 
-.wrapper .contenedor-principal .cont-info .title {
-  color: white;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
-}
-
 .wrapper .contenedor-principal .cont-info .title:before {
   content: "Inversión en Bienes Raíces";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: white;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: white;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .wrapper .contenedor-principal .cont-info .subtitle {
@@ -201,24 +175,18 @@
 
 .wrapper .contenedor-activos {
   overflow: hidden;
-  padding: 60px 5% 100px;
-  background: white;
-}
-
-.wrapper .contenedor-activos .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
+  padding: 80px 5% 100px;
+  background-image: url(../img/bg-activos.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .wrapper .contenedor-activos .contenedor-grafica {
   width: 73%;
   margin: 0 auto;
   padding: 50px 0;
-  margin-top: 100px;
+  margin-top: 120px;
   position: relative;
 }
 
@@ -233,6 +201,7 @@
   border-radius: 30px;
   color: white;
   padding: 20px 20px 20px 35px;
+  height: 58px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,7 +238,7 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background: #009fe3;
+  background: #35b1e5;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,6 +251,27 @@
           align-items: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) -2.4px 2.4px 3.2px;
           box-shadow: rgba(0, 0, 0, 0.35) -2.4px 2.4px 3.2px;
+}
+
+.wrapper .contenedor-activos .contenedor-grafica .dec .sha {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: calc(100% - 100px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+  background-image: url(../img/sombra-grafica.png);
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.wrapper .contenedor-activos .contenedor-grafica .dec.dec0 {
+  right: 80%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .wrapper .contenedor-activos .contenedor-grafica .dec.dec1 {
@@ -334,7 +324,8 @@
 
 .wrapper .contenedor-activos .cont-contactanos a {
   padding: 7px 22px;
-  background: #009fe3;
+  background: #35b1e5;
+  border: 2px solid #35b1e5;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -343,7 +334,8 @@
 }
 
 .wrapper .contenedor-activos .cont-contactanos a:hover {
-  opacity: .6;
+  color: #35b1e5;
+  background: transparent;
 }
 
 .wrapper .contenedor-sucursales {
@@ -352,7 +344,7 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  padding: 60px 5%;
+  padding: 80px 5% 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,7 +371,12 @@
 }
 
 .wrapper .contenedor-sucursales .cont-tabs ul li.active {
-  font-size: 30px;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.wrapper .contenedor-sucursales .cont-tabs ul li.active:hover {
+  opacity: 1;
 }
 
 .wrapper .contenedor-sucursales .cont-tabs ul li:hover {
@@ -391,13 +388,29 @@
   padding: 0 35px;
 }
 
-.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal {
-  display: none;
+.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider img {
+.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-img img {
   width: 100%;
   height: auto;
+  visibility: hidden;
+}
+
+.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-info {
+  margin-top: 10px;
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-info p {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  font-size: 18px;
 }
 
 .wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .owl-nav {
@@ -461,57 +474,14 @@
           transform: scale(1);
 }
 
-.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-info {
-  margin-top: 10px;
-  -webkit-column-count: 2;
-          column-count: 2;
-}
-
-.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-info p {
-  color: white;
-  font-weight: 100;
-  margin: 0;
-  font-size: 18px;
-}
-
-.wrapper .contenedor-sucursales .cont-contenido .cont-sucursal.active {
-  display: block;
-}
-
 .wrapper .contenedor-funciona {
   overflow: hidden;
-  padding: 60px 5%;
+  padding: 80px 5% 100px;
   background: white;
-}
-
-.wrapper .contenedor-funciona .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
 }
 
 .wrapper .contenedor-funciona .title:before {
   content: "¿Cómo Funciona?";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .wrapper .contenedor-funciona .contenedor-items {
@@ -582,38 +552,12 @@
 
 .wrapper .contenedor-fondeo {
   overflow: hidden;
-  padding: 60px 5%;
+  padding: 80px 5% 100px;
   background: white;
-}
-
-.wrapper .contenedor-fondeo .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
 }
 
 .wrapper .contenedor-fondeo .title:before {
   content: "Fondeo Colectivo \A en Bienes Raíces";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
   white-space: pre;
 }
 
@@ -664,16 +608,7 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  padding: 55px 5% 85px;
-}
-
-.wrapper .contenedor-inversionistas .title {
-  color: white;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
+  padding: 80px 5% 100px;
 }
 
 .wrapper .contenedor-inversionistas .contenedor-items {
@@ -691,10 +626,10 @@
   width: 22%;
   background: #ffffff;
   padding: 30px;
-  border-bottom: 4px solid #009fe3;
+  border-bottom: 4px solid #35b1e5;
   -webkit-transition: all .3s;
   transition: all .3s;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .wrapper .contenedor-inversionistas .contenedor-items .cont-item p {
@@ -706,7 +641,7 @@
 }
 
 .wrapper .contenedor-inversionistas .contenedor-items .cont-item p span {
-  color: #009fe3;
+  color: #35b1e5;
   font-weight: bolder;
   font-size: 46px;
   -webkit-transition: all .3s;

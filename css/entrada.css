@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: 65px 5% 100px;
+  padding: 80px 5% 100px;
 }
 
 .contenedor-general-entrada h2 {
@@ -23,41 +23,16 @@
 }
 
 .grid-container {
-  background-image: url(../img/home-bottom-bg.jpg);
-  background-position: center;
+  background-image: url(../img/bg-activos.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 150px 5% 250px;
   overflow: hidden;
 }
 
-.grid-container .titlee {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
-}
-
-.grid-container .titlee:before {
+.grid-container .title:before {
   content: "Blog";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .grid-container .grid-posts {
@@ -105,7 +80,7 @@
   transition: opacity 200ms ease;
 }
 
-.grid-container .grid-posts .item .title-box .title {
+.grid-container .grid-posts .item .title-box .titlee {
   font-size: 24px;
   font-weight: bold;
   line-height: 1.2;
@@ -140,7 +115,7 @@
           align-items: center;
 }
 
-.grid-container .grid-posts .item .overlay .title {
+.grid-container .grid-posts .item .overlay .titlee {
   opacity: 0;
   font-size: 32px;
   font-weight: bold;
@@ -171,7 +146,7 @@
   left: calc(-100% - 20px);
 }
 
-.grid-container .grid-posts .item:hover .overlay .title {
+.grid-container .grid-posts .item:hover .overlay .titlee {
   opacity: 1;
 }
 

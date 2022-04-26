@@ -4,37 +4,13 @@
         background-image: url(../img/bg-contact.jpg);
         background-position: center bottom;
         min-height: 100vh;
-        padding: 60px 90px;
+        padding: 80px 90px 100px;
         overflow: hidden;
         padding-top: 160px;
 
         .title {
-            color: #3f4143;
-            font-size: 50px;
-            line-height: 1;
-            font-weight: bolder;
-            position: relative;
-            width: 100%;
-
             &:before {
                 content: attr(data-text);
-                position: absolute;
-                font-weight: bold;
-                font-size: 93px;
-                width: 1000%;
-                top: -35px;
-                left: -70px;
-                color: #0000;
-                letter-spacing: -5px;
-                line-height: 1;
-                -webkit-text-fill-color: transparent;
-                stroke-width: 1px;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: #0000;
-                -webkit-text-stroke-color: #3f4143;
-                -moz-text-stroke-width: 1px;
-                -webkit-text-stroke-width: 1px;
-                opacity: 0.3;
             }
         }
 
@@ -42,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 40px 0;
+            margin: 80px 0 40px;
 
             .item {
                 padding: 5px 10px;
@@ -50,9 +26,9 @@
                 color: #3f4143;
                 font-weight: 100;
                 cursor: pointer;
-                transition: all 300ms linear;
-                filter: saturate(3);
+                transition: all .3s;
                 text-transform: uppercase;
+                position: relative;
 
                 &.active {
                     font-weight: bolder;
@@ -76,7 +52,7 @@
 
                 &:hover {
                     color: white;
-                    background-color: #3fb0e4;
+                    background-color: #35b1e5;
                 }
             }
         }
@@ -86,6 +62,9 @@
                 display: none;
                 align-items: stretch;
                 opacity: 0;
+                justify-content: space-between;
+                width: 83%;
+                margin: 0 auto;
 
                 &.active {
                     display: flex;
@@ -93,7 +72,14 @@
 
                 .column {
                     &:first-child {
-                        padding-right: 30px;
+                        width: 46%;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        img{
+                            width: 100%;
+                            visibility: hidden;
+                        }
 
                         .image-banner {
                             position: relative;
@@ -111,8 +97,8 @@
                     }
 
                     &:last-child {
+                        width: 47%;
                         padding: 80px 0;
-                        padding-left: 30px;
                     }
 
                     .title_project {
@@ -148,6 +134,12 @@
                                 font-weight: 100;
                                 font-size: 20px;
                                 text-transform: uppercase;
+                                transition: all .3s;
+                            }
+                            &:hover{
+                                a{
+                                    color: #35b1e5;
+                                }
                             }
                         }
                     }
@@ -155,99 +147,123 @@
             }
         }
     }
-    .contenedor-edificaciones{
-        background-image: url(../img/bg-inversionistas.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden;
-        padding: 55px 5% 85px;
-        .title {
-            color: white;
-            font-size: 50px;
-            line-height: 1;
-            font-weight: bolder;
-            position: relative;
-            width: 100%;
-            text-align: center;
-        }
-        .cont-edificaciones{
-            margin-top: 50px;
-            .owl-stage{
-                .owl-item{
-                    transform: scale(.75);
-                    transition: all .3s;
-                    .cont-item{
-                        position: relative;
-                        .cont-info{
-                            position: absolute;
-                            bottom: 20px;
-                            right: -50px;
-                            background: #00ccff;
-                            padding: 30px 15px;
-                            max-width: 320px;
-                            opacity: 0;
-                            box-shadow: rgba(0, 0, 0, .7) 0px 4px 12px;
-                            transition: all .3s;
-                            p{
-                                color: white;
-                                font-weight: 100;
-                                margin: 0;
-                                font-size: 14px;
-                                position: relative;
-                                &::after{
-                                    content: "";
-                                    position: absolute;
-                                    bottom: -6px;
-                                    left: 0;
-                                    height: 3px;
-                                    width: 50px;
-                                    background: white;
+    .contenedor-galerias{
+        .contenedor-edificaciones{
+            background-image: url(../img/bg-inversionistas.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden;
+            padding: 80px 5% 100px;
+            .titles{
+                .title {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    display: none;
+                    img{
+                        width: auto;
+                        height: 45px;
+                        margin-right: 10px;
+                    }
+                    &:before {
+                        content: attr(data-text);
+                        width: 100%;
+                    }
+                    &.active{
+                        display: flex !important;
+                    }
+                }
+            }
+            .cont-edificaciones{
+                margin-top: 50px;
+                .owl-stage{
+                    .owl-item{
+                        transform: scale(.75);
+                        transition: all .3s;
+                        .cont-item{
+                            position: relative;
+                            .cont-img{
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                img{
+                                    width: 100%;
+                                    height: auto;
+                                    visibility: hidden;
+                                }
+                            }
+                            .cont-info{
+                                position: absolute;
+                                bottom: 20px;
+                                right: -50px;
+                                background: #35b1e5;
+                                padding: 30px 15px;
+                                max-width: 320px;
+                                opacity: 0;
+                                box-shadow: rgba(0, 0, 0, .7) 0px 4px 12px;
+                                transition: all .3s;
+                                p{
+                                    color: white;
+                                    font-weight: 100;
+                                    margin: 0;
+                                    font-size: 14px;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -6px;
+                                        left: 0;
+                                        height: 3px;
+                                        width: 50px;
+                                        background: white;
+                                    }
+                                }
+                            }
+                        }
+                        &.active{
+                            transform: scale(1);
+                            .cont-item{
+                                .cont-info{
+                                    opacity: 1;
                                 }
                             }
                         }
                     }
-                    &.active{
-                        transform: scale(1);
-                        .cont-item{
-                            .cont-info{
-                                opacity: 1;
-                            }
-                        }
-                    }
                 }
-            }
-            .owl-nav {
-                margin: 0;
-                button {
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 100%;
+                .owl-nav {
                     margin: 0;
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    top: calc(50% - 10px);
-                    transform: translateY(-50%);
-                    transition: all 0.3s;
-                    &.owl-prev {
-                        //left: -35px;
-                        left: 185px;
-                    }
-                    &.owl-next {
-                        //right: -35px;
-                        right: 185px;
-                    }
-                    img {
-                        width: 100%;
-                        height: auto;
+                    button {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 100%;
+                        margin: 0;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: calc(50% - 10px);
+                        transform: translateY(-50%);
                         transition: all 0.3s;
-                    }
-                    &:hover {
-                        background: transparent;
+                        &.owl-prev {
+                            //left: -35px;
+                            left: 185px;
+                        }
+                        &.owl-next {
+                            //right: -35px;
+                            right: 185px;
+                        }
                         img {
-                            transform: scale(0.8);
+                            width: 100%;
+                            height: auto;
+                            transition: all 0.3s;
+                        }
+                        &:hover {
+                            background: transparent;
+                            img {
+                                transform: scale(0.8);
+                            }
                         }
                     }
                 }
@@ -297,8 +313,8 @@
         .contenedor-principal {
             .tabs-content {
                 .tab {
+                    width: 100%;
                     .column {
-                        width: 50%;
                         .image-banner{
                             img{
                                 width: 100%;
@@ -361,13 +377,14 @@
             .tabs-content {
                 .tab {
                     flex-direction: column;
+                    width: 100%;
     
                     &.active {
                         display: flex;
                     }
     
                     .column {
-                        width: 100%;
+                        width: 100% !important;
                         .image-banner{
                             img{
                                 width: 100%;

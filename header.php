@@ -26,7 +26,9 @@ $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
 
         <header>
             <div class="site-logo">
-                <img src="<?php echo $mainLogo ?>" alt="<?php echo get_bloginfo() . ' Logo '; ?>" class="header_logo">
+                <a href="<?php echo get_home_url(); ?>">
+                    <img src="<?php echo $mainLogo ?>" alt="<?php echo get_bloginfo() . ' Logo '; ?>" class="header_logo">
+                </a>
             </div>
         </header><!-- Header -->
 

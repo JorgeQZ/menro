@@ -16,79 +16,79 @@ get_header();
     </div>
 
     <div class="grid-container">
-        <div class="titlee animate__animated">
+        <div class="title animate__animated">
             Blog
         </div>
         <div class="grid-posts">
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>
             <a class="item animate__animated" rel="nofollow noopener" href="#" target="_blank">
                 <div class="overlay">
                     <div>
-                        <div class="title">titulo</div>
+                        <div class="titlee">titulo</div>
                         <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                     </div>
                 </div>
                 <div class="title-box">
-                    <div class="title">titulo</div>
+                    <div class="titlee">titulo</div>
                     <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo laboriosam modi </div>
                 </div>
             </a>

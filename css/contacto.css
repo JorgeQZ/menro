@@ -98,6 +98,12 @@
   width: 100%;
 }
 
+.wrapper .main-content .container .col .item .col a {
+  font-size: 14px;
+  color: #5d5d5d;
+  text-decoration: none;
+}
+
 .wrapper .main-content .container .col form .half-width {
   width: calc(45% - 10px);
   display: inline-block;
@@ -169,10 +175,16 @@
   color: white;
   font-size: 18px;
   background-color: #35b1e5;
-  -webkit-filter: saturate(3);
-          filter: saturate(3);
+  border: 2px solid #35b1e5;
   cursor: pointer;
   width: 120px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.wrapper .main-content .container .col form .button-submit input[type=submit]:hover {
+  background: transparent;
+  color: #35b1e5;
 }
 
 @media screen and (max-width: 767px) {

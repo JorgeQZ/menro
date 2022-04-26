@@ -12,7 +12,7 @@
             margin: 10px 3px;
             padding: 3px;
             border-radius: 3px;
-            transition: background 400ms;
+            transition: all .3s;
             filter: saturate(3);
 
             img {
@@ -20,10 +20,12 @@
                 max-width: 20px;
                 filter: invert(0);
             }
-
+            
             &:hover {
-                background-color: #3fb0e4;
+                //background-color: #3fb0e4;
+                opacity: .7;
             }
+            
         }
     }
 }
@@ -48,10 +50,11 @@ footer {
                 width: 100%;
                 max-width: 20px;
             }
-
+            /*
             &:hover {
                 background-color: #4eadd7;
             }
+            */
         }
     }
 }

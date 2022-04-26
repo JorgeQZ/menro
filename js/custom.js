@@ -38,8 +38,16 @@ jQuery(document).ready(function ($) {
         jQuery('#' + tab_id).addClass('active').animate({
             'opacity': '1'
         }, 600);
+/*
+        var aux =  jQuery(this).index();
+        $('.wrapper .contenedor-edificaciones.active').hide();
+        $('.wrapper .contenedor-edificaciones.active').removeClass("active");
+        $('.wrapper .contenedor-edificaciones').eq(aux).fadeIn(300);
+        $('.wrapper .contenedor-edificaciones').eq(aux).addClass("active");
+*/
+    });
 
-    })
+
     // Botones del render
     let currentButton;
     $('.button-content').on('click', function (e) {

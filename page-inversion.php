@@ -8,7 +8,7 @@ get_header();
 
 <div class="contenedor-principal">
     <div class="cont-info animate__animated">
-        <div class="title">
+        <div class="title bl">
             Inversión en Bienes Raíces <br>
             a Tu Alcance
         </div>
@@ -16,7 +16,7 @@ get_header();
             En MENRO Inversiones inviertes en bienes raíces en todo México, 
             de una forma segura y con retornos de los más atractivos del mercado.
         </p>
-        <a href="#" target="_blank">Conoce más</a>
+        <a href="nosotros/" target="_blank">Conoce más</a>
     </div>
 </div>
 
@@ -30,6 +30,7 @@ get_header();
         <div class="contenedor-grafica">
             <div class="dec dec1">
                 <div class="index">0</div>
+                <div class="sha"></div>
             </div>
             <div class="dec dec2"></div>
             <div class="dec dec3"></div>
@@ -67,13 +68,13 @@ get_header();
             </div>
             <div class="cont-item animate__animated">
                 <div class="stat dest" style="width: 80%;">
-                    <strong>MENRO Capital</strong>
+                    <strong>MENRO <br> Capital</strong>
                     13.01%
                 </div>
             </div>
         </div>
         <div class="cont-contactanos animate__animated">
-            <a href="#">Contáctanos</a>
+            <a href="contacto/">Contáctanos</a>
         </div>
     </div>
 
@@ -87,96 +88,67 @@ get_header();
             </ul>
         </div>
         <div class="cont-contenido">
-            <div class="cont-sucursal active">
-                <div class="cont-slider owl-carousel owl-theme">
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                </div>
-                <div class="cont-info">
-                    <p>
-                        <strong>Ubicación:</strong> Monterrey, N.L. <br>
-                        <strong>Cantidad conseguida:</strong> $3,000,000 <br>
-                        <strong>Tasa anual estimada:</strong> 16% <br>
-                        <strong>Plazo estimado:</strong> 8 meses <br>
-                        <strong>Instrumento:</strong> C <br>
-                        <strong>Inversión mínima:</strong> $500,000
-                    </p>
-                </div>
-            </div>
             <div class="cont-sucursal">
                 <div class="cont-slider owl-carousel owl-theme">
                     <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
+                        <div class="cont-img" style="background-image: url(<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>);">
+                            <img src="<?php echo get_template_directory_uri().'/img/sucursal-cont.jpg'?>" alt="">
+                        </div>
+                        <div class="cont-info">
+                            <p>
+                                <strong>Ubicación:</strong> León, Guanajuato <br>
+                                <strong>Cantidad conseguida:</strong> $700,000 <br>
+                                <strong>Tasa anual estimada:</strong> 16% <br>
+                                <strong>Plazo estimado:</strong> 12 meses <br>
+                                <strong>Instrumento:</strong> $A+ <br>
+                            </p>
+                        </div>
                     </div>
                     <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
+                        <div class="cont-img" style="background-image: url(<?php echo get_template_directory_uri().'/img/sucursal2.jpg'?>);">
+                            <img src="<?php echo get_template_directory_uri().'/img/sucursal-cont.jpg'?>" alt="">
+                        </div>
+                        <div class="cont-info">
+                            <p>
+                                <strong>Ubicación:</strong> Monterrey, N.L. <br>
+                                <strong>Cantidad conseguida:</strong> $3,000,000 <br>
+                                <strong>Tasa anual estimada:</strong> 16% <br>
+                                <strong>Plazo estimado:</strong> 8 meses <br>
+                                <strong>Instrumento:</strong> A+ <br>
+                                <strong>Inversión mínima:</strong> $500,000
+                            </p>
+                        </div>
                     </div>
                     <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                </div>
-                <div class="cont-info">
-                    <p>
-                        <strong>2Ubicación:</strong> Monterrey, N.L. <br>
-                        <strong>Cantidad conseguida:</strong> $3,000,000 <br>
-                        <strong>Tasa anual estimada:</strong> 16% <br>
-                        <strong>Plazo estimado:</strong> 8 meses <br>
-                        <strong>Instrumento:</strong> C <br>
-                        <strong>Inversión mínima:</strong> $500,000
-                    </p>
-                </div>
-            </div>
-            <div class="cont-sucursal">
-                <div class="cont-slider owl-carousel owl-theme">
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
+                        <div class="cont-img" style="background-image: url(<?php echo get_template_directory_uri().'/img/sucursal3.jpg'?>);">
+                            <img src="<?php echo get_template_directory_uri().'/img/sucursal-cont.jpg'?>" alt="">
+                        </div>
+                        <div class="cont-info">
+                            <p>
+                                <strong>Ubicación:</strong> San Pedro, N.L. <br>
+                                <strong>Cantidad conseguida:</strong> $2,4000,000 <br>
+                                <strong>Tasa anual estimada:</strong> 17.5% <br>
+                                <strong>Plazo estimado:</strong> 36 meses <br>
+                                <strong>Instrumento:</strong> AA+ <br>
+                                <strong>Inversión mínima:</strong> $2,000,000
+                            </p>
+                        </div>
                     </div>
                     <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
+                        <div class="cont-img" style="background-image: url(<?php echo get_template_directory_uri().'/img/sucursal4.jpg'?>);">
+                            <img src="<?php echo get_template_directory_uri().'/img/sucursal-cont.jpg'?>" alt="">
+                        </div>
+                        <div class="cont-info">
+                            <p>
+                                <strong>Ubicación:</strong> San Pedro, N.L. <br>
+                                <strong>Cantidad conseguida:</strong> $1,100,000 <br>
+                                <strong>Tasa anual estimada:</strong> 15.5% <br>
+                                <strong>Plazo estimado:</strong> 6 meses <br>
+                                <strong>Instrumento:</strong> AA+ <br>
+                                <strong>Inversión mínima:</strong> $2,000,000
+                            </p>
+                        </div>
                     </div>
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                </div>
-                <div class="cont-info">
-                    <p>
-                        <strong>3Ubicación:</strong> Monterrey, N.L. <br>
-                        <strong>Cantidad conseguida:</strong> $3,000,000 <br>
-                        <strong>Tasa anual estimada:</strong> 16% <br>
-                        <strong>Plazo estimado:</strong> 8 meses <br>
-                        <strong>Instrumento:</strong> C <br>
-                        <strong>Inversión mínima:</strong> $500,000
-                    </p>
-                </div>
-            </div>
-            <div class="cont-sucursal">
-                <div class="cont-slider owl-carousel owl-theme">
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                    <div class="cont-item">
-                        <img src="<?php echo get_template_directory_uri().'/img/sucursal1.jpg'?>" alt="">
-                    </div>
-                </div>
-                <div class="cont-info">
-                    <p>
-                        <strong>4Ubicación:</strong> Monterrey, N.L. <br>
-                        <strong>Cantidad conseguida:</strong> $3,000,000 <br>
-                        <strong>Tasa anual estimada:</strong> 16% <br>
-                        <strong>Plazo estimado:</strong> 8 meses <br>
-                        <strong>Instrumento:</strong> C <br>
-                        <strong>Inversión mínima:</strong> $500,000
-                    </p>
                 </div>
             </div>
         </div>
@@ -240,7 +212,7 @@ get_header();
     </div>
 
     <div class="contenedor-inversionistas">
-        <div class="title animate__animated">
+        <div class="title bl animate__animated">
             Nuestros Tipos de Inversionistas
         </div>
         <div class="contenedor-items">
@@ -326,17 +298,28 @@ get_header();
 
 <script>
     $ = jQuery;
-    $('.cont-slider').owlCarousel({
-        loop: false,
-        margin: 0,
-        dots: false,
-        nav: true,
-        items: 1,
-        navText: ["<img src='<?php echo get_template_directory_uri().'/img/flecha-izq.png';?>'>", "<img src='<?php echo get_template_directory_uri().'/img/flecha-der.png';?>'>"],
-    });
 
     $(document).ready(function() {
 
+        $('.cont-slider').owlCarousel({
+            loop: false,
+            margin: 0,
+            dots: false,
+            nav: true,
+            items: 1,
+            navText: ["<img src='<?php echo get_template_directory_uri().'/img/flecha-izq.png';?>'>", "<img src='<?php echo get_template_directory_uri().'/img/flecha-der.png';?>'>"],
+        });
+        $('.cont-slider').on('changed.owl.carousel', function(event) {
+            var item = event.item.index;
+            $('.wrapper .contenedor-sucursales .cont-tabs ul li.active').removeClass("active");
+            $('.wrapper .contenedor-sucursales .cont-tabs ul li').eq(item).addClass("active");
+        });
+        $(".wrapper .main-content .contenedor-sucursales .cont-tabs ul li").click(function(){
+            var a = $(this).index();
+            console.log(a);
+            $('.cont-slider').trigger('to.owl.carousel', a);
+        });
+        /*
         $(".wrapper .main-content .contenedor-sucursales .cont-tabs ul li").each(function(index){
             var a = index;
             $(this).on('click', function(e) {
@@ -352,7 +335,7 @@ get_header();
                 });
             });
         });
-
+        */
     });
 
 

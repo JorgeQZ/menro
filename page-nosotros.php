@@ -43,7 +43,7 @@ get_header();
     </div>
 
     <div class="contenedor-proyectos">
-        <div class="contenedor-proyecto">
+        <div class="contenedor-proyecto" style="background-image: url(<?php echo get_template_directory_uri().'/img/bg-contratistageneral.jpg'?>);">
             <div class="cont-tit">
                 <h2>
                     Contratista <br>
@@ -56,14 +56,11 @@ get_header();
                     Contratista general
                 </h2>
                 <p>
-                    Coordinamos y supervisamos 
-                    cada aspecto de tu proyecto, 
-                    de inicio a fin; enfocándonos 
-                    en la calidad y eficiencia.
+                    Ofrecemos proyectos de calidad, con eficiencia en tiempo y reducción de costos.
                 </p>
             </div>
         </div>
-        <div class="contenedor-proyecto">
+        <div class="contenedor-proyecto" style="background-image: url(<?php echo get_template_directory_uri().'/img/bg-llaveenmano.jpg'?>);">
             <div class="cont-tit">
                 <h2>
                     Proyectos llave en mano
@@ -75,14 +72,11 @@ get_header();
                     Proyectos llave en mano
                 </h2>
                 <p>
-                    Coordinamos y supervisamos 
-                    cada aspecto de tu proyecto, 
-                    de inicio a fin; enfocándonos 
-                    en la calidad y eficiencia.
+                    Coordinamos y supervisamos cada aspecto de tu proyecto, de inicio a fin; enfocándonos en la calidad y eficiencia.
                 </p>
             </div>
         </div>
-        <div class="contenedor-proyecto">
+        <div class="contenedor-proyecto" style="background-image: url(<?php echo get_template_directory_uri().'/img/bg-consultoria.jpg'?>);">
             <div class="cont-tit">
                 <h2>
                     Consultoría
@@ -94,9 +88,7 @@ get_header();
                     Consultoría
                 </h2>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odio sed doloribus officia! 
-                    Perspiciatis molestiae velit, quo repellat, numquam aspernatur corporis id, soluta commodi 
-                    impedit magnam voluptatum officiis a dicta.
+                    Brindamos apoyo y orientamos a nuestros clientes en el desarrollo de sus proyectos.
                 </p>
             </div>
         </div>
@@ -193,7 +185,7 @@ get_header();
             <!--
                 <img src="<?php echo get_template_directory_uri().'/img/mapa.jpg'?>" alt="">
             -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.657017290472!2d-100.35843798468332!3d25.6495064836878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bde75bb8b127%3A0xc67c297e5ecd632f!2sMENRO%20Construcci%C3%B3n!5e0!3m2!1ses-419!2smx!4v1649282895289!5m2!1ses-419!2smx" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1I6Dp_c6u1bfGy2HIphPyrRGEfu5SUiwJ&ehbc=2E312F" width="640" height="480"></iframe>
         </div>
     </div>
 

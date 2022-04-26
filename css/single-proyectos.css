@@ -18,6 +18,18 @@
   margin: 0 auto;
 }
 
+.contenedor-general-sucursales .contenedor-sucursales .cont-slider .cont-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contenedor-general-sucursales .contenedor-sucursales .cont-slider .cont-item img {
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+
 .contenedor-general-sucursales .contenedor-sucursales .cont-slider .owl-dots button span {
   width: 7px;
   height: 7px;

@@ -11,6 +11,16 @@
         .cont-slider{
             width: 82%;
             margin: 0 auto;
+            .cont-item{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                img{
+                    width: 100%;
+                    height: auto;
+                    visibility: hidden;
+                }
+            }
             .owl-dots {
                 button {
                     span {

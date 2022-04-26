@@ -16,7 +16,7 @@
             transition: color 400ms;
 
             &:hover {
-                color: #4eadd7;
+                color: #35b1e5;
                 filter: saturate(3);
             }
         }
@@ -78,7 +78,7 @@
                     font-size: $footerFZ;
 
                     &:hover {
-                        color: #4eadd7;
+                        color: #35b1e5;
                     }
                 }
             }
@@ -93,6 +93,10 @@
 
             &:first-child {
                 border-right: $border-width solid white;
+                img{
+                    width: 169px;
+                    height: auto;
+                }
             }
 
             &:last-child {

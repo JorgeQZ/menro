@@ -66,12 +66,12 @@
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq {
   width: 49%;
-  background: #369bc5;
-  max-width: 585px;
+  background: #35b1e5;
 }
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq .info {
   padding: 110px 65px;
+  max-width: 585px;
 }
 
 .wrapper .wrapper-sec .contenedor-secundario .col-izq .info h2 {
@@ -230,37 +230,11 @@
 .wrapper .wrapper-sec .contenedor-metodologia {
   background: white;
   overflow: hidden;
-  padding: 60px 5%;
-}
-
-.wrapper .wrapper-sec .contenedor-metodologia .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
+  padding: 80px 5% 100px;
 }
 
 .wrapper .wrapper-sec .contenedor-metodologia .title:before {
   content: "Nuestra Metodología";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia {
@@ -370,37 +344,11 @@
 .wrapper .wrapper-sec .contenedor-diferenciador {
   background: white;
   overflow: hidden;
-  padding: 60px 5%;
-}
-
-.wrapper .wrapper-sec .contenedor-diferenciador .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
+  padding: 80px 5% 100px;
 }
 
 .wrapper .wrapper-sec .contenedor-diferenciador .title:before {
   content: "Nuestro Diferenciador";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .wrapper .wrapper-sec .contenedor-diferenciador .subtitle {
@@ -479,37 +427,11 @@
 }
 
 .wrapper .wrapper-sec .contenedor-presencia .cont-tit {
-  padding: 60px 5%;
-}
-
-.wrapper .wrapper-sec .contenedor-presencia .cont-tit .title {
-  color: #3f4143;
-  font-size: 50px;
-  line-height: 1;
-  font-weight: bolder;
-  position: relative;
-  width: 100%;
+  padding: 80px 5% 60px;
 }
 
 .wrapper .wrapper-sec .contenedor-presencia .cont-tit .title:before {
   content: "Nuestra Presencia";
-  position: absolute;
-  font-weight: bold;
-  font-size: 93px;
-  width: 1000%;
-  top: -35px;
-  left: -70px;
-  color: #0000;
-  letter-spacing: -5px;
-  line-height: 1;
-  -webkit-text-fill-color: transparent;
-  stroke-width: 1px;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: #0000;
-  -webkit-text-stroke-color: #3f4143;
-  -moz-text-stroke-width: 1px;
-  -webkit-text-stroke-width: 1px;
-  opacity: 0.3;
 }
 
 .wrapper .wrapper-sec .contenedor-presencia .cont-presencia img {

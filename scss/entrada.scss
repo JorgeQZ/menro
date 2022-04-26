@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    padding: 65px 5% 100px;
+    padding: 80px 5% 100px;
 
     h2{
         color: #3f4143;
@@ -25,39 +25,16 @@
 
 // grid de posts
 .grid-container {
-    background-image: url(../img/home-bottom-bg.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: url(../img/bg-activos.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     padding: 150px 5% 250px;
     overflow: hidden;
 
-    .titlee {
-        color: #3f4143;
-        font-size: 50px;
-        line-height: 1;
-        font-weight: bolder;
-        position: relative;
-        width: 100%;
-
+    .title {
         &:before {
             content: "Blog";
-            position: absolute;
-            font-weight: bold;
-            font-size: 93px;
-            width: 1000%;
-            top: -35px;
-            left: -70px;
-            color: #0000;
-            letter-spacing: -5px;
-            line-height: 1;
-            -webkit-text-fill-color: transparent;
-            stroke-width: 1px;
-            -moz-text-fill-color: transparent;
-            -webkit-text-fill-color: #0000;
-            -webkit-text-stroke-color: #3f4143;
-            -moz-text-stroke-width: 1px;
-            -webkit-text-stroke-width: 1px;
-            opacity: 0.3;
         }
     }
 
@@ -93,7 +70,7 @@
                 position: relative;
                 transition: opacity 200ms ease;
 
-                .title {
+                .titlee {
                     font-size: 24px;
                     font-weight: bold;
                     line-height: 1.2;
@@ -123,7 +100,7 @@
                 display: flex;
                 align-items: center;
 
-                .title {
+                .titlee {
                     opacity: 0;
                     font-size: 32px;
                     font-weight: bold;
@@ -153,7 +130,7 @@
                     width: calc(100% + 20px);
                     left: calc(-100% - 20px);
 
-                    .title {
+                    .titlee {
                         opacity: 1;
                     }
 
