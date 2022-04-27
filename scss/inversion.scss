@@ -149,7 +149,7 @@
 
     .contenedor-activos{
         overflow: hidden;
-        padding: 80px 5% 100px;
+        padding: 120px 5%;
         background-image: url(../img/bg-activos.jpg);
         background-size: cover;
         background-position: center;
@@ -277,7 +277,7 @@
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden;
-        padding: 80px 5% 100px;
+        padding: 120px 5%;
         display: flex;
         .cont-tabs{
             width: 40%;
@@ -377,7 +377,7 @@
 
     .contenedor-funciona{
         overflow: hidden;
-        padding: 80px 5% 100px;
+        padding: 120px 5%;
         background: white;
         .title {
             &:before {
@@ -432,7 +432,7 @@
 
     .contenedor-fondeo{
         overflow: hidden;
-        padding: 80px 5% 100px;
+        padding: 120px 5%;
         background: white;
         .title {
             &:before {
@@ -479,7 +479,7 @@
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden;
-        padding: 80px 5% 100px;
+        padding: 120px 5%;
         .contenedor-items{
             display: flex;
             justify-content: space-between;
@@ -567,21 +567,33 @@
                         font-size: 14px;
                     }
                 }
+                .dec{
+                    &.dec9{
+                        .index{
+                            left: -40px;
+                        }
+                    }
+                }
             }
         }
         .contenedor-sucursales{
             flex-direction: column;
             .cont-tabs{
                 width: 100%;
+                ul{
+                    padding-left: 35px;
+                }
             }
             .cont-contenido{
                 margin-top: 50px;
                 width: 100%;
                 .cont-sucursal{
-                    .cont-info{
-                        column-count: 1;
-                        p{
-                            font-size: 16px;
+                    .cont-slider{
+                        .cont-info{
+                            column-count: 1;
+                            p{
+                                font-size: 16px;
+                            }
                         }
                     }
                 }

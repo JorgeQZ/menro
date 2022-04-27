@@ -275,28 +275,30 @@
 @media screen and (min-width: 1024px) and (max-width: 1279px){
     
     .wrapper{
-        .contenedor-edificaciones{
-            .cont-edificaciones{
-                .owl-stage{
-                    .owl-item{
-                        .cont-item{
-                            .cont-info{
-                                right: -20px;
-                                max-width: 300px;
-                                p{
-                                    font-size: 13px;
+        .contenedor-galerias{
+            .contenedor-edificaciones{
+                .cont-edificaciones{
+                    .owl-stage{
+                        .owl-item{
+                            .cont-item{
+                                .cont-info{
+                                    right: -20px;
+                                    max-width: 300px;
+                                    p{
+                                        font-size: 13px;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                .owl-nav {
-                    button {
-                        &.owl-prev {
-                            left: 145px;
-                        }
-                        &.owl-next {
-                            right: 145px;
+                    .owl-nav {
+                        button {
+                            &.owl-prev {
+                                left: 145px;
+                            }
+                            &.owl-next {
+                                right: 145px;
+                            }
                         }
                     }
                 }
@@ -325,30 +327,32 @@
                 }
             }
         }
-        .contenedor-edificaciones{
-            .cont-edificaciones{
-                .owl-stage{
-                    .owl-item{
-                        transform: scale(.85);
-                        .cont-item{
-                            .cont-info{
-                                padding: 20px 10px;
-                                right: -20px;
-                                max-width: 300px;
-                                p{
-                                    font-size: 13px;
+        .contenedor-galerias{
+            .contenedor-edificaciones{
+                .cont-edificaciones{
+                    .owl-stage{
+                        .owl-item{
+                            transform: scale(.85);
+                            .cont-item{
+                                .cont-info{
+                                    padding: 20px 10px;
+                                    right: -20px;
+                                    max-width: 300px;
+                                    p{
+                                        font-size: 13px;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                .owl-nav {
-                    button {
-                        &.owl-prev {
-                            left: 70px;
-                        }
-                        &.owl-next {
-                            right: 70px;
+                    .owl-nav {
+                        button {
+                            &.owl-prev {
+                                left: 70px;
+                            }
+                            &.owl-next {
+                                right: 70px;
+                            }
                         }
                     }
                 }
@@ -370,6 +374,10 @@
                 .item {
                     &:before {
                         display: none;
+                    }
+                    &:hover{
+                        background: transparent;
+                        color: #3f4143;
                     }
                 }
             }
@@ -417,39 +425,48 @@
                 }
             }
         }
-        .contenedor-edificaciones{
-            .cont-edificaciones{
-                .owl-stage{
-                    .owl-item{
-                        transform: scale(1);
-                        .cont-item{
-                            .cont-info{
-                                padding: 10px 5px;
-                                right: 0;
-                                bottom: 0;
-                                max-width: 260px;
-                                p{
-                                    font-size: 10px;
-                                    &::after{
-                                        display: none;
+        .contenedor-galerias{
+            .contenedor-edificaciones{   
+                .titles{
+                    .title {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                .cont-edificaciones{
+                    .owl-stage{
+                        .owl-item{
+                            transform: scale(1);
+                            .cont-item{
+                                .cont-info{
+                                    padding: 10px;
+                                    right: 0;
+                                    bottom: 0;
+                                    max-width: 260px;
+                                    p{
+                                        font-size: 10px;
+                                        &::after{
+                                            display: none;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-                .owl-nav {
-                    margin-top: 20px;
-                    button {
-                        position: inherit;
-                        top: inherit;
-                        transform: unset;
-                        margin: 0 5px;
-                        &.owl-prev {
-                            left: inherit;
-                        }
-                        &.owl-next {
-                            right: inherit;
+                    .owl-nav {
+                        margin-top: 20px;
+                        button {
+                            position: inherit;
+                            top: inherit;
+                            transform: unset;
+                            margin: 0 5px;
+                            &.owl-prev {
+                                left: inherit;
+                            }
+                            &.owl-next {
+                                right: inherit;
+                            }
                         }
                     }
                 }

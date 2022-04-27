@@ -404,6 +404,7 @@ img {
   .title:before {
     font-size: 60px;
     letter-spacing: -4px;
+    display: none;
   }
 }
 
@@ -518,6 +519,10 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+  footer .column:first-child img {
+    width: 169px;
+    height: auto;
   }
 }
 

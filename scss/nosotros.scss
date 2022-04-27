@@ -191,7 +191,7 @@
         .contenedor-metodologia{
             background: white;
             overflow: hidden;
-            padding: 80px 5% 100px;
+            padding: 120px 5%;
             .title {
                 &:before {
                     content: "Nuestra Metodología";
@@ -295,7 +295,7 @@
         .contenedor-diferenciador{
             background: white;
             overflow: hidden;
-            padding: 80px 5% 100px;
+            padding: 120px 5%;
             .title {
                 &:before {
                     content: "Nuestro Diferenciador";
@@ -358,7 +358,7 @@
             background: white;
             overflow: hidden;
             .cont-tit{
-                padding: 80px 5% 60px;
+                padding: 120px 5% 60px;
                 .title {
                     &:before {
                         content: "Nuestra Presencia";
@@ -466,7 +466,7 @@
                         .cont-rama{
                             &:nth-child(2n){
                                 left: -175px;
-                                right: inherit;
+                                right: initial;
                                 > img{
                                     transform: inherit
                                 }
@@ -475,8 +475,8 @@
                                     right: inherit;
                                 }
                                 &::before{
+                                    left: initial;
                                     right: -8.5px;
-                                    left: inherit;
                                 }
                             }
     

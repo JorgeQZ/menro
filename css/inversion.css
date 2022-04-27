@@ -175,7 +175,7 @@
 
 .wrapper .contenedor-activos {
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
   background-image: url(../img/bg-activos.jpg);
   background-size: cover;
   background-position: center;
@@ -344,7 +344,7 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,7 +476,7 @@
 
 .wrapper .contenedor-funciona {
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
   background: white;
 }
 
@@ -552,7 +552,7 @@
 
 .wrapper .contenedor-fondeo {
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
   background: white;
 }
 
@@ -608,7 +608,7 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
 }
 
 .wrapper .contenedor-inversionistas .contenedor-items {
@@ -689,6 +689,9 @@
     padding: 20px 10px 20px 15px;
     font-size: 14px;
   }
+  .wrapper .contenedor-activos .contenedor-grafica .dec.dec9 .index {
+    left: -40px;
+  }
   .wrapper .contenedor-sucursales {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -698,15 +701,18 @@
   .wrapper .contenedor-sucursales .cont-tabs {
     width: 100%;
   }
+  .wrapper .contenedor-sucursales .cont-tabs ul {
+    padding-left: 35px;
+  }
   .wrapper .contenedor-sucursales .cont-contenido {
     margin-top: 50px;
     width: 100%;
   }
-  .wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-info {
+  .wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-info {
     -webkit-column-count: 1;
             column-count: 1;
   }
-  .wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-info p {
+  .wrapper .contenedor-sucursales .cont-contenido .cont-sucursal .cont-slider .cont-info p {
     font-size: 16px;
   }
   .wrapper .contenedor-funciona .contenedor-items .cont-item {

@@ -142,3 +142,43 @@
 .blog-container .grid-container .pagination-container .item.current, .blog-container .grid-container .pagination-container .item:hover {
   background-color: #4eadd7;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .blog-container .grid-container .grid-posts {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .blog-container .grid-container .grid-posts .post-item {
+    width: calc(100% - 20px);
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog-container {
+    padding: 60px 30px;
+  }
+  .blog-container .grid-container .grid-posts .post-item {
+    height: auto;
+    width: calc(100% - 20px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog-container .grid-container .grid-posts .post-item img {
+    height: 280px;
+    width: 100%;
+  }
+  .blog-container .grid-container .grid-posts .post-item .title-box {
+    width: 100%;
+    height: auto;
+  }
+  .blog-container .grid-container .grid-posts .post-item .title-box .title {
+    font-size: 24px;
+  }
+  .blog-container .grid-container .grid-posts .post-item .title-box .desc {
+    font-size: 16px;
+  }
+}

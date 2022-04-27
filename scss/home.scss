@@ -111,3 +111,50 @@ $max-width: 1280px;
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    
+    .blog-container {
+        .grid-container {
+            .grid-posts {
+                justify-content: center;
+                .post-item {
+                    width: calc(100% - 20px);
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    
+    .blog-container {
+        padding: 60px 30px;
+        .grid-container {
+            .grid-posts {
+                .post-item {
+                    height: auto;
+                    width: calc(100% - 20px);
+                    flex-direction: column;
+                    img {
+                        height: 280px;
+                        width: 100%;
+                    }
+                    .title-box {
+                        width: 100%;
+                        height: auto;
+                        .title {
+                            font-size: 24px;
+                        }
+                        .desc {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

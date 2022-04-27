@@ -230,7 +230,7 @@
 .wrapper .wrapper-sec .contenedor-metodologia {
   background: white;
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
 }
 
 .wrapper .wrapper-sec .contenedor-metodologia .title:before {
@@ -344,7 +344,7 @@
 .wrapper .wrapper-sec .contenedor-diferenciador {
   background: white;
   overflow: hidden;
-  padding: 80px 5% 100px;
+  padding: 120px 5%;
 }
 
 .wrapper .wrapper-sec .contenedor-diferenciador .title:before {
@@ -427,7 +427,7 @@
 }
 
 .wrapper .wrapper-sec .contenedor-presencia .cont-tit {
-  padding: 80px 5% 60px;
+  padding: 120px 5% 60px;
 }
 
 .wrapper .wrapper-sec .contenedor-presencia .cont-tit .title:before {
@@ -514,7 +514,7 @@
   }
   .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) {
     left: -175px;
-    right: inherit;
+    right: initial;
   }
   .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n) > img {
     -webkit-transform: inherit;
@@ -525,8 +525,8 @@
     right: inherit;
   }
   .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama:nth-child(2n)::before {
+    left: initial;
     right: -8.5px;
-    left: inherit;
   }
   .wrapper .wrapper-sec .contenedor-metodologia .cont-metodologia .cont-arbol .cont-rama.rama2 {
     top: 200px;
