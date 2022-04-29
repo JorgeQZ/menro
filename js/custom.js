@@ -223,25 +223,25 @@ jQuery(document).ready(function ($) {
     // })
 
     // GENERALES
-    let animated_elements = $('.animate__animated');
+    let animated_elements = $('.animate__todos');
     for (let i = 0; i < animated_elements.length; i++) {
         new Waypoint({
-            element: $('.animate__animated')[i],
+            element: $('.animate__todos')[i],
             handler: function () {
-                $('.animate__animated').eq(i).addClass('animate__fadeInUp');
+                $('.animate__todos').eq(i).addClass('animate__fadeInUp');
             },
             offset: '75%',
         })
     }
 
-    let animated_elements_encabezados = $('.animate__animated__encabezados');
-    for (let i = 0; i < animated_elements.length; i++) {
+    let animated_elements_encabezados = $('.animate__encabezados');
+    for (let i = 0; i < animated_elements_encabezados.length; i++) {
         new Waypoint({
-            element: $('.animate__animated__encabezados')[i],
+            element: $('.animate__encabezados')[i],
             handler: function () {
-                $('.animate__animated__encabezados').eq(i).addClass('animate__fadeInUp');
+                $('.animate__encabezados').eq(i).addClass('animate__fadeInUp');
             },
-            offset: '25%',
+            offset: '100%',
         })
     }
 
