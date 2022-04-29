@@ -233,4 +233,16 @@ jQuery(document).ready(function ($) {
             offset: '75%',
         })
     }
+
+    let animated_elements_encabezados = $('.animate__animated__encabezados');
+    for (let i = 0; i < animated_elements.length; i++) {
+        new Waypoint({
+            element: $('.animate__animated__encabezados')[i],
+            handler: function () {
+                $('.animate__animated__encabezados').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '25%',
+        })
+    }
+
 });

@@ -428,6 +428,7 @@ $max-width: 1280px;
                     flex-direction: row;
                     flex-wrap: wrap;
                     position: relative;
+                    margin-bottom: 60px;
 
                     &:before {
                         content: '';
@@ -445,7 +446,7 @@ $max-width: 1280px;
                         text-decoration: none;
                         margin: 10px;
                         width: calc(50% - 20px);
-                        height: 180px;
+                        height: 280px;
                         background-image: url(../img/slider-bg.jpg);
                         background-position: center;
                         display: flex;
@@ -982,4 +983,21 @@ $max-width: 1280px;
             }
         }
     }
+}
+
+@media screen and (max-width: 767px) {
+
+    .wrapper{
+        .main-content{
+            .grid-container{
+                .grid-posts{
+                    flex-direction: column;
+                    .item{
+                        width: calc(100% - 20px);
+                    }
+                }
+            }
+        }
+    }
+
 }

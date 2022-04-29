@@ -50,11 +50,11 @@ $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
                 <?php if ($mostrarBanner === 'imagen'): ?>
 
                 <div class="thumbnail_banner" style="background-image: url(<?php echo $featured_image ?>)">
-                    <div class="title_banner animate__animated" data-text="<?php echo $title_text; ?>">
+                    <div class="title_banner animate__animated__encabezados" data-text="<?php echo $title_text; ?>">
                         <?php echo $title_text; ?>
                     </div>
                     <?php if($excerpt != "" && is_singular('post')){ ?>
-                    <p class="subtitle_banner animate__animated">
+                    <p class="subtitle_banner animate__animated__encabezados">
                         <?php echo $excerpt; ?>
                     </p>
                     <?php } ?>

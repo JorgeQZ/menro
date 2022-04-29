@@ -443,6 +443,7 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: relative;
+    margin-bottom: 60px;
   }
   .wrapper .main-content .grid-container .grid-posts:before {
     content: '';
@@ -460,7 +461,7 @@
     text-decoration: none;
     margin: 10px;
     width: calc(50% - 20px);
-    height: 180px;
+    height: 280px;
     background-image: url(../img/slider-bg.jpg);
     background-position: center;
     display: -webkit-box;
@@ -999,5 +1000,17 @@
   .wrapper .main-content .grid-container .contact-block .column:last-child input[type="submit"]:hover {
     background: white;
     color: #35b1e5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper .main-content .grid-container .grid-posts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .main-content .grid-container .grid-posts .item {
+    width: calc(100% - 20px);
   }
 }

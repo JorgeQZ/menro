@@ -184,7 +184,7 @@ get_header();
                         $imgDestacada = wp_get_attachment_url( $thumbID );
                     ?>
 
-                    <a class="item" rel="nofollow noopener" href="<?php the_permalink();?>" target="_blank" style="background-image: url(<?php echo $imgDestacada; ?>);">
+                    <a class="item" rel="nofollow noopener" href="<?php the_permalink();?>" style="background-image: url(<?php echo $imgDestacada; ?>);">
                         <div class="overlay">
                             <div>
                                 <div class="title"><?php the_title();?></div>
