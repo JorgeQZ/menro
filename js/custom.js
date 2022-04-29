@@ -134,6 +134,7 @@ jQuery(document).ready(function ($) {
     });
 
     //submit del contact form
+    /*
     $('#wpcf7-f92-o1 .wpcf7-submit').on({
         mouseenter: function () {
             anime({
@@ -147,6 +148,7 @@ jQuery(document).ready(function ($) {
             $(this).attr('style', '');
         }
     });
+    */
     /*
         jQuery('.galeria-proyectos').owlCarousel({
             loop: false,

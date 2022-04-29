@@ -446,6 +446,9 @@
                 flex-direction: column;
                 .contenedor-proyecto{
                     width: 100%;
+                    .cont-info{
+                        position: absolute;
+                    }
                     &:nth-child(2){
                         border-left: 0;
                         border-right: 0;
@@ -457,9 +460,10 @@
     
             .contenedor-metodologia{
                 .cont-metodologia{
-                    margin: 100px 0;
+                    width: 75%;
+                    margin: 100px auto;
                     display: flex;
-                    justify-content: right;
+                    justify-content: flex-end;
                     .cont-arbol{
                         margin: 0;
                         height: 1000px;

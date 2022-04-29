@@ -78,6 +78,7 @@ img {
     -moz-text-stroke-width: 1px;
     -webkit-text-stroke-width: 1px;
     opacity: 0.5;
+    display: none;
   }
   .wrapper .thumbnail_banner .subtitle_banner {
     color: white;
@@ -223,6 +224,7 @@ img {
     -moz-text-stroke-width: 1px;
     -webkit-text-stroke-width: 1px;
     opacity: 0.5;
+    display: none;
   }
   .wrapper .thumbnail_banner .subtitle_banner {
     color: white;
@@ -375,6 +377,7 @@ img {
   -moz-text-stroke-width: 1px;
   -webkit-text-stroke-width: 1px;
   opacity: 0.3;
+  display: none;
 }
 
 .title.bl {

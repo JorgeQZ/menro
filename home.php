@@ -21,11 +21,14 @@ $loop = new WP_Query($args);
             <div class="grid-posts">
                 <?php
 if ($loop->have_posts()):
-    while ($loop->have_posts()):
-        $loop->the_post();
-        ?>
+    while ( $loop->have_posts() ) : $loop->the_post();
+    ?>
+            <?php 
+                $thumbID = get_post_thumbnail_id( $post->ID );
+                $imgDestacada = wp_get_attachment_url( $thumbID );
+            ?>
                 <a class="post-item animate__animated" rel="nofollow noopener" href="<?php the_permalink();?>">
-                    <img src="<?php echo get_template_directory_uri() . '/img/object.jpg'; ?>" alt="">
+                    <img src="<?php echo $imgDestacada; ?>" alt="">
                     <div class="title-box">
                         <div>
                             <div class="title"><?php the_title();?></div>
@@ -35,7 +38,7 @@ if ($loop->have_posts()):
                         </div>
                     </div>
                 </a>
-                <?php
+            <?php
     endwhile;
 endif;
 wp_reset_query();

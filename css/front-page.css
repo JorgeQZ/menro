@@ -13,6 +13,7 @@
     background-image: url(../img/home-top-bg.jpg);
     background-size: cover;
     background-position: center;
+    display: none;
   }
   .wrapper .main-content .render-cont .image-cont {
     width: 100%;
@@ -362,9 +363,10 @@
 */
   }
   .wrapper .main-content .middle-logos-cont {
-    margin-top: 50px;
     width: 100%;
     height: auto;
+    padding: 120px 0;
+    background: white;
   }
   .wrapper .main-content .middle-logos-cont .container {
     background-color: #fff;
@@ -386,14 +388,41 @@
     -webkit-filter: saturate(1.2);
             filter: saturate(1.2);
   }
+  .wrapper .main-content .middle-logos-cont .container a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 240px;
+    padding: 12px 35px;
+    background: transparent;
+    border: 2px solid #515151;
+    color: #515151;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .wrapper .main-content .middle-logos-cont .container a:hover {
+    color: white;
+    background: #515151;
+  }
   .wrapper .main-content .middle-logos-cont .container .logos {
     margin: 0 auto;
+    margin-top: 40px;
   }
   .wrapper .main-content .middle-logos-cont .container .logos img {
     display: block;
     max-height: 50px;
     max-width: 120px;
-    margin: 20px auto;
+    margin: 60px auto;
   }
   .wrapper .main-content .grid-container {
     background-image: url(../img/home-bottom-bg.jpg);
@@ -519,6 +548,8 @@
     position: relative;
     -ms-flex-direction: column;
         flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
   }
   .wrapper .main-content .grid-container .contact-block:before {
     content: '';
@@ -549,7 +580,7 @@
   .wrapper .main-content .grid-container .contact-block .column {
     z-index: 10;
   }
-  .wrapper .main-content .grid-container .contact-block .column:first-child .title {
+  .wrapper .main-content .grid-container .contact-block .column:first-child .titlee {
     font-weight: 900;
     font-size: 30px;
   }
@@ -577,12 +608,9 @@
     font-weight: 900;
     color: white;
     font-size: 18px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#45b5e8), to(#1489be));
-    background: linear-gradient(#45b5e8, #1489be);
-    -webkit-box-shadow: 0 0 0 0 #0080b6;
-            box-shadow: 0 0 0 0 #0080b6;
-    -webkit-filter: saturate(3);
-            filter: saturate(3);
+    background: #35b1e5;
+    -webkit-box-shadow: 0 0 0 0 #35b1e5;
+            box-shadow: 0 0 0 0 #35b1e5;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -591,8 +619,8 @@
     transition: all 300ms ease;
   }
   .wrapper .main-content .grid-container .contact-block .column:last-child input[type="submit"]:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#1489be), to(#45b5e8));
-    background: linear-gradient(#1489be, #45b5e8);
+    background: white;
+    color: #35b1e5;
   }
   .wrapper .side-menu {
     background-color: #191919;
@@ -701,7 +729,6 @@
     width: calc(100% - 90px);
   }
   .wrapper .main-content .middle-logos-cont {
-    margin-top: 50px;
     width: 100%;
     height: auto;
   }
@@ -725,21 +752,6 @@
     border-top: 1px solid white;
     border-bottom: 1px solid white;
   }
-  .wrapper .main-content .middle-logos-cont .container a {
-    padding: 12px 35px;
-    background: transparent;
-    border: 2px solid #515151;
-    color: #515151;
-    font-size: 22px;
-    text-decoration: none;
-    border-radius: 25px;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .wrapper .main-content .middle-logos-cont .container a:hover {
-    color: white;
-    background: #515151;
-  }
   .wrapper .main-content .middle-logos-cont .container .title {
     color: #0099cc;
     font-size: 30px;
@@ -749,13 +761,14 @@
   }
   .wrapper .main-content .middle-logos-cont .container .logos {
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 70%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -763,7 +776,7 @@
   .wrapper .main-content .middle-logos-cont .container .logos img {
     max-height: 60px;
     max-width: 130px;
-    margin: 0 100px;
+    margin: 0;
   }
   .wrapper .main-content .grid-container {
     background-image: url(../img/home-bottom-bg.jpg);
@@ -893,7 +906,7 @@
     padding: 20px 40px;
     width: 90%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -942,7 +955,7 @@
     width: 60%;
     padding-right: 30px;
   }
-  .wrapper .main-content .grid-container .contact-block .column:first-child .title {
+  .wrapper .main-content .grid-container .contact-block .column:first-child .titlee {
     font-weight: 900;
     font-size: 30px;
   }
@@ -973,12 +986,9 @@
     font-weight: 900;
     color: white;
     font-size: 18px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#45b5e8), to(#1489be));
-    background: linear-gradient(#45b5e8, #1489be);
-    -webkit-box-shadow: 0 0 0 0 #0080b6;
-            box-shadow: 0 0 0 0 #0080b6;
-    -webkit-filter: saturate(3);
-            filter: saturate(3);
+    background: #35b1e5;
+    -webkit-box-shadow: 0 0 0 0 #35b1e5;
+            box-shadow: 0 0 0 0 #35b1e5;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -987,7 +997,7 @@
     transition: all 300ms ease;
   }
   .wrapper .main-content .grid-container .contact-block .column:last-child input[type="submit"]:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#1489be), to(#45b5e8));
-    background: linear-gradient(#1489be, #45b5e8);
+    background: white;
+    color: #35b1e5;
   }
 }
