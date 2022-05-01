@@ -7,10 +7,10 @@ get_header();
 
 
 <div class="contenedor-principal">
-    <div class="cont-info animate__animated">
+    <div class="cont-info animate__animated animate__encabezados">
         <div class="title bl">
-            Inversión en Bienes Raíces <br>
-            a Tu Alcance
+            Inversión en bienes raíces <br>
+            a tu alcance
         </div>
         <p class="subtitle">
             En MENRO Inversiones inviertes en bienes raíces en todo México, 
@@ -23,9 +23,9 @@ get_header();
 <div class="wrapper-sec">
 
     <div class="contenedor-activos">
-        <div class="title animate__animated">
-            Una de las Clases de Activos <br>
-            Más Rentable del Mercado
+        <div class="title animate__animated animate__todos">
+            Una de las clases de activos <br>
+            más rentable del mercado
         </div>
         <div class="contenedor-grafica">
             <div class="dec dec1">
@@ -42,44 +42,44 @@ get_header();
             <div class="dec dec9">
                 <div class="index">15</div>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <div class="stat" style="width: 49%;">
                     <strong>Fibras</strong>
                     7.28%
                 </div>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <div class="stat" style="width: 43%;">
                     <strong>Bancos</strong>
                     3.90%
                 </div>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <div class="stat" style="width: 46%;">
                     <strong>Cetes</strong>
                     5.00%
                 </div>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <div class="stat" style="width: 56%;">
                     <strong>IPC</strong>
                     8.51%
                 </div>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <div class="stat dest" style="width: 80%;">
                     <strong>MENRO <br> Capital</strong>
                     13.01%
                 </div>
             </div>
         </div>
-        <div class="cont-contactanos animate__animated">
+        <div class="cont-contactanos animate__animated animate__todos">
             <a href="contacto/">Contáctanos</a>
         </div>
     </div>
 
     <div class="contenedor-sucursales">
-        <div class="cont-tabs">
+        <div class="cont-tabs animate__animated animate__todos">
             <ul>
                 <li class="active">León</li>
                 <li>San Jerónimo</li>
@@ -155,35 +155,35 @@ get_header();
     </div>
 
     <div class="contenedor-funciona">
-        <div class="title animate__animated">
+        <div class="title animate__animated animate__todos">
             ¿Cómo Funciona?
         </div>
         <div class="contenedor-items">
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona1.png'?>" alt="">
                 <p>Buscamos las mejores opciones a mediano y largo plazo</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona2.png'?>" alt="">
                 <p>Estructuramos los valores más altos de CF y ROE</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona3.png'?>" alt="">
                 <p>Puntualizamos el tema legal y de contrato</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona4.png'?>" alt="">
                 <p>Los publicamos y tú eliges en cual invertir</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona5.png'?>" alt="">
                 <p>Regístrate para seleccionar las oportunidades disponibles</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona6.png'?>" alt="">
-                <p>Tu aportación es la más importante, y juntos, con demás inversionistas llevamos a cabo el proyecto que elegiste</p>
+                <p>Tu aportación es la más importante y juntos, con demás inversionistas llevamos a cabo el proyecto que elegiste</p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-funciona7.png'?>" alt="">
                 <p>Monitorea el avance físico y de rendimiento de tu portafolio</p>
             </div>
@@ -191,19 +191,19 @@ get_header();
     </div>
 
     <div class="contenedor-fondeo">
-        <div class="title animate__animated">
-            Fondeo Colectivo <br> en Bienes Raíces
+        <div class="title animate__animated animate__todos">
+            Fondeo colectivo <br> en bienes raíces
         </div>
-        <p class="subtitle animate__animated">
+        <p class="subtitle animate__animated animate__todos">
             Micro, pequeños y grandes ahorradores se integran a las grandes inversiones de desarrollos en México.
         </p>
         <div class="cont-fondeo">
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-fondeo1.png'?>" alt="">
                 <p>Rendimientos hasta</p>
                 <p><strong>13% - 16%</strong></p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <img src="<?php echo get_template_directory_uri().'/img/icon-fondeo2.png'?>" alt="">
                 <p>Inversiones mínimas desde</p>
                 <p><strong>$5,000 USD</strong></p>
@@ -212,11 +212,11 @@ get_header();
     </div>
 
     <div class="contenedor-inversionistas">
-        <div class="title bl animate__animated">
+        <div class="title bl animate__animated animate__todos">
             Nuestros Tipos de Inversionistas
         </div>
         <div class="contenedor-items">
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <p>
                     <strong>Retorno:</strong> <br>
                     Variable
@@ -234,7 +234,7 @@ get_header();
                     <span>AAA+</span>
                 </p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <p>
                     <strong>Retorno:</strong> <br>
                     Fijo / Premium
@@ -252,7 +252,7 @@ get_header();
                     <span>AA+</span>
                 </p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <p>
                     <strong>Retorno:</strong> <br>
                     Fijo / Alto
@@ -270,7 +270,7 @@ get_header();
                     <span>A+</span>
                 </p>
             </div>
-            <div class="cont-item animate__animated">
+            <div class="cont-item animate__animated animate__todos">
                 <p>
                     <strong>Retorno:</strong> <br>
                     Fijo / Alto

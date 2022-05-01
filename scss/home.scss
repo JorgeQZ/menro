@@ -8,6 +8,7 @@ $max-width: 1280px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 60px 90px;
 
     .grid-container {
@@ -101,11 +102,13 @@ $max-width: 1280px;
                 text-decoration: none;
                 color: white;
                 background-color: lightgray;
-                filter: saturate(3);
-                transition: background-color 300ms;
-
+                transition: all 300ms;
+                border-radius: 25px;
+                
                 &.current, &:hover {
                     background-color: #4eadd7;
+                    border-radius: 0px;
+
                 }
             }
         }

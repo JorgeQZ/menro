@@ -16,13 +16,13 @@ get_header();
     }
 </style>
 
-<div class="title animate__animated">
-    ¿Tienes algun proyecto?
+<div class="title animate__animated animate__todos">
+    ¿Tienes algún proyecto?
 </div>
-<p class="subtitle animate__animated">Escríbenos para poder ayudarte en lo que necesites.</p>
+<p class="subtitle animate__animated animate__todos">Escríbenos para poder ayudarte en lo que necesites.</p>
 
 <div class="container">
-    <div class="col animate__animated">
+    <div class="col animate__animated animate__todos">
         <div class="item">
             <div class="col"><img src="<?php echo get_template_directory_uri().'/img/icon-loca.png'?>" alt="" class="icon"></div>
             <div class="col">
@@ -55,7 +55,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="col animate__animated">
+    <div class="col animate__animated animate__todos">
         <?php echo do_shortcode('[contact-form-7 id="108" title="Contacto"]'); ?>
     </div>
 </div>

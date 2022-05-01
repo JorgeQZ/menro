@@ -5,6 +5,58 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 130px;
+    .back_button{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 10px;
+        background: transparent;
+        border: 2px solid #515151;
+        color: #515151;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        &:hover{
+            color: white;
+            background-color: #515151;
+            border-radius: 0;
+        }
+    }
+
+    .cont-button-nav{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .button-nav{
+            
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            padding: 10px;
+            background: transparent;
+            border: 2px solid #4eadd7;
+            color: #515151;
+            text-decoration: none;
+            border-radius: 25px;
+            
+            margin: 20px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            &:hover{
+                color: white;
+                background-color: #4eadd7;
+                border-radius: 0;
+            }
+        }
+    }   
     .contenedor-sucursales{
         width: 90%;
         margin: 0 auto;

@@ -20,45 +20,43 @@ $loop = new WP_Query($args);
         <div class="grid-container">
             <div class="grid-posts">
                 <?php
-if ($loop->have_posts()):
-    while ( $loop->have_posts() ) : $loop->the_post();
-    ?>
-            <?php 
-                $thumbID = get_post_thumbnail_id( $post->ID );
-                $imgDestacada = wp_get_attachment_url( $thumbID );
-            ?>
-                <a class="post-item animate__animated" rel="nofollow noopener" href="<?php the_permalink();?>">
-                    <img src="<?php echo $imgDestacada; ?>" alt="">
-                    <div class="title-box">
-                        <div>
-                            <div class="title"><?php the_title();?></div>
-                            <div class="desc">
-                                <?php the_excerpt();?>
+                if ($loop->have_posts()):
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                        $thumbID = get_post_thumbnail_id( $post->ID );
+                        $imgDestacada = wp_get_attachment_url( $thumbID );
+                        ?>
+                        <a class="post-item animate__animated animate__todos" rel="nofollow noopener" href="<?php the_permalink();?>">
+                            <img src="<?php echo $imgDestacada; ?>" alt="">
+                            <div class="title-box">
+                                <div>
+                                    <div class="title"><?php the_title();?></div>
+                                    <div class="desc">
+                                        <?php the_excerpt();?>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </a>
-            <?php
-    endwhile;
-endif;
-wp_reset_query();
-$GLOBALS['wp_query']->max_num_pages = $loop->max_num_pages;
-$pages = $loop->max_num_pages;
-?>
+                        </a>
+                    <?php
+                    endwhile;
+                endif;
+                wp_reset_query();
+                $GLOBALS['wp_query']->max_num_pages = $loop->max_num_pages;
+                $pages = $loop->max_num_pages;
+                ?>
             </div>
 
             <div class="pagination-container">
                 <?php
-for ($i = 1; $i <= $pages; $i++) {
-    if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
-        if ($paged == $i):
-            echo "<span class='item current'>" . $i . "</span>";
-        else:
-            echo "<a href='" . get_pagenum_link($i) . "' class='item'>" . $i . "</a>";
-        endif;
-    }
-}
-?>
+                    for ($i = 1; $i <= $pages; $i++) {
+                        if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+                            if ($paged == $i):
+                                echo "<span class='item current'>" . $i . "</span>";
+                            else:
+                                echo "<a href='" . get_pagenum_link($i) . "' class='item'>" . $i . "</a>";
+                            endif;
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>

@@ -2,362 +2,22 @@ $border-width: 2px;
 $footerFZ: 13px;
 $max-width: 1280px;
 
-//RENDER
-@media screen and (min-width: 300px) {
-    .wrapper {
-        .main-content {
-            //Render
-            .render-cont {
-                padding: 30px 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-image: url(../img/home-top-bg.jpg);
-                background-size: cover;
-                background-position: center;
-                display: none;
-                .image-cont {
-                    width: 100%;
-                    margin: auto;
-                    position: relative;
 
-                    img {
-                        width: 100%;
-                    }
-
-                    .button-content-bottom-left, .button-content-top-right {
-                        transform-origin: center;
-                        width: 220px;
-                        height: 65px;
-
-                        .button {
-                            margin-left: auto;
-                            cursor: pointer;
-                            width: 35px;
-                            height: 35px;
-                            background-color: #3fb0e4;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: white;
-                            line-height: 0;
-                            border-radius: 50%;
-                            padding: 0;
-                            filter: saturate(3);
-                            box-shadow: 0px 4px 20px -4px rgba(black, 0.5);
-                            position: absolute;
-
-                            p {
-                                padding: 0;
-                                margin: 0 auto;
-                                line-height: 1;
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 50%;
-                                border: 1px solid white;
-                                display: flex;
-                                align-items: center;
-                                font-size: 20px;
-                                justify-content: center;
-                            }
-                        }
-
-                        .shape {
-                            filter: saturate(3);
-                            transform-origin: 0 100%;
-                            height: 30px;
-                            position: absolute;
-                            width: 220px;
-                            border-top: 3px solid #3fb0e4;
-                            opacity: 0;
-                            bottom: 20%;
-                            left: 10px;
-                            padding-top: 15px;
-
-                            &:before {
-                                content: '';
-                                width: 7px;
-                                height: 7px;
-                                border-radius: 50%;
-                                background-color: #3fb0e4;
-                                position: absolute;
-                                top: -5px;
-                                left: 0;
-                            }
-
-                            .text {
-                                .title {
-                                    transform: translateY(20px);
-                                    font-size: 30px;
-                                    font-weight: bold;
-                                    line-height: 1.2;
-                                    color: #515151;
-                                    opacity: 0;
-                                }
-
-                                .desc {
-                                    transform: translateY(20px);
-                                    line-height: 1.1;
-                                    font-weight: 100;
-                                    font-size: 16px;
-                                    color: #adadad;
-                                    opacity: 0;
-                                }
-                            }
-                        }
-                    }
-
-                    .button-content-bottom-left {
-                        .button {
-                            bottom: 35%;
-                            left: 30%;
-                        }
-                    }
-
-                    .button-content-top-right {
-                        .button {
-                            top: 15%;
-                            right: 20%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    //Render
-    .render-cont {
-        padding: 60px;
-        padding-top: 160px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url(../img/home-top-bg.jpg);
-        background-size: cover;
-        background-position: center;
-
-        .image-cont {
-            width: 800px;
-            max-width: 800px;
-            margin: auto;
-            position: relative;
-
-            img {
-                width: 100%;
-            }
-
-            .button-content-bottom-left, .button-content-top-right {
-                transform-origin: center;
-                position: relative;
-                width: 235px;
-                height: 65px;
-
-                .button {
-                    margin-left: auto;
-                    cursor: pointer;
-                    width: 35px;
-                    height: 35px;
-                    background-color: #3fb0e4;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: white;
-                    line-height: 0;
-                    border-radius: 50%;
-                    padding: 0;
-                    filter: saturate(3);
-                    box-shadow: 0px 4px 20px -4px rgba(black, 0.5);
-
-                    p {
-                        padding: 0;
-                        margin: 0 auto;
-                        line-height: 1;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
-                        border: 1px solid white;
-                        display: flex;
-                        align-items: center;
-                        font-size: 20px;
-                        justify-content: center;
-                    }
-                }
-
-                .shape {
-                    filter: saturate(3);
-                    transform-origin: 0 100%;
-                    position: relative;
-                    opacity: 0;
-                    width: 0;
-                    height: 30px;
-
-                    &:before {
-                        content: '';
-                        width: 7px;
-                        height: 7px;
-                        border-radius: 50%;
-                        background-color: #3fb0e4;
-                        position: absolute;
-                        transform: skewX(25deg);
-                    }
-
-                    .text {
-                        width: calc(100% + 30px);
-
-                        .title {
-                            transform: translateY(20px);
-                            opacity: 0;
-                            font-size: 30px;
-                            font-weight: bold;
-                            line-height: 1.2;
-                            color: #515151;
-                        }
-
-                        .desc {
-                            transform: translateY(20px);
-                            opacity: 0;
-                            line-height: 1.1;
-                            font-weight: 100;
-                            font-size: 16px;
-                            color: #adadad;
-                        }
-                    }
-                }
-            }
-
-            .button-content-bottom-left {
-                transform: translate3d(10%, -180%, 0) perspective(10px);
-
-                .shape {
-                    margin-left: auto;
-                    border-bottom: 3px solid #3fb0e4;
-                    border-right: 3px solid #3fb0e4;
-                    transform: skewX(-25deg) translateY(-5px) translateX(-30px);
-
-                    &:before {
-                        bottom: -4px;
-                        left: -3px;
-                    }
-
-                    .text {
-                        transform: skewX(25deg);
-                        margin-left: 30px;
-                        padding-top: 40px;
-                    }
-                }
-            }
-
-            .button-content-top-right {
-                transform: translate3d(165%, -600%, 0) perspective(10px);
-
-                .shape {
-                    margin-right: auto;
-                    margin-left: 10px;
-                    border-top: 3px solid #3fb0e4;
-                    border-left: 3px solid #3fb0e4;
-                    transform-origin: 0 100%;
-                    transform: skewX(-25deg) translateY(-63px) translateX(180px);
-
-                    &:before {
-                        top: -4px;
-                        right: -3px;
-                    }
-
-                    .text {
-                        transform: translateY(-120px) skewX(25deg);
-                        margin-left: -30px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-//RENDER
-
+@import "render";
 //HOME
 
 @media screen and (min-width: 300px) {
     .wrapper {
         position: relative;
         margin: 0;
-/*
-        .sidebar-content {
-            position: fixed;
-            right: 0;
-            top: 0;
-            z-index: 99;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-right: 15px;
 
-            &.stickToBottom {
-                position: absolute;
-                top: unset;
-                bottom: 0;
-                height: 100vh;
-            }
-
-            .sidebar {
-                position: relative;
-
-                &:before {
-                    position: absolute;
-                    content: '';
-                    height: 220px;
-                    width: 2px;
-                    bottom: calc(100% + 50px);
-                    right: 0;
-                    background-color: #fff;
-                }
-
-                &:after {
-                    position: absolute;
-                    content: '';
-                    height: 220px;
-                    width: 2px;
-                    top: calc(100% + 50px);
-                    right: 0;
-                    background-color: #fff;
-                }
-            }
-
-            .menu {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                position: relative;
-
-                li {
-                    text-align: right;
-                    margin: 16px 0;
-
-                    a {
-                        padding: 1px 5px;
-                        font-size: 13px;
-                        font-weight: 100;
-                        color: white;
-                        text-decoration: none;
-                        transition: background 400ms;
-
-                        &:hover {
-                            background-color: #4eadd7;
-                        }
-                    }
-                }
-            }
-        }
-*/
         .main-content {
             // tira de logos
             .middle-logos-cont {
                 width: 100%;
                 height: auto;
                 padding: 120px 0;
+                padding-top: 60px;
                 background: white;
                 //background-color: #3fb0e4;
                 //filter: saturate(3);
@@ -397,6 +57,7 @@ $max-width: 1280px;
                         &:hover{
                             color: white;
                             background: #515151;
+                            border-radius: 0;
                         }
                     }
 
@@ -419,6 +80,7 @@ $max-width: 1280px;
                 background-image: url(../img/home-bottom-bg.jpg);
                 background-position: center;
                 background-size: cover;
+                background-attachment: fixed;
                 padding: 80px 20px;
 
                 .grid-posts {
@@ -600,6 +262,7 @@ $max-width: 1280px;
                                     //background: linear-gradient(#1489be, #45b5e8);
                                     background: white;
                                     color: #35b1e5;
+                                    border-radius: 0;
                                 }
                             }
                         }
@@ -833,6 +496,7 @@ $max-width: 1280px;
                             transition: max-height 200ms linear, left 400ms ease 500ms, width 0ms linear;
                             display: flex;
                             align-items: center;
+                            overflow: hidden;
 
                             .title {
                                 opacity: 0;

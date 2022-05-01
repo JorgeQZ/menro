@@ -21,7 +21,7 @@ if(is_singular('proyectos')){
 }
 $mostrarBanner = is_home() ? 'imagen' : get_field('mostrar_banner');
 ?>
-    <div class="wrapper" id="mainWrapper <?php echo get_field('logo'); ?>">
+    <div class="wrapper  <?php echo get_field('logo'); ?>" id="mainWrapper">
         <!-- Header -->
 
         <header>

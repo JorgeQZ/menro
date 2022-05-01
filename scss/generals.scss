@@ -27,6 +27,20 @@ img{
     opacity: 0;
 }
 
+.wrapper .thumbnail_banner{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .wrapper {
         position: relative;

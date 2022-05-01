@@ -8,106 +8,95 @@ get_header();
 
 <div class="contenedor-principal">
 
-    <div class="title animate__animated" data-text=" <?php the_title();?>"><?php the_title();?></div>
+    <div class="title animate__animated animate__todos" data-text=" <?php the_title();?>"><?php the_title();?></div>
 
     <!-- Opciones de tabs -->
     <?php
-$tax_proy_sust = 'categoria_proyectos';
-$args_cat = array(
-    'taxonomy' => $tax_proy_sust,
-    'hide_empty' => 1,
-    'orderby' => 'id',
-    'order' => 'ASC',
-);
-$cats = get_categories($args_cat);
-if ($cats):
-    $first = true;
-    echo '<div class="tabs-options animate__animated">';
-    foreach ($cats as $item):
-
+        $tax_proy_sust = 'categoria_proyectos';
+        $args_cat = array(
+            'taxonomy' => $tax_proy_sust,
+            'hide_empty' => 1,
+            'orderby' => 'id',
+            'order' => 'ASC',
+        );
+        $cats = get_categories($args_cat);
+        if ($cats):
+            $first = true;
+            echo '<div class="tabs-options animate__animated animate__todos">';
+            foreach ($cats as $item):
+            ?>
+                <div class="option-item item<?php if ($first) {echo ' active';
+                    $first = false;}?>" data-button="tab-<?php echo _e($item->term_id, 'menro') ?>">
+                    <?php echo _e($item->name, 'menro') ?>
+                </div>
+            <?php
+            endforeach;
+            echo '</div>';
+            wp_reset_query();
+        endif;
     ?>
-    <div class="option-item item<?php if ($first) {echo ' active';
-        $first = false;}?>" data-button="tab-<?php echo _e($item->term_id, 'menro') ?>">
-        <?php echo _e($item->name, 'menro') ?>
-    </div>
-    <?php
-
-endforeach;
-echo '</div>';
-wp_reset_query();
-endif;
-?>
     <!-- Opciones de tabs -->
 
     <!-- Contenido de Tabs -->
-    <div class="tabs-content animate__animated">
+    <div class="tabs-content">
         <?php
-if ($cats):
-    $first = true;
-    foreach ($cats as $item):
-    ?>
-        <div class="tab<?php if ($first) {echo ' active';
-            $first = false;}?>" id="tab-<?php echo _e($item->term_id, 'menro') ?>" style="opacity: 1">
-            <?php
-                $cat_image = get_field('imagen', $tax_proy_sust . '_' . $item->term_id);
-                /*
-                if ($cat_image):
-                    echo '<div class="image-banner">';
-                    echo wp_get_attachment_image($cat_image, 'cat_image_projects');
-                    echo '</div>';
-                endif;
-                */
+        if ($cats):
+            $first = true;
+            foreach ($cats as $item):
             ?>
-            <div class="column" style="background-image: url(<?php echo $cat_image; ?>);">
-                <img src="<?php echo get_template_directory_uri().'/img/proyectos-img.jpg'?>" alt="">
-            </div>
-            <div class="column">
+            <div class="tab<?php if ($first) {echo ' active';
+                $first = false;}?>" id="tab-<?php echo _e($item->term_id, 'menro') ?>" style="opacity: 1">
+                <?php $cat_image = get_field('imagen', $tax_proy_sust . '_' . $item->term_id); ?>
 
-                <div class="title_project">
-                    <?php echo _e($item->name, 'menro'); ?>
+                <div class="column animate__animated project_img" style="background-image: url(<?php echo $cat_image; ?>);">
+                    <img src="<?php echo get_template_directory_uri().'/img/proyectos-img.jpg'?>" alt="">
                 </div>
 
-                <?php
+                <div class="column">
 
-    $projects = array(
-        'post_type' => 'proyectos',
-        'hide_empty' => 1,
-        'orderby' => 'date',
-        'order' => 'ASC',
-        'posts_per_page' => -1,
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'categoria_proyectos',
-                'field' => 'term_id',
-                'terms' => $item->term_id,
-            ),
-        ),
-    );
-    $post_projects = new WP_Query($projects);
+                    <div class="title_project animate__animated animate__todos">
+                        <?php echo _e($item->name, 'menro'); ?>
+                    </div>
 
-    if ($post_projects->have_posts()):
-        echo '<ol>';
-        while ($post_projects->have_posts()):
-            $post_projects->the_post();
-            echo '<li>';
-            echo '<a href="' . get_the_permalink() . '" >' . get_the_title() . '</a>';
-            echo '</li>';
-        endwhile;
-        echo '</ol>';
-    endif;
-    ?>
+                    <?php
+                    $projects = array(
+                        'post_type' => 'proyectos',
+                        'hide_empty' => 1,
+                        'orderby' => 'date',
+                        'order' => 'ASC',
+                        'posts_per_page' => -1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'categoria_proyectos',
+                                'field' => 'term_id',
+                                'terms' => $item->term_id,
+                            ),
+                        ),
+                    );
+                    $post_projects = new WP_Query($projects);
+
+                    if ($post_projects->have_posts()):
+                        echo '<ol>';
+                        while ($post_projects->have_posts()):
+                            $post_projects->the_post();
+                            echo '<li class=" animate__animated animate__todos">';
+                            echo '<a href="' . get_the_permalink() . '" >' . get_the_title() . '</a>';
+                            echo '</li>';
+                        endwhile;
+                        echo '</ol>';
+                    endif;
+                    ?>
+                </div>
             </div>
-        </div>
-        <?php
-endforeach;
-wp_reset_query();
-endif;
-?>
+            <?php
+            endforeach;
+            wp_reset_query();
+        endif;
+    ?>
     </div><!-- Contenido de Tabs -->
-
 </div>
 
-<div class="wrapper-sec">
+<div class="wrapper-sec ">
     <div class="contenedor-galerias">
         <div class="contenedor-edificaciones">
             <div class="titles">
@@ -116,9 +105,9 @@ endif;
                 $first = true;
                 foreach ($cats as $item):
                 ?>
-                <div class="title bl <?php if ($first) {echo ' active';
+                <div class="title bl animate__animated animate__todos <?php if ($first) {echo ' active';
         $first = false;}?>" data-text="<?php echo _e($item->name, 'menro') ?>">
-                    <img src="<?php the_field('icono_slider', $tax_proy_sust . '_' . $item->term_id); ?>" alt="">
+                    <img class="animate__animated project_img" src="<?php the_field('icono_slider', $tax_proy_sust . '_' . $item->term_id); ?>" alt="">
                     <?php echo _e($item->name, 'menro') ?>
                 </div>
                 <?php
@@ -128,7 +117,7 @@ endif;
             endif;
             ?>
             </div>
-            <div class="cont-edificaciones owl-carousel owl-theme">
+            <div class="cont-edificaciones owl-carousel owl-theme animate__animated animate__todos">
                 <?php
                 if ($cats):
                     $first = true;

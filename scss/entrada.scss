@@ -4,6 +4,8 @@
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
     padding: 80px 5% 100px;
 
     h2{
@@ -26,9 +28,10 @@
 // grid de posts
 .grid-container {
     background-image: url(../img/bg-activos.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 150px 5% 250px;
     overflow: hidden;
 
@@ -48,7 +51,19 @@
         position: relative;
         margin-top: 90px;
         //box-shadow: 0px 150px 50px -100px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 175px 65px -95px rgba(0, 0, 0, 0.5);
+       
+        &:before{
+            content: '';
+            position: absolute;
+            top: 30%;
+            z-index: 0;
+            width: 100%;
+            height: 70%;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            -webkit-filter: blur(20px);
+            filter: blur(20px);
+        }
 
 
         .item {
@@ -99,6 +114,7 @@
                 transition: max-height 200ms linear, left 400ms ease 500ms, width 0ms linear;
                 display: flex;
                 align-items: center;
+                overflow: hidden;
 
                 .titlee {
                     opacity: 0;

@@ -38,92 +38,102 @@ jQuery(document).ready(function ($) {
         jQuery('#' + tab_id).addClass('active').animate({
             'opacity': '1'
         }, 600);
-/*
-        var aux =  jQuery(this).index();
-        $('.wrapper .contenedor-edificaciones.active').hide();
-        $('.wrapper .contenedor-edificaciones.active').removeClass("active");
-        $('.wrapper .contenedor-edificaciones').eq(aux).fadeIn(300);
-        $('.wrapper .contenedor-edificaciones').eq(aux).addClass("active");
-*/
+            /*
+                    var aux =  jQuery(this).index();
+                    $('.wrapper .contenedor-edificaciones.active').hide();
+                    $('.wrapper .contenedor-edificaciones.active').removeClass("active");
+                    $('.wrapper .contenedor-edificaciones').eq(aux).fadeIn(300);
+                    $('.wrapper .contenedor-edificaciones').eq(aux).addClass("active");
+            */
     });
 
 
-    // Botones del render
-    let currentButton;
-    $('.button-content').on('click', function (e) {
-        e.stopPropagation()
-        clickedButton = $(this)[0].className; //pa saber cual boton se clickeó
+    //botone render close 
+    $('.close-button').on('click', function(e){
+        $(this).parent().removeClass('animate__fadeInLeft').css({
+            'display': 'none'
+        });
+    });
 
+    // Botones del render
+    let currentButton = '';
+    $('.button-content').on('click', function (e) {
+        e.stopPropagation();
+        let width = screen.width;
+        console.log(width);
+        clickedButton = $(this).attr('id'); //pa saber cual boton se clickeó
         //linea de tiempo para editar las acciones de la figura
         child_shape_animation = anime.timeline({
-            easing: 'easeInCubic',
-            duration: 700
+            easing: 'linear',
+            duration: 200
         });
 
-        if (currentButton != clickedButton) {
-            //Reinicio los inline styles
-            $('.shape, .shape .text,  .shape .text .title,  .shape .text .desc ').attr('style', '')
+        if(width > 1023){
+            if (currentButton != clickedButton) {
+                //Reinicio los inline styles
+                $('.shape-title, .shape_angle, .shape_hr ').attr('style', 'opacity: 0');
+                let child_shape = $(this).find('.shape')[0]; //div lineas azules
+                let angle_h = $(this).attr('data-animate-h');//div que contiene titulo y desc
+                let angle_shape = $(this).find('.shape_angle')[0];
+                let shape_hr = $(this).find('.shape_hr')[0];
+                let shape_title = $(child_shape).find('.shape-title')[0];//div que contiene titulo y desc
 
-            let child_shape = $(this).find('.shape')[0]; //div lineas azules
-            let text_div = $(child_shape).find('.text')[0];//div que contiene titulo y desc
+            
 
-            //esta madre son las lineas azules con la bolita
-            child_shape_animation.add({
-                targets: child_shape,
-                opacity: 1,
-            })
+                child_shape_animation.add({
+                    targets: angle_shape,
+                    height: angle_h,
+                    opacity: 1,
+                    duration: 200
+                })
 
-            child_shape_animation.add({
-                targets: child_shape,
-                width: 220,
-                duration: 450
+            
+                child_shape_animation.add({
+                    targets: shape_hr,
+                    opacity: 1,
+                    duration: 10
+                })
 
-            })
+                child_shape_animation.add({
+                    targets: shape_hr,
+                    delay: 450,
+                    width: '100%'
+                })
 
-            // Estas madres son el titulo y descripcion de los botones
-            child_shape_animation.add({
-                targets: $(text_div).find('.title')[0],
-                easing: 'linear',
-                delay: 500,
-                keyframes: [
-                    {
-                        translateY: 20,
-                        duration: 300
-                    },
-                    {
-                        opacity: 1,
-                        translateY: 0,
-                        duration: 300,
+                child_shape_animation.add({
+                    targets: shape_title,
+                    delay: 300,
+                    keyframes: [
+                        {   
+                            opacity:0,
+                            translateY: 5,
+                        },
+                        {
+                            opacity: 1,
+                            translateY: 0,
+                        }
+                    ],
+                })
 
-                    }
-                ],
+                //Variable auxiliar pa saber cual es el boton activo actual
+                currentButton = clickedButton;
+            }
+        }else{
+            $('.shape-mobile')
+                .removeClass('animate__fadeInRight')
+                .css({
+                    'display': 'none'
             });
 
-            child_shape_animation.add({
-                targets: $(text_div).find('.desc')[0],
-                easing: 'linear',
-                delay: 200,
-                keyframes: [
-                    {
-                        translateY: 20,
-                        duration: 300
-                    },
-                    {
-                        opacity: 1,
-                        translateY: 0,
-                        duration: 300,
-                        delay: 100
-
-                    }
-                ],
+            $('#shape_mobile_' + clickedButton)
+                .addClass('animate__fadeInRight')
+                .css({
+                'display': 'block'
             });
-
-            //Variable auxiliar pa saber cual es el boton activo actual
-            currentButton = clickedButton;
         }
     });
 
-    /* Menú */
+    // /* Menú */
     $('.burguer').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -149,78 +159,10 @@ jQuery(document).ready(function ($) {
         }
     });
     */
-    /*
-        jQuery('.galeria-proyectos').owlCarousel({
-            loop: false,
-            margin: 0,
-            dots: true,
-            nav: false,
-            items: 1
-        });
-    */
+  
     // =====================================================
     //                    WAYPOINTS
     // =====================================================
-
-    //Side Menu
-    // new Waypoint({
-    //     element: $('#sidebarContent')[0],
-    //     handler: function () {
-    //         $('#sidebarContent').addClass('animate__fadeInRight');
-    //     },
-    // })
-    // //RENDER
-    // let render_cont = $('.render-cont')[0],
-    //     buttons = $(render_cont).find('.button-content'),
-    //     items_posts = $('.grid-posts .item')
-
-    // new Waypoint({
-    //     element: render_cont,
-    //     handler: function () {
-    //         let render_animation = anime.timeline({
-    //             duration: 500,
-    //             easing: 'easeInQuad',
-    //         })
-
-    //         render_animation.add({
-    //             targets: render_cont,
-    //             opacity: 1,
-    //         })
-
-    //         for (let i = 0; i <= buttons.length; i++) {
-    //             render_animation.add({
-    //                 targets: buttons[i],
-    //                 opacity: 1,
-    //                 delay: function () {
-    //                     return i * 150
-    //                 }
-    //             })
-    //         }
-    //     },
-    //     offset: '30%'
-    // })
-
-    //POSTS
-    // new Waypoint({
-    //     element: $('.grid-posts')[0],
-    //     handler: function () {
-    //         let grid_posts_animation = anime.timeline({
-    //             duration: 500,
-    //             easing: 'easeInQuad',
-    //         })
-
-    //         for (let i = 0; i <= items_posts.length; i++) {
-    //             grid_posts_animation.add({
-    //                 targets: items_posts[i],
-    //                 opacity: 1,
-    //                 delay: function () {
-    //                     return i * 10
-    //                 }
-    //             })
-    //         }
-    //     },
-    //     // offset: '30%'
-    // })
 
     // GENERALES
     let animated_elements = $('.animate__todos');
@@ -231,6 +173,17 @@ jQuery(document).ready(function ($) {
                 $('.animate__todos').eq(i).addClass('animate__fadeInUp');
             },
             offset: '75%',
+        })
+    }
+
+    let project_img = $('.project_img');
+    for (let i = 0; i < project_img.length; i++) {
+        new Waypoint({
+            element: $('.project_img')[i],
+            handler: function () {
+                $('.project_img').eq(i).addClass('animate__fadeInLeft');
+            },
+            offset: '100%',
         })
     }
 
@@ -245,4 +198,70 @@ jQuery(document).ready(function ($) {
         })
     }
 
+    let nivel_tres = $('.nivel_3');
+    for (let i = 0; i < nivel_tres.length; i++) {
+        new Waypoint({
+            element: $('.nivel_3')[i],
+            handler: function () {
+                $('.nivel_3').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '40%',
+        })
+    }
+
+    let nivel_dos = $('.nivel_2');
+    for (let i = 0; i < nivel_dos.length; i++) {
+        new Waypoint({
+            element: $('.nivel_2')[i],
+            handler: function () {
+                $('.nivel_2').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '60%',
+        })
+    }
+
+    let nivel_uno = $('.nivel_1');
+    for (let i = 0; i < nivel_uno.length; i++) {
+        new Waypoint({
+            element: $('.nivel_1')[i],
+            handler: function () {
+                $('.nivel_1').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '80%',
+        })
+    }
+
+    let nivel_cimentacion = $('.nivel_cimentacion');
+    for (let i = 0; i < nivel_cimentacion.length; i++) {
+        new Waypoint({
+            element: $('.nivel_cimentacion')[i],
+            handler: function () {
+                $('.nivel_cimentacion').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '100%',
+        })
+    }
+
+    let image_render = $('.image-cont-img');
+    for (let i = 0; i < image_render.length; i++) {
+        new Waypoint({
+            element: $('.image-cont-img')[i],
+            handler: function () {
+                $('.image-cont-img').eq(i).addClass('animate__fadeIn');
+            },
+            offset: '70%',
+        })
+    }
+
+
+    let footer = $('.footer_animate');
+    for (let i = 0; i < footer.length; i++) {
+        new Waypoint({
+            element: $('.footer_animate')[i],
+            handler: function () {
+                $('.footer_animate').eq(i).addClass('animate__fadeInUp');
+            },
+            offset: '100%',
+        })
+    }
 });

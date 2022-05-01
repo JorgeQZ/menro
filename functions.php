@@ -261,7 +261,7 @@ function re_rewrite_rules()
     $wp_rewrite->pagination_base = 'pagina';
     $wp_rewrite->flush_rules();
 }
-add_action('init', 're_rewrite_rules');
+// add_action('init', 're_rewrite_rules');
 
 /**
  * Post Type Proyectos

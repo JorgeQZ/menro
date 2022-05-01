@@ -25,6 +25,21 @@ img {
   opacity: 0;
 }
 
+.wrapper .thumbnail_banner {
+  position: relative;
+}
+
+.wrapper .thumbnail_banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   .wrapper {
     position: relative;
@@ -556,6 +571,7 @@ img {
     color: #35b1e5;
   }
   footer .column {
+    opacity: 0;
     padding: 0px 20px;
     min-width: 20%;
     display: -webkit-box;

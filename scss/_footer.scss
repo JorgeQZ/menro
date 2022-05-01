@@ -61,6 +61,7 @@
 
 @media screen and (min-width: 1024px) {
     footer {
+        
         flex-direction: row;
         font-size: $footerFZ;
 
@@ -91,6 +92,7 @@
         }
 
         .column {
+            opacity: 0;
             padding: 0px 20px;
             min-width: 20%;
             display: flex;

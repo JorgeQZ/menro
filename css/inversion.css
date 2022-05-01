@@ -37,10 +37,11 @@
   text-decoration: none;
   -webkit-transition: all .3s;
   transition: all .3s;
+  border-radius: 25px;
 }
 
 .wrapper .contenedor-principal .cont-info a:hover {
-  opacity: .6;
+  border-radius: 0;
 }
 
 .wrapper .contenedor-principal .container {
@@ -179,6 +180,7 @@
   background-image: url(../img/bg-activos.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
@@ -331,9 +333,11 @@
   border-radius: 8px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  border-radius: 25px;
 }
 
 .wrapper .contenedor-activos .cont-contactanos a:hover {
+  border-radius: 0;
   color: #35b1e5;
   background: transparent;
 }
@@ -343,6 +347,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
   padding: 120px 5%;
   display: -webkit-box;
@@ -477,6 +482,7 @@
 .wrapper .contenedor-funciona {
   overflow: hidden;
   padding: 120px 5%;
+  padding-bottom: 0;
   background: white;
 }
 
@@ -607,6 +613,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
   padding: 120px 5%;
 }

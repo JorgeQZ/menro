@@ -4,6 +4,7 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 80px 5% 100px;
 }
 
@@ -27,6 +28,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 150px 5% 250px;
   overflow: hidden;
 }
@@ -50,8 +52,19 @@
       flex-wrap: wrap;
   position: relative;
   margin-top: 90px;
-  -webkit-box-shadow: 0px 175px 65px -95px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 175px 65px -95px rgba(0, 0, 0, 0.5);
+}
+
+.grid-container .grid-posts:before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  z-index: 0;
+  width: 100%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
 }
 
 .grid-container .grid-posts .item {
@@ -113,6 +126,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .grid-container .grid-posts .item .overlay .titlee {
