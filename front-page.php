@@ -12,7 +12,7 @@ get_header();
     @media screen and (min-width: 1024px) {
         
         .clip #sidebar{
-            /*display: none;*/
+            display: none;
         }
         .wrapper .sidebar-content{
             z-index: 9999;

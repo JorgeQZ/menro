@@ -115,7 +115,7 @@ img{
 
         .sidebar-content {
             position: fixed;
-            width: 95px;
+            width: 90px;
             right: 0;
             top: 0;
             z-index: 0;
@@ -133,6 +133,15 @@ img{
 
                     .menu {
                         li {
+                            padding: 2px 0;
+                            padding-bottom: 5px;
+                            transition: all .3s;
+                            margin-left: auto;
+                            border-bottom: 2px solid transparent;
+                            width: fit-content;
+                            &:hover{
+                                border-bottom: 2px solid #3f4143;
+                            }
                             a {
                                 color: #3f4143;
                             }
@@ -189,19 +198,27 @@ img{
                 li {
                     text-align: right;
                     margin: 16px 0;
+                    border-bottom: 2px solid transparent;
+                    transition: all .3s;
+                    width: fit-content;
+                    margin-left: auto;
+                    padding-bottom: 5px;
 
+                    &:hover {
+                        //background-color: #00ccff;
+                        border-bottom: 2px solid white;
+
+                    }
                     a {
                         padding: 1px 5px;
-                        font-size: 13px;
+                        font-size: 12px;
                         font-weight: 100;
                         color: white;
                         text-decoration: none;
                         transition: all .3s;
+
                     
-                        &:hover {
-                            //background-color: #00ccff;
-                            opacity: .7;
-                        }
+                       
                     
                     }
                     &.current-menu-item{
