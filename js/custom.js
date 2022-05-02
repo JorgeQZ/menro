@@ -38,18 +38,17 @@ jQuery(document).ready(function ($) {
         jQuery('#' + tab_id).addClass('active').animate({
             'opacity': '1'
         }, 600);
-            /*
-                    var aux =  jQuery(this).index();
-                    $('.wrapper .contenedor-edificaciones.active').hide();
-                    $('.wrapper .contenedor-edificaciones.active').removeClass("active");
-                    $('.wrapper .contenedor-edificaciones').eq(aux).fadeIn(300);
-                    $('.wrapper .contenedor-edificaciones').eq(aux).addClass("active");
-            */
+        /*
+                var aux =  jQuery(this).index();
+                $('.wrapper .contenedor-edificaciones.active').hide();
+                $('.wrapper .contenedor-edificaciones.active').removeClass("active");
+                $('.wrapper .contenedor-edificaciones').eq(aux).fadeIn(300);
+                $('.wrapper .contenedor-edificaciones').eq(aux).addClass("active");
+        */
     });
 
-
-    //botone render close 
-    $('.close-button').on('click', function(e){
+    //botone render close
+    $('.close-button').on('click', function (e) {
         $(this).parent().removeClass('animate__fadeInLeft').css({
             'display': 'none'
         });
@@ -68,7 +67,7 @@ jQuery(document).ready(function ($) {
             duration: 200
         });
 
-        if(width > 1023){
+        if (width > 1023) {
             if (currentButton != clickedButton) {
                 //Reinicio los inline styles
                 $('.shape-title, .shape_angle, .shape_hr ').attr('style', 'opacity: 0');
@@ -78,8 +77,6 @@ jQuery(document).ready(function ($) {
                 let shape_hr = $(this).find('.shape_hr')[0];
                 let shape_title = $(child_shape).find('.shape-title')[0];//div que contiene titulo y desc
 
-            
-
                 child_shape_animation.add({
                     targets: angle_shape,
                     height: angle_h,
@@ -87,7 +84,6 @@ jQuery(document).ready(function ($) {
                     duration: 200
                 })
 
-            
                 child_shape_animation.add({
                     targets: shape_hr,
                     opacity: 1,
@@ -104,8 +100,8 @@ jQuery(document).ready(function ($) {
                     targets: shape_title,
                     delay: 300,
                     keyframes: [
-                        {   
-                            opacity:0,
+                        {
+                            opacity: 0,
                             translateY: 5,
                         },
                         {
@@ -118,18 +114,18 @@ jQuery(document).ready(function ($) {
                 //Variable auxiliar pa saber cual es el boton activo actual
                 currentButton = clickedButton;
             }
-        }else{
+        } else {
             $('.shape-mobile')
                 .removeClass('animate__fadeInRight')
                 .css({
                     'display': 'none'
-            });
+                });
 
             $('#shape_mobile_' + clickedButton)
                 .addClass('animate__fadeInRight')
                 .css({
-                'display': 'block'
-            });
+                    'display': 'block'
+                });
         }
     });
 
@@ -159,7 +155,7 @@ jQuery(document).ready(function ($) {
         }
     });
     */
-  
+
     // =====================================================
     //                    WAYPOINTS
     // =====================================================
@@ -252,7 +248,6 @@ jQuery(document).ready(function ($) {
             offset: '70%',
         })
     }
-
 
     let footer = $('.footer_animate');
     for (let i = 0; i < footer.length; i++) {

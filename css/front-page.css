@@ -355,6 +355,7 @@
     z-index: 1000;
     -webkit-transition: 300ms;
     transition: 300ms;
+    opacity: 0.8;
   }
   .render-cont .image-cont .button-content .button span {
     border: .12rem solid white;
@@ -378,6 +379,9 @@
     font-size: 22px;
     font-weight: 100;
     text-transform: uppercase;
+  }
+  .render-cont .image-cont .button-content .button:hover {
+    opacity: 1;
   }
   .render-cont .image-cont .button-content .shape_angle {
     display: none;
@@ -506,12 +510,14 @@
     z-index: 1000;
     -webkit-transition: 300ms;
     transition: 300ms;
+    opacity: 0.8;
   }
   .render-cont .image-cont .button-content .button:hover {
     -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.9);
             box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.9);
     -webkit-filter: saturate(1.5);
             filter: saturate(1.5);
+    opacity: 1;
   }
   .render-cont .image-cont .button-content .button span {
     border: .12rem solid white;
