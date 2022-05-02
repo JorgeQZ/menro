@@ -530,7 +530,7 @@
                     position: absolute;
                     height: 0;
                     opacity: 0;
-                   
+                    pointer-events: none;
                 }
                 .shape{
                     min-width: 150px;
@@ -538,7 +538,7 @@
                     position: absolute;
                     top: 0;
                     padding: 0;
-
+                    pointer-events: none;
                     .shape-title{
                         color: #515151;
                         transform: translateY(5px);

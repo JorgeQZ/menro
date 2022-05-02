@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
 
     // Botones del render
     let currentButton = '';
-    $('.button-content').on('click', function (e) {
+    $('.button-content').on('mouseenter', function (e) {
         e.stopPropagation();
         let width = screen.width;
         console.log(width);
