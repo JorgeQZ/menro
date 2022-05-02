@@ -141,7 +141,7 @@ get_header();
                 <div class="shape-title">Sistema VRF</div>
                 <div class="shape_hr"></div>
             </div>
-            <div class="shape_angle"></div>
+            <div style="--height: 50px;" class="shape_angle"></div>
         </div><!-- option 1 -->
 
        
@@ -156,7 +156,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 3 -->
 
          <!-- option 2 -->
@@ -168,7 +168,7 @@ get_header();
                 <div class="shape-title">Proceso BIM</div>
                 <div class="shape_hr"></div>
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 50px;" class="shape_angle"></div>
         </div><!-- option 2 -->
         
         <!-- option 4 -->
@@ -181,7 +181,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 75px;" class="shape_angle"></div>
         </div><!-- option 4 -->
 
         <!-- option 5 -->
@@ -195,7 +195,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 40px;" class="shape_angle"></div>
         </div><!-- option 5 -->
 
         <!-- option 6 -->
@@ -208,7 +208,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 6 -->
 
         <!-- option 7 -->
@@ -221,7 +221,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 7 -->
 
         <!-- option 8 -->
@@ -234,7 +234,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 40px;" class="shape_angle"></div>
         </div><!-- option 8 -->
 
         <!-- option 9 -->
@@ -247,7 +247,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 9 -->
 
         <!-- option 10 -->
@@ -259,7 +259,7 @@ get_header();
                 <div class="shape-title">Alfombra aislante</div>
                 <div class="shape_hr"></div>
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 10 -->
 
         <!-- option 11 -->
@@ -271,7 +271,7 @@ get_header();
                 <div class="shape-title">Duela aislante</div>
                 <div class="shape_hr"></div>
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 40px;" class="shape_angle"></div>
         </div><!-- option 11 -->
 
         <!-- option 12 -->
@@ -284,7 +284,7 @@ get_header();
                 <div class="shape_hr"></div>
                
             </div>
-             <div class="shape_angle"></div>
+             <div style="--height: 70px;" class="shape_angle"></div>
         </div><!-- option 12 -->
     </div>
 </div>

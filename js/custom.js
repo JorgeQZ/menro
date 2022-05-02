@@ -54,6 +54,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    
     // Botones del render
     let currentButton = '';
     $('.button-content').on('mouseenter', function (e) {
@@ -67,54 +68,7 @@ jQuery(document).ready(function ($) {
             duration: 200
         });
 
-        if (width > 1023) {
-            if (currentButton != clickedButton) {
-                //Reinicio los inline styles
-                $('.shape-title, .shape_angle, .shape_hr ').attr('style', 'opacity: 0');
-                let child_shape = $(this).find('.shape')[0]; //div lineas azules
-                let angle_h = $(this).attr('data-animate-h');//div que contiene titulo y desc
-                let angle_shape = $(this).find('.shape_angle')[0];
-                let shape_hr = $(this).find('.shape_hr')[0];
-                let shape_title = $(child_shape).find('.shape-title')[0];//div que contiene titulo y desc
-
-                child_shape_animation.add({
-                    targets: angle_shape,
-                    height: angle_h,
-                    opacity: 1,
-                    duration: 200
-                })
-
-                child_shape_animation.add({
-                    targets: shape_hr,
-                    opacity: 1,
-                    duration: 10
-                })
-
-                child_shape_animation.add({
-                    targets: shape_hr,
-                    delay: 450,
-                    width: '100%'
-                })
-
-                child_shape_animation.add({
-                    targets: shape_title,
-                    delay: 300,
-                    keyframes: [
-                        {
-                            opacity: 0,
-                            translateY: 5,
-                        },
-                        {
-                            opacity: 1,
-                            translateY: 0,
-                        }
-                    ],
-                })
-
-                //Variable auxiliar pa saber cual es el boton activo actual
-                currentButton = clickedButton;
-            }
-        } else {
+        if (width < 1024) {
             $('.shape-mobile')
                 .removeClass('animate__fadeInRight')
                 .css({
@@ -128,6 +82,7 @@ jQuery(document).ready(function ($) {
                 });
         }
     });
+    
 
     // /* Menú */
     $('.burguer').on('click', function (e) {
